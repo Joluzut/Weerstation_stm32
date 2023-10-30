@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "modules/sof",
+		"source" : "C:/Users/luukv/zephyrproject/modules/audio/sof/zephyr"
+	}
+}

@@ -1,0 +1,2 @@
+C:\Users\luukv\zephyr-sdk-0.16.1\arm-zephyr-eabi\bin\arm-zephyr-eabi-ar.exe qc libisr_tables.a CMakeFiles/isr_tables.dir/isr_tables.c.obj
+C:\Users\luukv\zephyr-sdk-0.16.1\arm-zephyr-eabi\bin\arm-zephyr-eabi-ranlib.exe libisr_tables.a

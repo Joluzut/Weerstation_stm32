@@ -1,0 +1,24 @@
+zephyr/lib/libc/minimal/CMakeFiles/lib__libc__minimal.dir/source/stdlib/strtoul.c.obj: \
+ C:\Users\luukv\zephyrproject\zephyr\lib\libc\minimal\source\stdlib\strtoul.c \
+ C:/Users/luukv/zephyrproject/zephyr/samples/sensor/eeprom/build/zephyr/include/generated/autoconf.h \
+ C:/Users/luukv/zephyrproject/zephyr/include/zephyr/toolchain/zephyr_stdint.h \
+ C:\Users\luukv\zephyrproject\zephyr\lib\libc\minimal\include/limits.h \
+ C:\Users\luukv\zephyrproject\zephyr\lib\libc\minimal\include/ctype.h \
+ C:\Users\luukv\zephyrproject\zephyr\lib\libc\minimal\include/errno.h \
+ C:\Users\luukv\zephyrproject\zephyr\include/zephyr/sys/errno_private.h \
+ C:\Users\luukv\zephyrproject\zephyr\include/zephyr/toolchain.h \
+ C:\Users\luukv\zephyrproject\zephyr\include/zephyr/toolchain/gcc.h \
+ C:\Users\luukv\zephyrproject\zephyr\include/zephyr/toolchain/common.h \
+ C:\Users\luukv\zephyrproject\zephyr\lib\libc\minimal\include/stdbool.h \
+ C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\zephyr\include\generated/syscalls/errno_private.h \
+ c:\users\luukv\zephyr-sdk-0.16.1\arm-zephyr-eabi\lib\gcc\arm-zephyr-eabi\12.2.0\include\stdarg.h \
+ C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\zephyr\include\generated/syscall_list.h \
+ C:\Users\luukv\zephyrproject\zephyr\lib\libc\minimal\include/stdint.h \
+ C:\Users\luukv\zephyrproject\zephyr\include/zephyr/syscall.h \
+ C:\Users\luukv\zephyrproject\zephyr\include/zephyr/arch/syscall.h \
+ C:\Users\luukv\zephyrproject\zephyr\include/zephyr/arch/arm/aarch32/syscall.h \
+ C:\Users\luukv\zephyrproject\zephyr\include/zephyr/types.h \
+ c:\users\luukv\zephyr-sdk-0.16.1\arm-zephyr-eabi\lib\gcc\arm-zephyr-eabi\12.2.0\include\stddef.h \
+ C:\Users\luukv\zephyrproject\zephyr\include/zephyr/linker/sections.h \
+ C:\Users\luukv\zephyrproject\zephyr\include/zephyr/linker/section_tags.h \
+ C:\Users\luukv\zephyrproject\zephyr\lib\libc\minimal\include/stdlib.h

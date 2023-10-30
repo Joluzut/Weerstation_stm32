@@ -1,0 +1,35 @@
+# Available runners configured by board.cmake.
+runners:
+- openocd
+- jlink
+
+# Default flash runner if --runner is not given.
+flash-runner: openocd
+
+# Default debug runner if --runner is not given.
+debug-runner: openocd
+
+# Common runner configuration values.
+config:
+  board_dir: C:/Users/luukv/zephyrproject/zephyr/boards/arm/nucleo_f030r8
+  # Build outputs:
+  elf_file: zephyr.elf
+  hex_file: zephyr.hex
+  bin_file: zephyr.bin
+  # Host tools:
+  gdb: C:/Users/luukv/zephyr-sdk-0.16.1/arm-zephyr-eabi/bin/arm-zephyr-eabi-gdb.exe
+  openocd: C:/Users/luukv/OneDrive/Documenten/a School/School 2023 2024/Blok 5/Weerstation/xpack-openocd-0.12.0-1-win32-x64/xpack-openocd-0.12.0-1/bin/openocd.exe
+  openocd_search:
+    - C:/Users/luukv/zephyr-sdk-0.16.1/sysroots/AMD64-pokysdk-linux/usr/share/openocd/scripts
+
+# Runner specific arguments
+args:
+  openocd:
+    - --cmd-load
+    - flash write_image erase
+    - --cmd-verify
+    - verify_image
+  jlink:
+    - --dt-flash=y
+    - --device=STM32F030R8
+    - --speed=4000

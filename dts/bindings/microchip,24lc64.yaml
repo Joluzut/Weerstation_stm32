@@ -1,0 +1,18 @@
+# Copyright (c) 2023 JSC
+#
+# SPDX-License-Identifier: Apache-2.0
+
+description: Microchip 24lc64 I2C eeprom
+
+include: base.yaml
+
+compatible: "microchip,24lc64"
+
+properties:
+  size:
+    type: int
+    description: Total EEPROM size in bytes
+    required: true
+  read-only:
+    type: boolean
+    description: Disable writes to the EEPROM

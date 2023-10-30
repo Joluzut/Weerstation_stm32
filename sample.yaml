@@ -1,0 +1,17 @@
+sample:
+  name: I2C eeprom 24LC64
+
+tests:
+  sample.sensor.tmp116:
+    harness: console
+    platform_allow:
+      - nucleo_f030r8
+    integration_platforms:
+      - nucleo_f030r8
+    tags: sensors
+    depends_on: i2c
+    harness_config:
+      type: one_line
+      regex:
+        - "temp is (.*) oC"
+      fixture: fixture_i2c_tmp116

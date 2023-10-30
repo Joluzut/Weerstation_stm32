@@ -1,0 +1,2 @@
+C:\Users\luukv\zephyr-sdk-0.16.1\arm-zephyr-eabi\bin\arm-zephyr-eabi-ar.exe qc libarch__common.a CMakeFiles/arch__common.dir/sw_isr_common.c.obj
+C:\Users\luukv\zephyr-sdk-0.16.1\arm-zephyr-eabi\bin\arm-zephyr-eabi-ranlib.exe libarch__common.a
