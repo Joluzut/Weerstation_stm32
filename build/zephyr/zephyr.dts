@@ -245,6 +245,12 @@
 				size = < 0x2000 >;
 				status = "okay";
 			};
+			eeprom2: e24lc64@51 {
+				compatible = "microchip,24lc64";
+				reg = < 0x51 >;
+				size = < 0x2000 >;
+				status = "okay";
+			};
 		};
 		spi1: arduino_spi: spi@40013000 {
 			compatible = "st,stm32-spi-fifo", "st,stm32-spi";
