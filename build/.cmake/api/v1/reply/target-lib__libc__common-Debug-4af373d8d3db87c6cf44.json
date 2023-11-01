@@ -1,0 +1,500 @@
+{
+	"archive" : {},
+	"artifacts" : 
+	[
+		{
+			"path" : "zephyr/lib/libc/common/liblib__libc__common.a"
+		}
+	],
+	"backtrace" : 3,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"zephyr_library_named",
+			"zephyr_library",
+			"add_dependencies",
+			"add_compile_options",
+			"target_link_libraries",
+			"target_sources",
+			"zephyr_library_sources",
+			"zephyr_library_sources_ifdef"
+		],
+		"files" : 
+		[
+			"C:/Users/luukv/zephyrproject/zephyr/cmake/modules/extensions.cmake",
+			"C:/Users/luukv/zephyrproject/zephyr/lib/libc/common/CMakeLists.txt",
+			"C:/Users/luukv/zephyrproject/zephyr/CMakeLists.txt",
+			"C:/Users/luukv/zephyrproject/zephyr/lib/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 3,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 398,
+				"parent" : 1
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 424,
+				"parent" : 2
+			},
+			{
+				"file" : 2
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 901,
+				"parent" : 4
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 843,
+				"parent" : 4
+			},
+			{
+				"file" : 3
+			},
+			{
+				"command" : 4,
+				"file" : 3,
+				"line" : 4,
+				"parent" : 7
+			},
+			{
+				"command" : 5,
+				"file" : 0,
+				"line" : 428,
+				"parent" : 2
+			},
+			{
+				"command" : 8,
+				"file" : 1,
+				"line" : 5,
+				"parent" : 0
+			},
+			{
+				"command" : 7,
+				"file" : 0,
+				"line" : 1740,
+				"parent" : 10
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 481,
+				"parent" : 11
+			},
+			{
+				"command" : 8,
+				"file" : 1,
+				"line" : 7,
+				"parent" : 0
+			},
+			{
+				"command" : 7,
+				"file" : 0,
+				"line" : 1740,
+				"parent" : 13
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 481,
+				"parent" : 14
+			},
+			{
+				"command" : 8,
+				"file" : 1,
+				"line" : 8,
+				"parent" : 0
+			},
+			{
+				"command" : 7,
+				"file" : 0,
+				"line" : 1740,
+				"parent" : 16
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 481,
+				"parent" : 17
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-g"
+				},
+				{
+					"backtrace" : 8,
+					"fragment" : "-Wshadow"
+				},
+				{
+					"backtrace" : 9,
+					"fragment" : "-fno-strict-aliasing"
+				},
+				{
+					"backtrace" : 9,
+					"fragment" : "-Os"
+				},
+				{
+					"backtrace" : 9,
+					"fragment" : "-imacros"
+				},
+				{
+					"backtrace" : 9,
+					"fragment" : "C:/Users/luukv/zephyrproject/zephyr/samples/sensor/eeprom/build/zephyr/include/generated/autoconf.h"
+				},
+				{
+					"backtrace" : 9,
+					"fragment" : "-ffreestanding"
+				},
+				{
+					"backtrace" : 9,
+					"fragment" : "-fno-common"
+				},
+				{
+					"backtrace" : 9,
+					"fragment" : "-g"
+				},
+				{
+					"backtrace" : 9,
+					"fragment" : "-gdwarf-4"
+				},
+				{
+					"backtrace" : 9,
+					"fragment" : "-fdiagnostics-color=always"
+				},
+				{
+					"backtrace" : 9,
+					"fragment" : "-mcpu=cortex-m0"
+				},
+				{
+					"backtrace" : 9,
+					"fragment" : "-mthumb"
+				},
+				{
+					"backtrace" : 9,
+					"fragment" : "-mabi=aapcs"
+				},
+				{
+					"backtrace" : 9,
+					"fragment" : "-mfp16-format=ieee"
+				},
+				{
+					"backtrace" : 9,
+					"fragment" : "--sysroot=C:/Users/luukv/zephyr-sdk-0.16.1/arm-zephyr-eabi/arm-zephyr-eabi"
+				},
+				{
+					"backtrace" : 9,
+					"fragment" : "-imacros"
+				},
+				{
+					"backtrace" : 9,
+					"fragment" : "C:/Users/luukv/zephyrproject/zephyr/include/zephyr/toolchain/zephyr_stdint.h"
+				},
+				{
+					"backtrace" : 9,
+					"fragment" : "-Wall"
+				},
+				{
+					"backtrace" : 9,
+					"fragment" : "-Wformat"
+				},
+				{
+					"backtrace" : 9,
+					"fragment" : "-Wformat-security"
+				},
+				{
+					"backtrace" : 9,
+					"fragment" : "-Wno-format-zero-length"
+				},
+				{
+					"backtrace" : 9,
+					"fragment" : "-Wno-pointer-sign"
+				},
+				{
+					"backtrace" : 9,
+					"fragment" : "-Wpointer-arith"
+				},
+				{
+					"backtrace" : 9,
+					"fragment" : "-Wexpansion-to-defined"
+				},
+				{
+					"backtrace" : 9,
+					"fragment" : "-Wno-unused-but-set-variable"
+				},
+				{
+					"backtrace" : 9,
+					"fragment" : "-Werror=implicit-int"
+				},
+				{
+					"backtrace" : 9,
+					"fragment" : "-fno-pic"
+				},
+				{
+					"backtrace" : 9,
+					"fragment" : "-fno-pie"
+				},
+				{
+					"backtrace" : 9,
+					"fragment" : "-fno-asynchronous-unwind-tables"
+				},
+				{
+					"backtrace" : 9,
+					"fragment" : "-fno-reorder-functions"
+				},
+				{
+					"backtrace" : 9,
+					"fragment" : "--param=min-pagesize=0"
+				},
+				{
+					"backtrace" : 9,
+					"fragment" : "-fno-defer-pop"
+				},
+				{
+					"backtrace" : 9,
+					"fragment" : "-fmacro-prefix-map=C:/Users/luukv/zephyrproject/zephyr/samples/sensor/eeprom=CMAKE_SOURCE_DIR"
+				},
+				{
+					"backtrace" : 9,
+					"fragment" : "-fmacro-prefix-map=C:/Users/luukv/zephyrproject/zephyr=ZEPHYR_BASE"
+				},
+				{
+					"backtrace" : 9,
+					"fragment" : "-fmacro-prefix-map=C:/Users/luukv/zephyrproject=WEST_TOPDIR"
+				},
+				{
+					"backtrace" : 9,
+					"fragment" : "-ffunction-sections"
+				},
+				{
+					"backtrace" : 9,
+					"fragment" : "-fdata-sections"
+				},
+				{
+					"backtrace" : 9,
+					"fragment" : "-std=c99"
+				},
+				{
+					"backtrace" : 9,
+					"fragment" : "-nostdinc"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 9,
+					"define" : "HSE_VALUE=8000000"
+				},
+				{
+					"backtrace" : 9,
+					"define" : "KERNEL"
+				},
+				{
+					"backtrace" : 9,
+					"define" : "STM32F030x8"
+				},
+				{
+					"backtrace" : 9,
+					"define" : "USE_FULL_LL_DRIVER"
+				},
+				{
+					"backtrace" : 9,
+					"define" : "USE_HAL_DRIVER"
+				},
+				{
+					"backtrace" : 9,
+					"define" : "__PROGRAM_START"
+				},
+				{
+					"backtrace" : 9,
+					"define" : "__ZEPHYR__=1"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 9,
+					"path" : "C:/Users/luukv/zephyrproject/zephyr/include"
+				},
+				{
+					"backtrace" : 9,
+					"path" : "C:/Users/luukv/zephyrproject/zephyr/samples/sensor/eeprom/build/zephyr/include/generated"
+				},
+				{
+					"backtrace" : 9,
+					"path" : "C:/Users/luukv/zephyrproject/zephyr/soc/arm/st_stm32/stm32f0"
+				},
+				{
+					"backtrace" : 9,
+					"path" : "C:/Users/luukv/zephyrproject/zephyr/drivers"
+				},
+				{
+					"backtrace" : 9,
+					"path" : "C:/Users/luukv/zephyrproject/zephyr/soc/arm/st_stm32/common"
+				},
+				{
+					"backtrace" : 9,
+					"path" : "C:/Users/luukv/zephyrproject/modules/lib/acpica/../../zephyr/include"
+				},
+				{
+					"backtrace" : 9,
+					"path" : "C:/Users/luukv/zephyrproject/modules/lib/acpica/.."
+				},
+				{
+					"backtrace" : 9,
+					"path" : "C:/Users/luukv/zephyrproject/modules/lib/acpica/source/include"
+				},
+				{
+					"backtrace" : 9,
+					"path" : "C:/Users/luukv/zephyrproject/modules/lib/acpica/source/include/platform"
+				},
+				{
+					"backtrace" : 9,
+					"path" : "C:/Users/luukv/zephyrproject/modules/lib/acpica/source/compiler"
+				},
+				{
+					"backtrace" : 9,
+					"path" : "C:/Users/luukv/zephyrproject/modules/lib/acpica/generate/zephyr"
+				},
+				{
+					"backtrace" : 9,
+					"path" : "C:/Users/luukv/zephyrproject/modules/lib/acpica/source/tools/acpiexec"
+				},
+				{
+					"backtrace" : 9,
+					"path" : "C:/Users/luukv/zephyrproject/modules/lib/acpica/source/tools/acpidump"
+				},
+				{
+					"backtrace" : 9,
+					"path" : "C:/Users/luukv/zephyrproject/modules/hal/cmsis/CMSIS/Core/Include"
+				},
+				{
+					"backtrace" : 9,
+					"path" : "C:/Users/luukv/zephyrproject/zephyr/modules/cmsis/."
+				},
+				{
+					"backtrace" : 9,
+					"path" : "C:/Users/luukv/zephyrproject/modules/hal/stm32/stm32cube/stm32f0xx/soc"
+				},
+				{
+					"backtrace" : 9,
+					"path" : "C:/Users/luukv/zephyrproject/modules/hal/stm32/stm32cube/stm32f0xx/drivers/include"
+				},
+				{
+					"backtrace" : 9,
+					"path" : "C:/Users/luukv/zephyrproject/modules/hal/stm32/stm32cube/stm32f0xx/drivers/include/Legacy"
+				},
+				{
+					"backtrace" : 9,
+					"path" : "C:/Users/luukv/zephyrproject/modules/hal/stm32/stm32cube/common_ll/include"
+				},
+				{
+					"backtrace" : 9,
+					"isSystem" : true,
+					"path" : "C:/Users/luukv/zephyrproject/zephyr/lib/libc/minimal/include"
+				},
+				{
+					"backtrace" : 9,
+					"isSystem" : true,
+					"path" : "c:/users/luukv/zephyr-sdk-0.16.1/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include"
+				},
+				{
+					"backtrace" : 9,
+					"isSystem" : true,
+					"path" : "c:/users/luukv/zephyr-sdk-0.16.1/arm-zephyr-eabi/bin/../lib/gcc/arm-zephyr-eabi/12.2.0/include-fixed"
+				}
+			],
+			"language" : "C",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 5,
+			"id" : "zephyr_generated_headers::@d36e55b69c1b90fb26b2"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "kobj_types_h_target::@d36e55b69c1b90fb26b2"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "syscall_list_h_target::@d36e55b69c1b90fb26b2"
+		},
+		{
+			"backtrace" : 6,
+			"id" : "driver_validation_h_target::@d36e55b69c1b90fb26b2"
+		}
+	],
+	"id" : "lib__libc__common::@4887e96c8898694998ea",
+	"name" : "lib__libc__common",
+	"nameOnDisk" : "liblib__libc__common.a",
+	"paths" : 
+	{
+		"build" : "zephyr/lib/libc/common",
+		"source" : "C:/Users/luukv/zephyrproject/zephyr/lib/libc/common"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 12,
+			"compileGroupIndex" : 0,
+			"path" : "C:/Users/luukv/zephyrproject/zephyr/lib/libc/common/source/stdlib/abort.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 15,
+			"compileGroupIndex" : 0,
+			"path" : "C:/Users/luukv/zephyrproject/zephyr/lib/libc/common/source/stdlib/malloc.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 18,
+			"compileGroupIndex" : 0,
+			"path" : "C:/Users/luukv/zephyrproject/zephyr/lib/libc/common/source/string/strnlen.c",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "STATIC_LIBRARY"
+}

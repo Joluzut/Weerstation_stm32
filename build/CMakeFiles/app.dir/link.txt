@@ -1,2 +1,2 @@
-C:\Users\luukv\zephyr-sdk-0.16.1\arm-zephyr-eabi\bin\arm-zephyr-eabi-ar.exe qc app\libapp.a CMakeFiles/app.dir/src/eeprom_24lc64.c.obj CMakeFiles/app.dir/src/main.c.obj
+C:\Users\luukv\zephyr-sdk-0.16.1\arm-zephyr-eabi\bin\arm-zephyr-eabi-ar.exe qc app\libapp.a CMakeFiles/app.dir/src/eeprom.c.obj CMakeFiles/app.dir/src/eeprom_24lc64.c.obj CMakeFiles/app.dir/src/main.c.obj
 C:\Users\luukv\zephyr-sdk-0.16.1\arm-zephyr-eabi\bin\arm-zephyr-eabi-ranlib.exe app\libapp.a

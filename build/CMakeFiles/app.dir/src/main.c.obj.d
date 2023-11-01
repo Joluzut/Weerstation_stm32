@@ -125,4 +125,6 @@ CMakeFiles/app.dir/src/main.c.obj: \
  C:\Users\luukv\zephyrproject\zephyr\include/zephyr/drivers/eeprom.h \
  C:\Users\luukv\zephyrproject\zephyr\lib\libc\minimal\include/sys/types.h \
  C:\Users\luukv\zephyrproject\zephyr\lib\libc\minimal\include/sys/_types.h \
- C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\zephyr\include\generated/syscalls/eeprom.h
+ C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\zephyr\include\generated/syscalls/eeprom.h \
+ C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\src\eeprom.h \
+ C:\Users\luukv\zephyrproject\zephyr\lib\libc\minimal\include/stdio.h
