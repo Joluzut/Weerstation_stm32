@@ -1,23 +1,5 @@
 #include "rtc.h"
 
-static const struct device *getRtc(void)//Configure the RTC device
-{
-	static const struct device *const dev = DEVICE_DT_GET(rtc_device_node);
-	if (dev==NULL)
-	{
-		printk("Device not found\n");
-		return NULL;
-	}
-	if(!device_is_ready(dev))
-	{
-		printk("Device not ready\n");
-		return NULL;
-	}
-
-	printk("Found device.");
-	return dev;
-}
-
 void syncRTC(const char* time, const struct device *dev, struct tm *timeStruct)//Sync RTC to time given as string
 {
     if (strptime(time, "%a %b %d %H:%M:%S %Y", timeStruct) == NULL) {
@@ -28,9 +10,10 @@ void syncRTC(const char* time, const struct device *dev, struct tm *timeStruct)/
     rtc_set_time(dev, timeStruct);
 }
 
-time_t getEpochTime(const struct tm *timeStruct)
+time_t getEpochTime(const struct device *dev, const struct tm *timeStruct)
 {
     // Convert the parsed time to Epoch time
+    rtc_get_time(dev, timeStruct);
     time_t epochTime = mktime(timeStruct);
 
     if (epochTime == -1) {
@@ -38,4 +21,9 @@ time_t getEpochTime(const struct tm *timeStruct)
         return NULL;
     }
     return epochTime;
+}
+
+int returnOne()
+{
+    return 1;
 }

@@ -1313,14 +1313,6 @@
     ],
     [
         [
-            "int *z_errno",
-            "void"
-        ],
-        "errno_private.h",
-        true
-    ],
-    [
-        [
             "bool atomic_cas",
             "atomic_t *target, atomic_val_t old_value,\n\t\t\t atomic_val_t new_value"
         ],
@@ -1805,6 +1797,22 @@
             "const struct device *dev, k_timeout_t timeout"
         ],
         "can.h",
+        false
+    ],
+    [
+        [
+            "int charger_get_prop",
+            "const struct device *dev, const charger_prop_t prop,\n\t\t\t       union charger_propval *val"
+        ],
+        "charger.h",
+        false
+    ],
+    [
+        [
+            "int charger_set_prop",
+            "const struct device *dev, const charger_prop_t prop,\n\t\t\t       const union charger_propval *val"
+        ],
+        "charger.h",
         false
     ],
     [
@@ -3869,6 +3877,14 @@
             "struct rtio *r, uint32_t wait_count"
         ],
         "rtio.h",
+        false
+    ],
+    [
+        [
+            "int *z_errno",
+            "void"
+        ],
+        "errno_private.h",
         false
     ],
     [
