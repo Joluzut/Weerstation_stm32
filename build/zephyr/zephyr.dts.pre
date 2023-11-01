@@ -1462,13 +1462,13 @@ arduino_spi: &spi1 {};
  bme280@76 {
   compatible = "bosch,bme280";
   reg = <0x76>;
-status = "okay";
-};
+  status = "okay";
+ };
  clock-frequency = <100000>;
- timings = < 8000000 100000 0x10420F13>,
+ timings = <8000000 100000 0x10420F13>,
            <16000000 100000 0x30420F13>,
            <48000000 100000 0xB0420F13>;
- status="okay";
+ status = "okay";
 
  eeprom1: e24lc64@50 {
   compatible = "microchip,24lc64";
@@ -1477,6 +1477,12 @@ status = "okay";
   status = "okay";
  };
 
+ eeprom2: e24lc64@51 {
+  compatible = "microchip,24lc64";
+  reg = <0x51>;
+  size = <8192>;
+  status = "okay";
+ };
 
 
 };

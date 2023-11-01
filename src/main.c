@@ -16,6 +16,7 @@
 
 // #define EEPROM_NODE DT_COMPAT_GET_ANY_STATUS_OKAY(zephyr_i2c-target-eeprom)
 #define NODE_EP1 DT_NODELABEL(eeprom1)
+#define NODE_EP2 DT_NODELABEL(eeprom2)
 #define MICRO_TO_HUNDERDTH 10000
 
 #define EEPROM_INTERNAL_BASE_ADDR 0xAF  // Read/write from internal addr 
@@ -23,54 +24,66 @@
 
 int main(void)
 {
-	const struct device *const dev = DEVICE_DT_GET(NODE_EP1);
+	const struct device *const dev1 = DEVICE_DT_GET(NODE_EP1);
+	const struct device *const dev2 = DEVICE_DT_GET(NODE_EP2);
 	const struct device *sensor = DEVICE_DT_GET_ANY(bosch_bme280);
     struct sensor_value temp, press, humidity;
-	uint8_t * data[4][1439];
-	int8_t * tempData[1439];
+	int8_t * data[5];
 
 	int ret;
-	uint16_t counter = 0;
-	uint8_t eeprom_data[sizeof(uint16_t)];
+	int counter = 0;
+	int8_t eeprom_data[sizeof(int8_t)];
 	while (1) {
-		printk( "Value: (%d)\n", counter);
 
-		// write data to eeprom device
-		ret = eeprom_write(dev, EEPROM_INTERNAL_BASE_ADDR, &counter, sizeof(counter));
-		if (ret) {
-			printk("Failed to write eeprom (%d)\n", ret);
-		}
-
-		// read data from eeprom device
-		k_sleep(K_MSEC(100));
-		ret = eeprom_read(dev, EEPROM_INTERNAL_BASE_ADDR, eeprom_data, sizeof(eeprom_data));
-		if (ret) {
-			printk("Failed to read eeprom (%d)\n", ret);
-		}
-
-		// check
-		if (counter != (uint16_t)(*eeprom_data)){
-			printk("Failed to read back eeprom (%d) (%d)\n",counter, (uint16_t)(*eeprom_data));
-		} else {
-			printk("Success reading back eeprom (%d) (%d)\n",counter, (uint16_t)(*eeprom_data));
-		}
-		
 		sensor_sample_fetch(sensor);
     	sensor_channel_get(sensor, SENSOR_CHAN_AMBIENT_TEMP, &temp);
     	sensor_channel_get(sensor, SENSOR_CHAN_PRESS, &press);
     	sensor_channel_get(sensor, SENSOR_CHAN_HUMIDITY, &humidity);
 
-        tempData[counter] = temp.val1;
-        data[0][counter]  = press.val1;
-        data[1][counter]  = humidity.val1;
-        data[2][counter]  = temp.val2/10000;
-    	data[3][counter]  = press.val2/10000;
-        data[4][counter]  = humidity.val2/10000;
-
-		printk("temperatuur: %d.%02d; luchtdruk: %d.%02d; luchtvochtigheid: %d.%02d; Teller: %d\n",
-        tempData[counter], data[2][counter], data[0][counter], data[3][counter], data[1][counter], data[4][counter], counter);
+        data[0] = temp.val1;
+		data[1] = temp.val2/10000;
+        data[2] = press.val1;
+		data[3] = press.val2/10000;
+        data[4] = humidity.val1;
+		data[5] = humidity.val2/10000;    
 		
-		if(counter >= 1439)
+		printk("\n%d.%02d %d.%02d %d.%02d %d\n",
+        data[0], data[1], data[2], data[3], data[4], data[5], counter/6);
+		
+		for(int x = 0; x<6; x++)
+		{
+		// write data to eeprom device
+		if(counter/6<720)
+		{
+			ret = eeprom_write(dev1, counter, &data[x], sizeof(data[x]));
+		}
+		else
+		{
+			ret = eeprom_write(dev2, counter-720, &data[x], sizeof(data[x]));
+		}
+		if (ret) {
+			printk("Failed to write eeprom (%d)\n", ret);
+		}
+		
+		// read data from eeprom device
+		k_sleep(K_MSEC(100));
+		if(counter/6<720)
+		{
+		ret = eeprom_read(dev1, counter, eeprom_data, sizeof(eeprom_data));
+		}
+		else
+		{
+		ret = eeprom_read(dev2, counter-720, eeprom_data, sizeof(eeprom_data));
+		}
+		if (ret) {
+			printk("Failed to read eeprom (%d)\n", ret);
+		}
+		printk("(%d)",(uint16_t)(*eeprom_data));
+
+		counter++;
+		}
+		
+		if(counter/6 >= 1439)
 		{
 			counter = 0;
 		}
@@ -78,7 +91,7 @@ int main(void)
 		{
 			counter++;
 		}
-		k_sleep(K_MSEC(1000));
+		k_sleep(K_MSEC(100));
 	}
 	return 0;
 }
