@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "zephyr/soc/soc/arm",
+		"source" : "/Users/dinordi/zephyrproject/zephyr/soc/arm"
+	}
+}

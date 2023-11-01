@@ -12,7 +12,7 @@
 #include <zephyr/sys/__assert.h>
 #include <zephyr/devicetree.h>
 #include <zephyr/drivers/eeprom.h>
-
+#include "rtc.h"
 
 // #define EEPROM_NODE DT_COMPAT_GET_ANY_STATUS_OKAY(zephyr_i2c-target-eeprom)
 #define NODE_EP1 DT_NODELABEL(eeprom1)
@@ -27,6 +27,19 @@ int main(void)
 	const struct device *const dev1 = DEVICE_DT_GET(NODE_EP1);
 	const struct device *const dev2 = DEVICE_DT_GET(NODE_EP2);
 	const struct device *sensor = DEVICE_DT_GET_ANY(bosch_bme280);
+	const struct device *rtc_dev = getRtc();
+	
+	struct tm rtc_time = {
+        .tm_year = 2023-1900,
+        .tm_mon = 10,
+        .tm_mday = 1,
+        .tm_hour = 12,
+        .tm_min = 0,
+        .tm_sec = 0
+    };
+	rtc_set_time(rtc_dev, &rtc_time);
+	time_t timeSinceEpoch;
+
     struct sensor_value temp, press, humidity;
 	int8_t * data[5];
 
