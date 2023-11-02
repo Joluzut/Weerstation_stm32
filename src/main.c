@@ -82,13 +82,7 @@ void uartTest()
 	while(1)
 	{
         char* resp;
-        // resp = sendESP("AT+RST\r\n", uart_dev, rst);
-        // printk("%s", resp);
-        // k_sleep(K_MSEC(3000));
-
-        //meting
-
-
+       
         measurementStruct meas = sendMeasurement(9,15, 100,92, 46,12, getEpochTime(rtc_dev), uart_dev);
 		printk("Measurement sending: %s, %s, %s", meas.tcp, meas.cipsend, meas.request);
         resp = sendESP(meas.tcp, uart_dev, tcp);
@@ -113,77 +107,8 @@ void uartTest()
 
 }
 
-// void eeprom()
-// {
-// 		sensor_sample_fetch(sensor);
-//     	sensor_channel_get(sensor, SENSOR_CHAN_AMBIENT_TEMP, &temp);
-//     	sensor_channel_get(sensor, SENSOR_CHAN_PRESS, &press);
-//     	sensor_channel_get(sensor, SENSOR_CHAN_HUMIDITY, &humidity);
-
-//         data[0] = temp.val1;
-// 		data[1] = temp.val2/10000;
-//         data[2] = press.val1;
-// 		data[3] = press.val2/10000;
-//         data[4] = humidity.val1;
-// 		data[5] = humidity.val2/10000;    
-		
-// 		printk("\n%d.%02d %d.%02d %d.%02d %d\n",
-//         data[0], data[1], data[2], data[3], data[4], data[5], counter/6);
-		
-// 		for(int x = 0; x<6; x++)
-// 		{
-// 		// write data to eeprom device
-// 		if(counter/6<720)
-// 		{
-// 			ret = eeprom_write(dev1, counter, &data[x], sizeof(data[x]));
-// 		}
-// 		else
-// 		{
-// 			ret = eeprom_write(dev2, counter-720, &data[x], sizeof(data[x]));
-// 		}
-// 		if (ret) {
-// 			printk("Failed to write eeprom (%d)\n", ret);
-// 		}
-		
-// 		// read data from eeprom device
-// 		k_sleep(K_MSEC(100));
-// 		if(counter/6<720)
-// 		{
-// 		ret = eeprom_read(dev1, counter, eeprom_data, sizeof(eeprom_data));
-// 		}
-// 		else
-// 		{
-// 		ret = eeprom_read(dev2, counter-720, eeprom_data, sizeof(eeprom_data));
-// 		}
-// 		if (ret) {
-// 			printk("Failed to read eeprom (%d)\n", ret);
-// 		}
-// 		printk("(%d)",(uint16_t)(*eeprom_data));
-
-// 		counter++;
-// 		}
-		
-// 		if(counter/6 >= 1439)
-// 		{
-// 			counter = 0;
-// 		}
-// 		else
-// 		{
-// 			counter++;
-// 		}
-// 		k_sleep(K_MSEC(100));
-// }
-
 int main(void)
 {
-	// const struct device *const dev1 = DEVICE_DT_GET(NODE_EP1);
-	// const struct device *const dev2 = DEVICE_DT_GET(NODE_EP2);
-	// const struct device *sensor = DEVICE_DT_GET_ANY(bosch_bme280);
-	// static const struct device *const rtc_dev = DEVICE_DT_GET(rtc_device_node);
-	
-	
-	
-
 	
 
     struct sensor_value temp, press, humidity;
@@ -193,7 +118,7 @@ int main(void)
 	int counter = 0;
 	int8_t eeprom_data[sizeof(int8_t)];
 	while (1) {
-		// eeprom();
+		
 		uartTest();
 	}
 	return 0;
