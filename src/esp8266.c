@@ -1,14 +1,14 @@
 #include "esp8266.h"
-K_MSGQ_DEFINE(uart_msgq, 2, 128, 4);
+K_MSGQ_DEFINE(uart_msgq, 2, 280, 4);
 char send_buf[256];
 
 
-char* sendESP(const char* str, const struct device *uart_dev)
+char* sendESP(const char* str, const struct device *uart_dev, status stat)
 {
-    snprintf(send_buf, 64, "AT+CIPSNTPTIME?\r\n");
+    snprintf(send_buf, 64, str);
     send_str(uart_dev, send_buf);
 
-    return returnUsartStr();
+    return returnUsartStr(stat);
 }
 
 char* getNTPTime()
@@ -18,7 +18,7 @@ char* getNTPTime()
     return time;
 }
 
-char* returnUsartStr()
+char* returnUsartStr(status stat)
 {
     int ret;
     uint16_t c;
@@ -26,6 +26,21 @@ char* returnUsartStr()
     for(int i = 0; i< sizeof(rx_buf); i++)
     {
         rx_buf[i] = '\0';
+    }
+    char* check;
+    char* check2;
+
+    switch(stat)
+    {
+        case rst:
+            check = "WIFI DISCONNECT\r\n";
+            check2 = "WIFI GOT IP\r\n";
+
+            break;
+        case at:
+            check = "OK\r\n";
+            check2 = "FAIL\r\n";
+
     }
     while(1)
     {
@@ -35,9 +50,19 @@ char* returnUsartStr()
             rx_buf[rx_buf_pos] = c;
             rx_buf_pos++;
         }
-        char* check = "OK\r\n";
-        const char *lastFourCharacters = rx_buf + strlen(rx_buf) - strlen("OK\r\n");
+        
+        // check = "OK\r\n";
+        // char* check = "OK\r\n";
+
+        const char *lastFourCharacters = rx_buf + strlen(rx_buf) - strlen(check);
+        printk("last4char: %s\n", lastFourCharacters);
+        const char *lastFourCharacters2 = rx_buf + strlen(rx_buf) - strlen(check2);
+
         if(strcmp(check, lastFourCharacters) == 0)
+        {
+            return rx_buf;
+        }
+        else if(strcmp(check2, lastFourCharacters2) == 0)
         {
             return rx_buf;
         }

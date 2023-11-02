@@ -66,6 +66,8 @@ void send_str(const struct device *dev, const char *str) {
 void uartTest()
 {
 	struct device *const uart_dev = DEVICE_DT_GET(UART_DEVICE_NODE);
+	static const struct device *const rtc_dev = DEVICE_DT_GET(rtc_device_node);
+
 	if (!device_is_ready(uart_dev)) {
         printk("UART device not found!");
         return 0;
@@ -79,10 +81,24 @@ void uartTest()
     int index = 0;
 	while(1)
 	{
-        char* resp = sendESP("AT\r\n", uart_dev);
+        char* resp;
+        resp = sendESP("AT+RST\r\n", uart_dev, rst);
+        printk("%s", resp);
+        k_sleep(K_MSEC(10000));
+
+        resp = sendESP("AT+CWJAP=\"iPhone van Joey\",\"123456789\"\r\n", uart_dev, at);
+        printk("%s", resp);
+        k_sleep(K_MSEC(12000));
+
+        resp = sendESP("AT+CIPSNTPCFG=1,1,\"0.nl.pool.ntp.org\"\r\n", uart_dev, at);
+        printk("%s", resp);
+        k_sleep(K_MSEC(1000));
+
+        resp = sendESP("AT+CIPSNTPTIME?\r\n", uart_dev, at);
         printk("%s", resp);
         k_sleep(K_MSEC(2000));
-		
+        parseTime(resp, rtc_dev);
+		printk("Epoch Time: %lld\n", getEpochTime(rtc_dev));
 		
 	}
 
@@ -154,17 +170,10 @@ int main(void)
 	// const struct device *const dev1 = DEVICE_DT_GET(NODE_EP1);
 	// const struct device *const dev2 = DEVICE_DT_GET(NODE_EP2);
 	// const struct device *sensor = DEVICE_DT_GET_ANY(bosch_bme280);
-	static const struct device *const dev = DEVICE_DT_GET(rtc_device_node);
+	// static const struct device *const rtc_dev = DEVICE_DT_GET(rtc_device_node);
 	
 	
-	struct tm rtc_time = {
-        .tm_year = 2023-1900,
-        .tm_mon = 10,
-        .tm_mday = 1,
-        .tm_hour = 12,
-        .tm_min = 0,
-        .tm_sec = 0
-    };
+	
 
 	
 

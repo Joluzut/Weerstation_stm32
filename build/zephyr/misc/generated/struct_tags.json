@@ -1,12 +1,12 @@
 {
     "__net_socket": [
+        "net_context",
+        "modem_socket",
         "dispatcher_context",
         "spair",
         "net_mgmt_socket",
         "tls_context",
-        "websocket_context",
-        "net_context",
-        "modem_socket"
+        "websocket_context"
     ],
     "__subsystem": [
         "adc_driver_api",
@@ -15,6 +15,7 @@
         "reset_driver_api",
         "sensor_driver_api",
         "uart_driver_api",
+        "rtc_driver_api",
         "crypto_driver_api",
         "auxdisplay_driver_api",
         "bbram_driver_api",
@@ -51,7 +52,6 @@
         "regulator_parent_driver_api",
         "regulator_driver_api",
         "retained_mem_driver_api",
-        "rtc_driver_api",
         "sdhc_driver_api",
         "smbus_driver_api",
         "spi_driver_api",

@@ -178,6 +178,9 @@
 /Users/dinordi/zephyrproject/zephyr/samples/basic/Weerstation_stm32/build/zephyr/drivers/timer/CMakeFiles/drivers__timer.dir
 /Users/dinordi/zephyrproject/zephyr/samples/basic/Weerstation_stm32/build/zephyr/drivers/timer/CMakeFiles/edit_cache.dir
 /Users/dinordi/zephyrproject/zephyr/samples/basic/Weerstation_stm32/build/zephyr/drivers/timer/CMakeFiles/rebuild_cache.dir
+/Users/dinordi/zephyrproject/zephyr/samples/basic/Weerstation_stm32/build/zephyr/drivers/rtc/CMakeFiles/drivers__rtc.dir
+/Users/dinordi/zephyrproject/zephyr/samples/basic/Weerstation_stm32/build/zephyr/drivers/rtc/CMakeFiles/edit_cache.dir
+/Users/dinordi/zephyrproject/zephyr/samples/basic/Weerstation_stm32/build/zephyr/drivers/rtc/CMakeFiles/rebuild_cache.dir
 /Users/dinordi/zephyrproject/zephyr/samples/basic/Weerstation_stm32/build/modules/pcf85063a/CMakeFiles/edit_cache.dir
 /Users/dinordi/zephyrproject/zephyr/samples/basic/Weerstation_stm32/build/modules/pcf85063a/CMakeFiles/rebuild_cache.dir
 /Users/dinordi/zephyrproject/zephyr/samples/basic/Weerstation_stm32/build/modules/acpica/CMakeFiles/edit_cache.dir

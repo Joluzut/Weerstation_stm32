@@ -1,0 +1,789 @@
+{
+	"archive" : {},
+	"artifacts" : 
+	[
+		{
+			"path" : "zephyr/libzephyr.a"
+		}
+	],
+	"backtrace" : 2,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"zephyr_library_named",
+			"add_dependencies",
+			"target_link_libraries",
+			"target_include_directories",
+			"zephyr_library_include_directories",
+			"target_sources",
+			"zephyr_sources",
+			"zephyr_sources_ifdef",
+			"include"
+		],
+		"files" : 
+		[
+			"/Users/dinordi/zephyrproject/zephyr/cmake/modules/extensions.cmake",
+			"/Users/dinordi/zephyrproject/zephyr/CMakeLists.txt",
+			"/Users/dinordi/zephyrproject/zephyr/lib/os/CMakeLists.txt",
+			"/Users/dinordi/zephyrproject/zephyr/misc/generated/CMakeLists.txt",
+			"/Users/dinordi/zephyrproject/zephyr/soc/arm/st_stm32/stm32f0/CMakeLists.txt",
+			"/Users/dinordi/zephyrproject/zephyr/soc/arm/st_stm32/common/CMakeLists.txt",
+			"/Users/dinordi/zephyrproject/zephyr/subsys/tracing/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 110,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 424,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 901,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 843,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 428,
+				"parent" : 1
+			},
+			{
+				"file" : 2
+			},
+			{
+				"command" : 5,
+				"file" : 2,
+				"line" : 65,
+				"parent" : 6
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 485,
+				"parent" : 7
+			},
+			{
+				"command" : 7,
+				"file" : 2,
+				"line" : 9,
+				"parent" : 6
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 86,
+				"parent" : 9
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 86,
+				"parent" : 9
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 86,
+				"parent" : 9
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 86,
+				"parent" : 9
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 86,
+				"parent" : 9
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 86,
+				"parent" : 9
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 86,
+				"parent" : 9
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 86,
+				"parent" : 9
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 86,
+				"parent" : 9
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 86,
+				"parent" : 9
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 86,
+				"parent" : 9
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 86,
+				"parent" : 9
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 86,
+				"parent" : 9
+			},
+			{
+				"command" : 8,
+				"file" : 2,
+				"line" : 28,
+				"parent" : 6
+			},
+			{
+				"command" : 7,
+				"file" : 0,
+				"line" : 1746,
+				"parent" : 23
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 86,
+				"parent" : 24
+			},
+			{
+				"command" : 7,
+				"file" : 2,
+				"line" : 40,
+				"parent" : 6
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 86,
+				"parent" : 26
+			},
+			{
+				"command" : 9,
+				"file" : 1,
+				"line" : 604,
+				"parent" : 0
+			},
+			{
+				"file" : 3,
+				"parent" : 28
+			},
+			{
+				"command" : 7,
+				"file" : 3,
+				"line" : 18,
+				"parent" : 29
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 86,
+				"parent" : 30
+			},
+			{
+				"file" : 4
+			},
+			{
+				"command" : 7,
+				"file" : 4,
+				"line" : 10,
+				"parent" : 32
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 86,
+				"parent" : 33
+			},
+			{
+				"file" : 5
+			},
+			{
+				"command" : 7,
+				"file" : 5,
+				"line" : 3,
+				"parent" : 35
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 86,
+				"parent" : 36
+			},
+			{
+				"command" : 7,
+				"file" : 5,
+				"line" : 10,
+				"parent" : 35
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 86,
+				"parent" : 38
+			},
+			{
+				"file" : 6
+			},
+			{
+				"command" : 7,
+				"file" : 6,
+				"line" : 49,
+				"parent" : 40
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 86,
+				"parent" : 41
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-g"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-fno-strict-aliasing"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-Os"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-imacros"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "/Users/dinordi/zephyrproject/zephyr/samples/basic/Weerstation_stm32/build/zephyr/include/generated/autoconf.h"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-fno-printf-return-value"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-fno-common"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-g"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-gdwarf-4"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-fdiagnostics-color=always"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-mcpu=cortex-m0"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-mthumb"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-mabi=aapcs"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-mfp16-format=ieee"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "--sysroot=/Users/dinordi/zephyr-sdk-0.16.1/arm-zephyr-eabi/arm-zephyr-eabi"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-imacros"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "/Users/dinordi/zephyrproject/zephyr/include/zephyr/toolchain/zephyr_stdint.h"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-Wall"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-Wformat"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-Wformat-security"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-Wno-format-zero-length"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-Wno-pointer-sign"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-Wpointer-arith"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-Wexpansion-to-defined"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-Wno-unused-but-set-variable"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-Werror=implicit-int"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-fno-pic"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-fno-pie"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-fno-asynchronous-unwind-tables"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-ftls-model=local-exec"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-fno-reorder-functions"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "--param=min-pagesize=0"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-fno-defer-pop"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-fmacro-prefix-map=/Users/dinordi/zephyrproject/zephyr/samples/basic/Weerstation_stm32=CMAKE_SOURCE_DIR"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-fmacro-prefix-map=/Users/dinordi/zephyrproject/zephyr=ZEPHYR_BASE"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-fmacro-prefix-map=/Users/dinordi/zephyrproject=WEST_TOPDIR"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-ffunction-sections"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-fdata-sections"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "--specs=picolibc.specs"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-std=c99"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 5,
+					"define" : "HSE_VALUE=8000000"
+				},
+				{
+					"backtrace" : 5,
+					"define" : "KERNEL"
+				},
+				{
+					"backtrace" : 5,
+					"define" : "PICOLIBC_INTEGER_PRINTF_SCANF"
+				},
+				{
+					"backtrace" : 5,
+					"define" : "STM32F030x8"
+				},
+				{
+					"backtrace" : 5,
+					"define" : "USE_FULL_LL_DRIVER"
+				},
+				{
+					"backtrace" : 5,
+					"define" : "USE_HAL_DRIVER"
+				},
+				{
+					"backtrace" : 5,
+					"define" : "_FORTIFY_SOURCE=1"
+				},
+				{
+					"backtrace" : 5,
+					"define" : "_POSIX_C_SOURCE=200809"
+				},
+				{
+					"backtrace" : 5,
+					"define" : "__LINUX_ERRNO_EXTENSIONS__"
+				},
+				{
+					"backtrace" : 5,
+					"define" : "__PROGRAM_START"
+				},
+				{
+					"backtrace" : 5,
+					"define" : "__ZEPHYR__=1"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 8,
+					"path" : "/Users/dinordi/zephyrproject/zephyr/kernel/include"
+				},
+				{
+					"backtrace" : 8,
+					"path" : "/Users/dinordi/zephyrproject/zephyr/arch/arm/include"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/dinordi/zephyrproject/zephyr/include"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/dinordi/zephyrproject/zephyr/samples/basic/Weerstation_stm32/build/zephyr/include/generated"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/dinordi/zephyrproject/zephyr/soc/arm/st_stm32/stm32f0"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/dinordi/zephyrproject/zephyr/drivers"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/dinordi/zephyrproject/zephyr/soc/arm/st_stm32/common"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/dinordi/zephyrproject/pcf85063a/include"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/dinordi/zephyrproject/modules/lib/acpica/../../zephyr/include"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/dinordi/zephyrproject/modules/lib/acpica/.."
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/dinordi/zephyrproject/modules/lib/acpica/source/include"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/dinordi/zephyrproject/modules/lib/acpica/source/include/platform"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/dinordi/zephyrproject/modules/lib/acpica/source/compiler"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/dinordi/zephyrproject/modules/lib/acpica/generate/zephyr"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/dinordi/zephyrproject/modules/lib/acpica/source/tools/acpiexec"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/dinordi/zephyrproject/modules/lib/acpica/source/tools/acpidump"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/dinordi/zephyrproject/modules/hal/cmsis/CMSIS/Core/Include"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/dinordi/zephyrproject/zephyr/modules/cmsis/."
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/dinordi/zephyrproject/modules/hal/stm32/stm32cube/stm32f0xx/soc"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/dinordi/zephyrproject/modules/hal/stm32/stm32cube/stm32f0xx/drivers/include"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/dinordi/zephyrproject/modules/hal/stm32/stm32cube/stm32f0xx/drivers/include/Legacy"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/Users/dinordi/zephyrproject/modules/hal/stm32/stm32cube/common_ll/include"
+				}
+			],
+			"language" : "C",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 3,
+			"id" : "zephyr_generated_headers::@d36e55b69c1b90fb26b2"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "kobj_types_h_target::@d36e55b69c1b90fb26b2"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "driver_validation_h_target::@d36e55b69c1b90fb26b2"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "syscall_list_h_target::@d36e55b69c1b90fb26b2"
+		}
+	],
+	"id" : "zephyr::@d36e55b69c1b90fb26b2",
+	"name" : "zephyr",
+	"nameOnDisk" : "libzephyr.a",
+	"paths" : 
+	{
+		"build" : "zephyr",
+		"source" : "/Users/dinordi/zephyrproject/zephyr"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 10,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/dinordi/zephyrproject/zephyr/lib/os/cbprintf_packaged.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 11,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/dinordi/zephyrproject/zephyr/lib/os/dec.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 12,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/dinordi/zephyrproject/zephyr/lib/os/fdtable.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 13,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/dinordi/zephyrproject/zephyr/lib/os/hex.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 14,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/dinordi/zephyrproject/zephyr/lib/os/printk.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 15,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/dinordi/zephyrproject/zephyr/lib/os/rb.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 16,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/dinordi/zephyrproject/zephyr/lib/os/sem.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 17,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/dinordi/zephyrproject/zephyr/lib/os/thread_entry.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 18,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/dinordi/zephyrproject/zephyr/lib/os/timeutil.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 19,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/dinordi/zephyrproject/zephyr/lib/os/heap.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 20,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/dinordi/zephyrproject/zephyr/lib/os/heap-validate.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 21,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/dinordi/zephyrproject/zephyr/lib/os/bitarray.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 22,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/dinordi/zephyrproject/zephyr/lib/os/multi_heap.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 25,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/dinordi/zephyrproject/zephyr/lib/os/cbprintf_complete.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 27,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/dinordi/zephyrproject/zephyr/lib/os/assert.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 31,
+			"compileGroupIndex" : 0,
+			"path" : "build/zephyr/misc/generated/configs.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 34,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/dinordi/zephyrproject/zephyr/soc/arm/st_stm32/stm32f0/soc.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 37,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/dinordi/zephyrproject/zephyr/soc/arm/st_stm32/common/stm32cube_hal.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 39,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/dinordi/zephyrproject/zephyr/soc/arm/st_stm32/common/soc_config.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 42,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/dinordi/zephyrproject/zephyr/subsys/tracing/tracing_none.c",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "STATIC_LIBRARY"
+}

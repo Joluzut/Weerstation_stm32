@@ -117,3 +117,8 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/Users/dinordi/zephyrproject/zephyr/samples/basic/Weerstation_stm32/build/zephyr/drivers/timer/cmake_install.cmake")
 endif()
 
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/Users/dinordi/zephyrproject/zephyr/samples/basic/Weerstation_stm32/build/zephyr/drivers/rtc/cmake_install.cmake")
+endif()
+

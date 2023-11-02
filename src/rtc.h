@@ -8,5 +8,5 @@
 
 
 void syncRTC(const char* time, const struct device *dev, struct tm *timeStruct);
-time_t getEpochTime(const struct device *dev, const struct tm *timeStruct);
-int returnOne();
+time_t getEpochTime(const struct device *dev);
+void parseTime(char* response, const struct device *rtc);
