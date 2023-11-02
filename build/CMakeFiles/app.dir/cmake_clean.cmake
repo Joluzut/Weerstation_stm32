@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/app.dir/src/eeprom.c.obj"
+  "CMakeFiles/app.dir/src/eeprom.c.obj.d"
   "CMakeFiles/app.dir/src/eeprom_24lc64.c.obj"
   "CMakeFiles/app.dir/src/eeprom_24lc64.c.obj.d"
   "CMakeFiles/app.dir/src/main.c.obj"

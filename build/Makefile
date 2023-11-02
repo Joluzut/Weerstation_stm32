@@ -947,6 +947,30 @@ footprint/fast:
 	$(MAKE) $(MAKESILENT) -f zephyr\cmake\reports\CMakeFiles\footprint.dir\build.make zephyr/cmake/reports/CMakeFiles/footprint.dir/build
 .PHONY : footprint/fast
 
+src/eeprom.obj: src/eeprom.c.obj
+.PHONY : src/eeprom.obj
+
+# target to build an object file
+src/eeprom.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\app.dir\build.make CMakeFiles/app.dir/src/eeprom.c.obj
+.PHONY : src/eeprom.c.obj
+
+src/eeprom.i: src/eeprom.c.i
+.PHONY : src/eeprom.i
+
+# target to preprocess a source file
+src/eeprom.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\app.dir\build.make CMakeFiles/app.dir/src/eeprom.c.i
+.PHONY : src/eeprom.c.i
+
+src/eeprom.s: src/eeprom.c.s
+.PHONY : src/eeprom.s
+
+# target to generate assembly for a file
+src/eeprom.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\app.dir\build.make CMakeFiles/app.dir/src/eeprom.c.s
+.PHONY : src/eeprom.c.s
+
 src/eeprom_24lc64.obj: src/eeprom_24lc64.c.obj
 .PHONY : src/eeprom_24lc64.obj
 
@@ -1067,6 +1091,9 @@ help:
 	@echo ... zephyr
 	@echo ... zephyr_final
 	@echo ... zephyr_pre0
+	@echo ... src/eeprom.obj
+	@echo ... src/eeprom.i
+	@echo ... src/eeprom.s
 	@echo ... src/eeprom_24lc64.obj
 	@echo ... src/eeprom_24lc64.i
 	@echo ... src/eeprom_24lc64.s
