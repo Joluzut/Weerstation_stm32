@@ -14,10 +14,10 @@
 #include <zephyr/drivers/eeprom.h>
 #include "rtc.h"
 #include "esp8266.h"
+#include "eeprom.h"
+
 
 // #define EEPROM_NODE DT_COMPAT_GET_ANY_STATUS_OKAY(zephyr_i2c-target-eeprom)
-#define NODE_EP1 DT_NODELABEL(eeprom1)
-#define NODE_EP2 DT_NODELABEL(eeprom2)
 #define rtc_device_node DT_NODELABEL(rtc) //RTC node
 #define UART_DEVICE_NODE DT_NODELABEL(usart1) //Uart node
 
@@ -112,11 +112,12 @@ int main(void)
 	
 
     struct sensor_value temp, press, humidity;
-	int8_t * data[5];
-
-	int ret;
-	int counter = 0;
-	int8_t eeprom_data[sizeof(int8_t)];
+	int8_t * data[6];
+	int counterWrite = 0;
+	int counterRead = 0;
+	int8_t recieved;
+	int32_t time = 1698849621;
+	int32_t recievedtime;
 	while (1) {
 		
 		uartTest();
