@@ -31,28 +31,32 @@
 
    	
 static char rx_buf2[128];
-// void rusa(const struct device *uart_dev, void *user_data)
-// {
-//     int ret;
 
-//     ret = uart_poll_in(uart_dev, &uart_data);
-//     if (ret == 0) {
-//         // printk("Char: %c\n", uart_data);
-//         // Put received data into the message queue
-// 		// printk("Char: %c\n", uart_data);
-//         ret = k_msgq_put(&uart_msgq, &uart_data, K_NO_WAIT);
-//         if (ret != 0) {
-//             printk("Failed to put data into message queue\n");
-//         }
-//     } else if (ret == -EAGAIN) {
-//         // No data available, handle it accordingly
-//     } else {
-//         // Handle error, if any
-//         printk("UART read error: %d\n", ret);
-//     }
-    
-// }
+void startup(const struct device *uart_dev, const struct device *rtc_dev)
+{
+    while(1)
+    {
+        char* resp;
+        resp = sendESP("AT+CWJAP=\"iPhone van Joey\",\"123456789\"\r\n", uart_dev, at);
+        printk("%s", resp);
+        k_sleep(K_MSEC(100));
+        const char *lastFourCharacters = resp + strlen(resp) - strlen("FAIL\r\n");
+        if(strcmp(lastFourCharacters, "FAIL\r\n") == 0)
+        {
+            continue;
+        }
+        resp = sendESP("AT+CIPSNTPCFG=1,1,\"0.nl.pool.ntp.org\"\r\n", uart_dev, at);
+        printk("%s", resp);
+        k_sleep(K_MSEC(1000));
 
+        resp = sendESP("AT+CIPSNTPTIME?\r\n", uart_dev, at);
+        printk("%s", resp);
+        k_sleep(K_MSEC(1000));
+        parseTime(resp, rtc_dev);
+        k_sleep(K_MSEC(3000));
+        break;
+    }
+}
 
 
 void uartTest()
@@ -71,6 +75,10 @@ void uartTest()
     char recv_buf[1024];
     uart_irq_rx_enable(uart_dev);
     int index = 0;
+
+    startup(uart_dev, rtc_dev);
+
+
 	while(1)
 	{
         char* resp;
@@ -78,30 +86,26 @@ void uartTest()
         // printk("%s", resp);
         // k_sleep(K_MSEC(3000));
 
-        resp = sendESP("AT+CWJAP=\"iPhone van Joey\",\"123456789\"\r\n", uart_dev, at);
-        printk("%s", resp);
-        k_sleep(K_MSEC(100));
+        //meting
 
-        resp = sendESP("AT+CIPSNTPCFG=1,1,\"0.nl.pool.ntp.org\"\r\n", uart_dev, at);
-        printk("%s", resp);
-        k_sleep(K_MSEC(1000));
-
-        resp = sendESP("AT+CIPSNTPTIME?\r\n", uart_dev, at);
-        printk("%s", resp);
-        k_sleep(K_MSEC(1000));
-        parseTime(resp, rtc_dev);
-		// printk("Epoch Time: %lld\n", getEpochTime(rtc_dev));
-        k_sleep(K_MSEC(3000));
 
         measurementStruct meas = sendMeasurement(9,15, 100,92, 46,12, getEpochTime(rtc_dev), uart_dev);
 		printk("Measurement sending: %s, %s, %s", meas.tcp, meas.cipsend, meas.request);
-        resp = sendESP(meas.tcp, uart_dev, at);
+        resp = sendESP(meas.tcp, uart_dev, tcp);
         printk("%s", resp);
         k_sleep(K_MSEC(1500));
-        resp = sendESP(meas.cipsend, uart_dev, at);
+        
+
+        resp = sendESP(meas.cipsend, uart_dev, tcp);
         printk("%s", resp);
         k_sleep(K_MSEC(1000));
-        resp = sendESP(meas.request, uart_dev, at);
+        const char *lastFourCharacters = resp + strlen(resp) - strlen("ERROR\r\n");
+        if(strcmp(lastFourCharacters, "ERROR\r\n") == 0)
+        {
+            startup(uart_dev, rtc_dev);
+            continue;
+        }
+        resp = sendESP(meas.request, uart_dev, tcp);
         printk("%s", resp);
         k_sleep(K_MSEC(10000));
 

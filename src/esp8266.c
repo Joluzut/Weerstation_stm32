@@ -75,6 +75,10 @@ char* returnUsartStr(status stat)
         case at:
             check = "OK\r\n";
             check2 = "FAIL\r\n";
+            break;
+        case tcp:
+            check = "OK\r\n";
+            check2 = "ERROR\r\n";
 
     }
     while(1)

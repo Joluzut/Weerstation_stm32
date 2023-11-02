@@ -14,7 +14,8 @@
 #define MSG_SIZE 512
 typedef enum{
     rst=0,
-    at
+    at,
+    tcp
 }status;
 typedef struct
 {
