@@ -8,9 +8,15 @@ ELF Header:
   Type:                              EXEC (Executable file)
   Machine:                           ARM
   Version:                           0x1
+<<<<<<< HEAD
   Entry point address:               0x8002a89
   Start of program headers:          52 (bytes into file)
   Start of section headers:          903876 (bytes into file)
+=======
+  Entry point address:               0x8002dc5
+  Start of program headers:          52 (bytes into file)
+  Start of section headers:          783200 (bytes into file)
+>>>>>>> origin/development
   Flags:                             0x5000200, Version5 EABI, soft-float ABI
   Size of this header:               52 (bytes)
   Size of program headers:           32 (bytes)
@@ -22,6 +28,7 @@ ELF Header:
 Section Headers:
   [Nr] Name              Type            Addr     Off    Size   ES Flg Lk Inf Al
   [ 0]                   NULL            00000000 000000 000000 00      0   0  0
+<<<<<<< HEAD
   [ 1] rom_start         PROGBITS        08000000 0000f4 0000b4 00 WAX  0   0  4
   [ 2] text              PROGBITS        080000b4 0001a8 0092d4 00  AX  0   0  4
   [ 3] .ARM.exidx        ARM_EXIDX       08009388 00947c 000008 00  AL  2   0  4
@@ -52,6 +59,35 @@ Section Headers:
   [28] .symtab           SYMTAB          00000000 0ce660 0081a0 10     29 1245  4
   [29] .strtab           STRTAB          00000000 0d6800 006185 00      0   0  1
   [30] .shstrtab         STRTAB          00000000 0dc985 00013d 00      0   0  1
+=======
+  [ 1] rom_start         PROGBITS        08000000 0000d4 0000b4 00 WAX  0   0  4
+  [ 2] text              PROGBITS        080000b4 000188 006830 00  AX  0   0  4
+  [ 3] .ARM.exidx        ARM_EXIDX       080068e4 0069b8 000008 00  AL  2   0  4
+  [ 4] initlevel         PROGBITS        080068ec 0069c0 0000a0 00   A  0   0  4
+  [ 5] device_area       PROGBITS        0800698c 006a60 000140 00   A  0   0  4
+  [ 6] sw_isr_table      PROGBITS        08006acc 006ba0 0000e8 00  WA  0   0  4
+  [ 7] log_const_area    PROGBITS        08006bb4 006c88 000058 00   A  0   0  4
+  [ 8] rodata            PROGBITS        08006c0c 006ce0 0005bc 00   A  0   0  4
+  [ 9] .ramfunc          PROGBITS        20000000 00744c 000000 00   W  0   0  1
+  [10] datas             PROGBITS        20000000 0072a0 000188 00  WA  0   0  8
+  [11] device_states     PROGBITS        20000188 007428 000020 00  WA  0   0  1
+  [12] bss               NOBITS          200001a8 007450 0002ae 00  WA  0   0  8
+  [13] noinit            NOBITS          20000458 007450 000548 00  WA  0   0  8
+  [14] .comment          PROGBITS        00000000 00744c 000020 01  MS  0   0  1
+  [15] .debug_aranges    PROGBITS        00000000 007470 0011d8 00      0   0  8
+  [16] .debug_info       PROGBITS        00000000 008648 05b779 00      0   0  1
+  [17] .debug_abbrev     PROGBITS        00000000 063dc1 00b28b 00      0   0  1
+  [18] .debug_line       PROGBITS        00000000 06f04c 019fcc 00      0   0  1
+  [19] .debug_frame      PROGBITS        00000000 089018 0029e4 00      0   0  4
+  [20] .debug_str        PROGBITS        00000000 08b9fc 00a4aa 01  MS  0   0  1
+  [21] .debug_loc        PROGBITS        00000000 095ea6 018c75 00      0   0  1
+  [22] .debug_ranges     PROGBITS        00000000 0aeb20 004130 00      0   0  8
+  [23] .ARM.attributes   ARM_ATTRIBUTES  00000000 0b2c50 00002c 00      0   0  1
+  [24] .last_section     PROGBITS        08007370 007448 000004 00   A  0   0  1
+  [25] .symtab           SYMTAB          00000000 0b2c7c 006c60 10     26 988  4
+  [26] .strtab           STRTAB          00000000 0b98dc 005961 00      0   0  1
+  [27] .shstrtab         STRTAB          00000000 0bf23d 000123 00      0   0  1
+>>>>>>> origin/development
 Key to Flags:
   W (write), A (alloc), X (execute), M (merge), S (strings), I (info),
   L (link order), O (extra OS processing required), G (group), T (TLS),
@@ -60,12 +96,20 @@ Key to Flags:
 
 Program Headers:
   Type           Offset   VirtAddr   PhysAddr   FileSiz MemSiz  Flg Align
+<<<<<<< HEAD
   EXIDX          0x00947c 0x08009388 0x08009388 0x00008 0x00008 R   0x4
   LOAD           0x0000f4 0x08000000 0x08000000 0x0a440 0x0a440 RWE 0x4
   LOAD           0x00a538 0x20000000 0x0800a440 0x00274 0x00274 RW  0x8
   LOAD           0x00a7ac 0x0800a6b4 0x0800a6b4 0x00004 0x00004 R   0x1
   LOAD           0x000000 0x20000278 0x20000278 0x00000 0x00d6c RW  0x8
   TLS            0x0097d8 0x080096e4 0x080096e4 0x00000 0x00046 R   0x4
+=======
+  EXIDX          0x0069b8 0x080068e4 0x080068e4 0x00008 0x00008 R   0x4
+  LOAD           0x0000d4 0x08000000 0x08000000 0x071c8 0x071c8 RWE 0x4
+  LOAD           0x0072a0 0x20000000 0x080071c8 0x001a8 0x001a8 RW  0x8
+  LOAD           0x007448 0x08007370 0x08007370 0x00004 0x00004 R   0x1
+  LOAD           0x000000 0x200001a8 0x200001a8 0x00000 0x007f8 RW  0x8
+>>>>>>> origin/development
 
  Section to Segment mapping:
   Segment Sections...

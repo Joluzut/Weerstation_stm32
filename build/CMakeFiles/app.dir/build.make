@@ -68,10 +68,24 @@ include CMakeFiles/app.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/app.dir/flags.make
 
+CMakeFiles/app.dir/src/eeprom.c.obj: CMakeFiles/app.dir/flags.make
+CMakeFiles/app.dir/src/eeprom.c.obj: C:/Users/luukv/zephyrproject/zephyr/samples/sensor/eeprom/src/eeprom.c
+CMakeFiles/app.dir/src/eeprom.c.obj: CMakeFiles/app.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/app.dir/src/eeprom.c.obj"
+	C:\Users\luukv\zephyr-sdk-0.16.1\arm-zephyr-eabi\bin\arm-zephyr-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/app.dir/src/eeprom.c.obj -MF CMakeFiles\app.dir\src\eeprom.c.obj.d -o CMakeFiles\app.dir\src\eeprom.c.obj -c C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\src\eeprom.c
+
+CMakeFiles/app.dir/src/eeprom.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/app.dir/src/eeprom.c.i"
+	C:\Users\luukv\zephyr-sdk-0.16.1\arm-zephyr-eabi\bin\arm-zephyr-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\src\eeprom.c > CMakeFiles\app.dir\src\eeprom.c.i
+
+CMakeFiles/app.dir/src/eeprom.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/app.dir/src/eeprom.c.s"
+	C:\Users\luukv\zephyr-sdk-0.16.1\arm-zephyr-eabi\bin\arm-zephyr-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\src\eeprom.c -o CMakeFiles\app.dir\src\eeprom.c.s
+
 CMakeFiles/app.dir/src/eeprom_24lc64.c.obj: CMakeFiles/app.dir/flags.make
 CMakeFiles/app.dir/src/eeprom_24lc64.c.obj: C:/Users/luukv/zephyrproject/zephyr/samples/sensor/eeprom/src/eeprom_24lc64.c
 CMakeFiles/app.dir/src/eeprom_24lc64.c.obj: CMakeFiles/app.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/app.dir/src/eeprom_24lc64.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/app.dir/src/eeprom_24lc64.c.obj"
 	C:\Users\luukv\zephyr-sdk-0.16.1\arm-zephyr-eabi\bin\arm-zephyr-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/app.dir/src/eeprom_24lc64.c.obj -MF CMakeFiles\app.dir\src\eeprom_24lc64.c.obj.d -o CMakeFiles\app.dir\src\eeprom_24lc64.c.obj -c C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\src\eeprom_24lc64.c
 
 CMakeFiles/app.dir/src/eeprom_24lc64.c.i: cmake_force
@@ -85,7 +99,7 @@ CMakeFiles/app.dir/src/eeprom_24lc64.c.s: cmake_force
 CMakeFiles/app.dir/src/main.c.obj: CMakeFiles/app.dir/flags.make
 CMakeFiles/app.dir/src/main.c.obj: C:/Users/luukv/zephyrproject/zephyr/samples/sensor/eeprom/src/main.c
 CMakeFiles/app.dir/src/main.c.obj: CMakeFiles/app.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/app.dir/src/main.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/app.dir/src/main.c.obj"
 	C:\Users\luukv\zephyr-sdk-0.16.1\arm-zephyr-eabi\bin\arm-zephyr-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/app.dir/src/main.c.obj -MF CMakeFiles\app.dir\src\main.c.obj.d -o CMakeFiles\app.dir\src\main.c.obj -c C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\src\main.c
 
 CMakeFiles/app.dir/src/main.c.i: cmake_force
@@ -98,17 +112,19 @@ CMakeFiles/app.dir/src/main.c.s: cmake_force
 
 # Object files for target app
 app_OBJECTS = \
+"CMakeFiles/app.dir/src/eeprom.c.obj" \
 "CMakeFiles/app.dir/src/eeprom_24lc64.c.obj" \
 "CMakeFiles/app.dir/src/main.c.obj"
 
 # External object files for target app
 app_EXTERNAL_OBJECTS =
 
+app/libapp.a: CMakeFiles/app.dir/src/eeprom.c.obj
 app/libapp.a: CMakeFiles/app.dir/src/eeprom_24lc64.c.obj
 app/libapp.a: CMakeFiles/app.dir/src/main.c.obj
 app/libapp.a: CMakeFiles/app.dir/build.make
 app/libapp.a: CMakeFiles/app.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C static library app\libapp.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C static library app\libapp.a"
 	$(CMAKE_COMMAND) -P CMakeFiles\app.dir\cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\app.dir\link.txt --verbose=$(VERBOSE)
 

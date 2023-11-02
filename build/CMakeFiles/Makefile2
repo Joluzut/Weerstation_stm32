@@ -2860,13 +2860,13 @@ CMakeFiles/zephyr_property_target.dir/clean:
 # Target rules for target CMakeFiles/app.dir
 
 # All Build rule for target.
-CMakeFiles/app.dir/all: zephyr/CMakeFiles/kobj_types_h_target.dir/all
-CMakeFiles/app.dir/all: zephyr/CMakeFiles/driver_validation_h_target.dir/all
 CMakeFiles/app.dir/all: zephyr/CMakeFiles/zephyr_generated_headers.dir/all
+CMakeFiles/app.dir/all: zephyr/CMakeFiles/kobj_types_h_target.dir/all
 CMakeFiles/app.dir/all: zephyr/CMakeFiles/syscall_list_h_target.dir/all
+CMakeFiles/app.dir/all: zephyr/CMakeFiles/driver_validation_h_target.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\app.dir\build.make CMakeFiles/app.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\app.dir\build.make CMakeFiles/app.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles --progress-num=5,6 "Built target app"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles --progress-num=5,6,7 "Built target app"
 .PHONY : CMakeFiles/app.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2889,10 +2889,10 @@ CMakeFiles/app.dir/clean:
 # Target rules for target zephyr/CMakeFiles/zephyr.dir
 
 # All Build rule for target.
-zephyr/CMakeFiles/zephyr.dir/all: zephyr/CMakeFiles/kobj_types_h_target.dir/all
-zephyr/CMakeFiles/zephyr.dir/all: zephyr/CMakeFiles/driver_validation_h_target.dir/all
 zephyr/CMakeFiles/zephyr.dir/all: zephyr/CMakeFiles/zephyr_generated_headers.dir/all
+zephyr/CMakeFiles/zephyr.dir/all: zephyr/CMakeFiles/kobj_types_h_target.dir/all
 zephyr/CMakeFiles/zephyr.dir/all: zephyr/CMakeFiles/syscall_list_h_target.dir/all
+zephyr/CMakeFiles/zephyr.dir/all: zephyr/CMakeFiles/driver_validation_h_target.dir/all
 	$(MAKE) $(MAKESILENT) -f zephyr\CMakeFiles\zephyr.dir\build.make zephyr/CMakeFiles/zephyr.dir/depend
 	$(MAKE) $(MAKESILENT) -f zephyr\CMakeFiles\zephyr.dir\build.make zephyr/CMakeFiles/zephyr.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles --progress-num=84,85,86,87,88,89,90,91,92,93,94,95,96 "Built target zephyr"
@@ -2900,7 +2900,7 @@ zephyr/CMakeFiles/zephyr.dir/all: zephyr/CMakeFiles/syscall_list_h_target.dir/al
 
 # Build rule for subdir invocation for target.
 zephyr/CMakeFiles/zephyr.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 18
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 17
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 zephyr/CMakeFiles/zephyr.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 0
 .PHONY : zephyr/CMakeFiles/zephyr.dir/rule
@@ -2999,12 +2999,12 @@ zephyr/CMakeFiles/parse_syscalls_target.dir/clean:
 zephyr/CMakeFiles/driver_validation_h_target.dir/all: zephyr/CMakeFiles/parse_syscalls_target.dir/all
 	$(MAKE) $(MAKESILENT) -f zephyr\CMakeFiles\driver_validation_h_target.dir\build.make zephyr/CMakeFiles/driver_validation_h_target.dir/depend
 	$(MAKE) $(MAKESILENT) -f zephyr\CMakeFiles\driver_validation_h_target.dir\build.make zephyr/CMakeFiles/driver_validation_h_target.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles --progress-num=22 "Built target driver_validation_h_target"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles --progress-num= "Built target driver_validation_h_target"
 .PHONY : zephyr/CMakeFiles/driver_validation_h_target.dir/all
 
 # Build rule for subdir invocation for target.
 zephyr/CMakeFiles/driver_validation_h_target.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 1
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 zephyr/CMakeFiles/driver_validation_h_target.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 0
 .PHONY : zephyr/CMakeFiles/driver_validation_h_target.dir/rule
@@ -3057,7 +3057,7 @@ zephyr/CMakeFiles/zephyr_generated_headers.dir/all: zephyr/CMakeFiles/version_h.
 
 # Build rule for subdir invocation for target.
 zephyr/CMakeFiles/zephyr_generated_headers.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 zephyr/CMakeFiles/zephyr_generated_headers.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 0
 .PHONY : zephyr/CMakeFiles/zephyr_generated_headers.dir/rule
@@ -3076,8 +3076,8 @@ zephyr/CMakeFiles/zephyr_generated_headers.dir/clean:
 
 # All Build rule for target.
 zephyr/CMakeFiles/offsets.dir/all: zephyr/CMakeFiles/kobj_types_h_target.dir/all
-zephyr/CMakeFiles/offsets.dir/all: zephyr/CMakeFiles/driver_validation_h_target.dir/all
 zephyr/CMakeFiles/offsets.dir/all: zephyr/CMakeFiles/syscall_list_h_target.dir/all
+zephyr/CMakeFiles/offsets.dir/all: zephyr/CMakeFiles/driver_validation_h_target.dir/all
 	$(MAKE) $(MAKESILENT) -f zephyr\CMakeFiles\offsets.dir\build.make zephyr/CMakeFiles/offsets.dir/depend
 	$(MAKE) $(MAKESILENT) -f zephyr\CMakeFiles\offsets.dir\build.make zephyr/CMakeFiles/offsets.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles --progress-num=81 "Built target offsets"
@@ -3085,7 +3085,7 @@ zephyr/CMakeFiles/offsets.dir/all: zephyr/CMakeFiles/syscall_list_h_target.dir/a
 
 # Build rule for subdir invocation for target.
 zephyr/CMakeFiles/offsets.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 zephyr/CMakeFiles/offsets.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 0
 .PHONY : zephyr/CMakeFiles/offsets.dir/rule
@@ -3111,7 +3111,7 @@ zephyr/CMakeFiles/offsets_h.dir/all: zephyr/CMakeFiles/offsets.dir/all
 
 # Build rule for subdir invocation for target.
 zephyr/CMakeFiles/offsets_h.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 zephyr/CMakeFiles/offsets_h.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 0
 .PHONY : zephyr/CMakeFiles/offsets_h.dir/rule
@@ -3132,12 +3132,12 @@ zephyr/CMakeFiles/offsets_h.dir/clean:
 zephyr/CMakeFiles/linker_zephyr_prebuilt_script_target.dir/all: zephyr/CMakeFiles/zephyr_generated_headers.dir/all
 	$(MAKE) $(MAKESILENT) -f zephyr\CMakeFiles\linker_zephyr_prebuilt_script_target.dir\build.make zephyr/CMakeFiles/linker_zephyr_prebuilt_script_target.dir/depend
 	$(MAKE) $(MAKESILENT) -f zephyr\CMakeFiles\linker_zephyr_prebuilt_script_target.dir\build.make zephyr/CMakeFiles/linker_zephyr_prebuilt_script_target.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles --progress-num=80 "Built target linker_zephyr_prebuilt_script_target"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles --progress-num= "Built target linker_zephyr_prebuilt_script_target"
 .PHONY : zephyr/CMakeFiles/linker_zephyr_prebuilt_script_target.dir/all
 
 # Build rule for subdir invocation for target.
 zephyr/CMakeFiles/linker_zephyr_prebuilt_script_target.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 zephyr/CMakeFiles/linker_zephyr_prebuilt_script_target.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 0
 .PHONY : zephyr/CMakeFiles/linker_zephyr_prebuilt_script_target.dir/rule
@@ -3156,31 +3156,31 @@ zephyr/CMakeFiles/linker_zephyr_prebuilt_script_target.dir/clean:
 
 # All Build rule for target.
 zephyr/CMakeFiles/zephyr_pre0.dir/all: zephyr/arch/common/CMakeFiles/arch__common.dir/all
-zephyr/CMakeFiles/zephyr_pre0.dir/all: zephyr/arch/common/CMakeFiles/isr_tables.dir/all
-zephyr/CMakeFiles/zephyr_pre0.dir/all: zephyr/CMakeFiles/kobj_types_h_target.dir/all
-zephyr/CMakeFiles/zephyr_pre0.dir/all: zephyr/CMakeFiles/driver_validation_h_target.dir/all
-zephyr/CMakeFiles/zephyr_pre0.dir/all: zephyr/CMakeFiles/offsets.dir/all
 zephyr/CMakeFiles/zephyr_pre0.dir/all: zephyr/CMakeFiles/linker_zephyr_prebuilt_script_target.dir/all
-zephyr/CMakeFiles/zephyr_pre0.dir/all: zephyr/CMakeFiles/zephyr.dir/all
+zephyr/CMakeFiles/zephyr_pre0.dir/all: zephyr/CMakeFiles/kobj_types_h_target.dir/all
 zephyr/CMakeFiles/zephyr_pre0.dir/all: zephyr/CMakeFiles/syscall_list_h_target.dir/all
+zephyr/CMakeFiles/zephyr_pre0.dir/all: zephyr/CMakeFiles/offsets.dir/all
+zephyr/CMakeFiles/zephyr_pre0.dir/all: zephyr/CMakeFiles/driver_validation_h_target.dir/all
+zephyr/CMakeFiles/zephyr_pre0.dir/all: zephyr/arch/common/CMakeFiles/isr_tables.dir/all
 zephyr/CMakeFiles/zephyr_pre0.dir/all: CMakeFiles/app.dir/all
-zephyr/CMakeFiles/zephyr_pre0.dir/all: zephyr/arch/arch/arm/core/aarch32/CMakeFiles/arch__arm__core__aarch32.dir/all
+zephyr/CMakeFiles/zephyr_pre0.dir/all: zephyr/CMakeFiles/zephyr.dir/all
 zephyr/CMakeFiles/zephyr_pre0.dir/all: zephyr/lib/libc/minimal/CMakeFiles/lib__libc__minimal.dir/all
+zephyr/CMakeFiles/zephyr_pre0.dir/all: zephyr/arch/arch/arm/core/aarch32/CMakeFiles/arch__arm__core__aarch32.dir/all
 zephyr/CMakeFiles/zephyr_pre0.dir/all: zephyr/arch/arch/arm/core/aarch32/cortex_m/CMakeFiles/arch__arm__core__aarch32__cortex_m.dir/all
 zephyr/CMakeFiles/zephyr_pre0.dir/all: zephyr/lib/libc/common/CMakeFiles/lib__libc__common.dir/all
-zephyr/CMakeFiles/zephyr_pre0.dir/all: zephyr/drivers/clock_control/CMakeFiles/drivers__clock_control.dir/all
-zephyr/CMakeFiles/zephyr_pre0.dir/all: zephyr/drivers/console/CMakeFiles/drivers__console.dir/all
 zephyr/CMakeFiles/zephyr_pre0.dir/all: zephyr/drivers/interrupt_controller/CMakeFiles/drivers__interrupt_controller.dir/all
+zephyr/CMakeFiles/zephyr_pre0.dir/all: zephyr/drivers/clock_control/CMakeFiles/drivers__clock_control.dir/all
 zephyr/CMakeFiles/zephyr_pre0.dir/all: zephyr/drivers/adc/CMakeFiles/drivers__adc.dir/all
-zephyr/CMakeFiles/zephyr_pre0.dir/all: zephyr/drivers/sensor/stm32_temp/CMakeFiles/drivers__sensor__stm32_temp.dir/all
-zephyr/CMakeFiles/zephyr_pre0.dir/all: zephyr/drivers/i2c/CMakeFiles/drivers__i2c.dir/all
-zephyr/CMakeFiles/zephyr_pre0.dir/all: zephyr/drivers/pinctrl/CMakeFiles/drivers__pinctrl.dir/all
-zephyr/CMakeFiles/zephyr_pre0.dir/all: zephyr/drivers/reset/CMakeFiles/drivers__reset.dir/all
 zephyr/CMakeFiles/zephyr_pre0.dir/all: zephyr/drivers/sensor/bme280/CMakeFiles/drivers__sensor__bme280.dir/all
 zephyr/CMakeFiles/zephyr_pre0.dir/all: zephyr/drivers/gpio/CMakeFiles/drivers__gpio.dir/all
+zephyr/CMakeFiles/zephyr_pre0.dir/all: zephyr/drivers/pinctrl/CMakeFiles/drivers__pinctrl.dir/all
+zephyr/CMakeFiles/zephyr_pre0.dir/all: zephyr/drivers/reset/CMakeFiles/drivers__reset.dir/all
+zephyr/CMakeFiles/zephyr_pre0.dir/all: zephyr/drivers/console/CMakeFiles/drivers__console.dir/all
+zephyr/CMakeFiles/zephyr_pre0.dir/all: zephyr/drivers/i2c/CMakeFiles/drivers__i2c.dir/all
 zephyr/CMakeFiles/zephyr_pre0.dir/all: zephyr/drivers/serial/CMakeFiles/drivers__serial.dir/all
-zephyr/CMakeFiles/zephyr_pre0.dir/all: zephyr/drivers/sensor/stm32_vref/CMakeFiles/drivers__sensor__stm32_vref.dir/all
 zephyr/CMakeFiles/zephyr_pre0.dir/all: zephyr/drivers/timer/CMakeFiles/drivers__timer.dir/all
+zephyr/CMakeFiles/zephyr_pre0.dir/all: zephyr/drivers/sensor/stm32_temp/CMakeFiles/drivers__sensor__stm32_temp.dir/all
+zephyr/CMakeFiles/zephyr_pre0.dir/all: zephyr/drivers/sensor/stm32_vref/CMakeFiles/drivers__sensor__stm32_vref.dir/all
 zephyr/CMakeFiles/zephyr_pre0.dir/all: modules/stm32/stm32cube/CMakeFiles/..__modules__hal__stm32__stm32cube.dir/all
 zephyr/CMakeFiles/zephyr_pre0.dir/all: zephyr/kernel/CMakeFiles/kernel.dir/all
 	$(MAKE) $(MAKESILENT) -f zephyr\CMakeFiles\zephyr_pre0.dir\build.make zephyr/CMakeFiles/zephyr_pre0.dir/depend
@@ -3212,12 +3212,12 @@ zephyr/CMakeFiles/linker_zephyr_final_script_target.dir/all: zephyr/CMakeFiles/z
 zephyr/CMakeFiles/linker_zephyr_final_script_target.dir/all: zephyr/CMakeFiles/zephyr_pre0.dir/all
 	$(MAKE) $(MAKESILENT) -f zephyr\CMakeFiles\linker_zephyr_final_script_target.dir\build.make zephyr/CMakeFiles/linker_zephyr_final_script_target.dir/depend
 	$(MAKE) $(MAKESILENT) -f zephyr\CMakeFiles\linker_zephyr_final_script_target.dir\build.make zephyr/CMakeFiles/linker_zephyr_final_script_target.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles --progress-num= "Built target linker_zephyr_final_script_target"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles --progress-num=80 "Built target linker_zephyr_final_script_target"
 .PHONY : zephyr/CMakeFiles/linker_zephyr_final_script_target.dir/all
 
 # Build rule for subdir invocation for target.
 zephyr/CMakeFiles/linker_zephyr_final_script_target.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 93
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 94
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 zephyr/CMakeFiles/linker_zephyr_final_script_target.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 0
 .PHONY : zephyr/CMakeFiles/linker_zephyr_final_script_target.dir/rule
@@ -3236,32 +3236,32 @@ zephyr/CMakeFiles/linker_zephyr_final_script_target.dir/clean:
 
 # All Build rule for target.
 zephyr/CMakeFiles/zephyr_final.dir/all: zephyr/arch/common/CMakeFiles/arch__common.dir/all
-zephyr/CMakeFiles/zephyr_final.dir/all: zephyr/arch/common/CMakeFiles/isr_tables.dir/all
-zephyr/CMakeFiles/zephyr_final.dir/all: zephyr/CMakeFiles/kobj_types_h_target.dir/all
-zephyr/CMakeFiles/zephyr_final.dir/all: zephyr/CMakeFiles/driver_validation_h_target.dir/all
-zephyr/CMakeFiles/zephyr_final.dir/all: zephyr/CMakeFiles/offsets.dir/all
 zephyr/CMakeFiles/zephyr_final.dir/all: zephyr/CMakeFiles/linker_zephyr_final_script_target.dir/all
-zephyr/CMakeFiles/zephyr_final.dir/all: zephyr/CMakeFiles/zephyr_pre0.dir/all
-zephyr/CMakeFiles/zephyr_final.dir/all: zephyr/CMakeFiles/zephyr.dir/all
+zephyr/CMakeFiles/zephyr_final.dir/all: zephyr/CMakeFiles/kobj_types_h_target.dir/all
 zephyr/CMakeFiles/zephyr_final.dir/all: zephyr/CMakeFiles/syscall_list_h_target.dir/all
+zephyr/CMakeFiles/zephyr_final.dir/all: zephyr/CMakeFiles/offsets.dir/all
+zephyr/CMakeFiles/zephyr_final.dir/all: zephyr/CMakeFiles/zephyr_pre0.dir/all
+zephyr/CMakeFiles/zephyr_final.dir/all: zephyr/CMakeFiles/driver_validation_h_target.dir/all
+zephyr/CMakeFiles/zephyr_final.dir/all: zephyr/arch/common/CMakeFiles/isr_tables.dir/all
 zephyr/CMakeFiles/zephyr_final.dir/all: CMakeFiles/app.dir/all
-zephyr/CMakeFiles/zephyr_final.dir/all: zephyr/arch/arch/arm/core/aarch32/CMakeFiles/arch__arm__core__aarch32.dir/all
+zephyr/CMakeFiles/zephyr_final.dir/all: zephyr/CMakeFiles/zephyr.dir/all
 zephyr/CMakeFiles/zephyr_final.dir/all: zephyr/lib/libc/minimal/CMakeFiles/lib__libc__minimal.dir/all
+zephyr/CMakeFiles/zephyr_final.dir/all: zephyr/arch/arch/arm/core/aarch32/CMakeFiles/arch__arm__core__aarch32.dir/all
 zephyr/CMakeFiles/zephyr_final.dir/all: zephyr/arch/arch/arm/core/aarch32/cortex_m/CMakeFiles/arch__arm__core__aarch32__cortex_m.dir/all
 zephyr/CMakeFiles/zephyr_final.dir/all: zephyr/lib/libc/common/CMakeFiles/lib__libc__common.dir/all
-zephyr/CMakeFiles/zephyr_final.dir/all: zephyr/drivers/clock_control/CMakeFiles/drivers__clock_control.dir/all
-zephyr/CMakeFiles/zephyr_final.dir/all: zephyr/drivers/console/CMakeFiles/drivers__console.dir/all
 zephyr/CMakeFiles/zephyr_final.dir/all: zephyr/drivers/interrupt_controller/CMakeFiles/drivers__interrupt_controller.dir/all
+zephyr/CMakeFiles/zephyr_final.dir/all: zephyr/drivers/clock_control/CMakeFiles/drivers__clock_control.dir/all
 zephyr/CMakeFiles/zephyr_final.dir/all: zephyr/drivers/adc/CMakeFiles/drivers__adc.dir/all
-zephyr/CMakeFiles/zephyr_final.dir/all: zephyr/drivers/sensor/stm32_temp/CMakeFiles/drivers__sensor__stm32_temp.dir/all
-zephyr/CMakeFiles/zephyr_final.dir/all: zephyr/drivers/i2c/CMakeFiles/drivers__i2c.dir/all
-zephyr/CMakeFiles/zephyr_final.dir/all: zephyr/drivers/pinctrl/CMakeFiles/drivers__pinctrl.dir/all
-zephyr/CMakeFiles/zephyr_final.dir/all: zephyr/drivers/reset/CMakeFiles/drivers__reset.dir/all
 zephyr/CMakeFiles/zephyr_final.dir/all: zephyr/drivers/sensor/bme280/CMakeFiles/drivers__sensor__bme280.dir/all
 zephyr/CMakeFiles/zephyr_final.dir/all: zephyr/drivers/gpio/CMakeFiles/drivers__gpio.dir/all
+zephyr/CMakeFiles/zephyr_final.dir/all: zephyr/drivers/pinctrl/CMakeFiles/drivers__pinctrl.dir/all
+zephyr/CMakeFiles/zephyr_final.dir/all: zephyr/drivers/reset/CMakeFiles/drivers__reset.dir/all
+zephyr/CMakeFiles/zephyr_final.dir/all: zephyr/drivers/console/CMakeFiles/drivers__console.dir/all
+zephyr/CMakeFiles/zephyr_final.dir/all: zephyr/drivers/i2c/CMakeFiles/drivers__i2c.dir/all
 zephyr/CMakeFiles/zephyr_final.dir/all: zephyr/drivers/serial/CMakeFiles/drivers__serial.dir/all
-zephyr/CMakeFiles/zephyr_final.dir/all: zephyr/drivers/sensor/stm32_vref/CMakeFiles/drivers__sensor__stm32_vref.dir/all
 zephyr/CMakeFiles/zephyr_final.dir/all: zephyr/drivers/timer/CMakeFiles/drivers__timer.dir/all
+zephyr/CMakeFiles/zephyr_final.dir/all: zephyr/drivers/sensor/stm32_temp/CMakeFiles/drivers__sensor__stm32_temp.dir/all
+zephyr/CMakeFiles/zephyr_final.dir/all: zephyr/drivers/sensor/stm32_vref/CMakeFiles/drivers__sensor__stm32_vref.dir/all
 zephyr/CMakeFiles/zephyr_final.dir/all: modules/stm32/stm32cube/CMakeFiles/..__modules__hal__stm32__stm32cube.dir/all
 zephyr/CMakeFiles/zephyr_final.dir/all: zephyr/kernel/CMakeFiles/kernel.dir/all
 	$(MAKE) $(MAKESILENT) -f zephyr\CMakeFiles\zephyr_final.dir\build.make zephyr/CMakeFiles/zephyr_final.dir/depend
@@ -3271,7 +3271,7 @@ zephyr/CMakeFiles/zephyr_final.dir/all: zephyr/kernel/CMakeFiles/kernel.dir/all
 
 # Build rule for subdir invocation for target.
 zephyr/CMakeFiles/zephyr_final.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 95
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 96
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 zephyr/CMakeFiles/zephyr_final.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 0
 .PHONY : zephyr/CMakeFiles/zephyr_final.dir/rule
@@ -3315,19 +3315,19 @@ zephyr/CMakeFiles/run.dir/clean:
 # Target rules for target zephyr/arch/common/CMakeFiles/arch__common.dir
 
 # All Build rule for target.
-zephyr/arch/common/CMakeFiles/arch__common.dir/all: zephyr/arch/common/CMakeFiles/isr_tables.dir/all
-zephyr/arch/common/CMakeFiles/arch__common.dir/all: zephyr/CMakeFiles/kobj_types_h_target.dir/all
-zephyr/arch/common/CMakeFiles/arch__common.dir/all: zephyr/CMakeFiles/driver_validation_h_target.dir/all
 zephyr/arch/common/CMakeFiles/arch__common.dir/all: zephyr/CMakeFiles/zephyr_generated_headers.dir/all
+zephyr/arch/common/CMakeFiles/arch__common.dir/all: zephyr/CMakeFiles/kobj_types_h_target.dir/all
 zephyr/arch/common/CMakeFiles/arch__common.dir/all: zephyr/CMakeFiles/syscall_list_h_target.dir/all
+zephyr/arch/common/CMakeFiles/arch__common.dir/all: zephyr/CMakeFiles/driver_validation_h_target.dir/all
+zephyr/arch/common/CMakeFiles/arch__common.dir/all: zephyr/arch/common/CMakeFiles/isr_tables.dir/all
 	$(MAKE) $(MAKESILENT) -f zephyr\arch\common\CMakeFiles\arch__common.dir\build.make zephyr/arch/common/CMakeFiles/arch__common.dir/depend
 	$(MAKE) $(MAKESILENT) -f zephyr\arch\common\CMakeFiles\arch__common.dir\build.make zephyr/arch/common/CMakeFiles/arch__common.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles --progress-num=19,20 "Built target arch__common"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles --progress-num=20 "Built target arch__common"
 .PHONY : zephyr/arch/common/CMakeFiles/arch__common.dir/all
 
 # Build rule for subdir invocation for target.
 zephyr/arch/common/CMakeFiles/arch__common.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 zephyr/arch/common/CMakeFiles/arch__common.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 0
 .PHONY : zephyr/arch/common/CMakeFiles/arch__common.dir/rule
@@ -3345,10 +3345,10 @@ zephyr/arch/common/CMakeFiles/arch__common.dir/clean:
 # Target rules for target zephyr/arch/common/CMakeFiles/isr_tables.dir
 
 # All Build rule for target.
-zephyr/arch/common/CMakeFiles/isr_tables.dir/all: zephyr/CMakeFiles/kobj_types_h_target.dir/all
-zephyr/arch/common/CMakeFiles/isr_tables.dir/all: zephyr/CMakeFiles/driver_validation_h_target.dir/all
 zephyr/arch/common/CMakeFiles/isr_tables.dir/all: zephyr/CMakeFiles/zephyr_generated_headers.dir/all
+zephyr/arch/common/CMakeFiles/isr_tables.dir/all: zephyr/CMakeFiles/kobj_types_h_target.dir/all
 zephyr/arch/common/CMakeFiles/isr_tables.dir/all: zephyr/CMakeFiles/syscall_list_h_target.dir/all
+zephyr/arch/common/CMakeFiles/isr_tables.dir/all: zephyr/CMakeFiles/driver_validation_h_target.dir/all
 	$(MAKE) $(MAKESILENT) -f zephyr\arch\common\CMakeFiles\isr_tables.dir\build.make zephyr/arch/common/CMakeFiles/isr_tables.dir/depend
 	$(MAKE) $(MAKESILENT) -f zephyr\arch\common\CMakeFiles\isr_tables.dir\build.make zephyr/arch/common/CMakeFiles/isr_tables.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles --progress-num=45 "Built target isr_tables"
@@ -3356,7 +3356,7 @@ zephyr/arch/common/CMakeFiles/isr_tables.dir/all: zephyr/CMakeFiles/syscall_list
 
 # Build rule for subdir invocation for target.
 zephyr/arch/common/CMakeFiles/isr_tables.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 zephyr/arch/common/CMakeFiles/isr_tables.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 0
 .PHONY : zephyr/arch/common/CMakeFiles/isr_tables.dir/rule
@@ -3374,18 +3374,18 @@ zephyr/arch/common/CMakeFiles/isr_tables.dir/clean:
 # Target rules for target zephyr/arch/arch/arm/core/aarch32/CMakeFiles/arch__arm__core__aarch32.dir
 
 # All Build rule for target.
-zephyr/arch/arch/arm/core/aarch32/CMakeFiles/arch__arm__core__aarch32.dir/all: zephyr/CMakeFiles/kobj_types_h_target.dir/all
-zephyr/arch/arch/arm/core/aarch32/CMakeFiles/arch__arm__core__aarch32.dir/all: zephyr/CMakeFiles/driver_validation_h_target.dir/all
 zephyr/arch/arch/arm/core/aarch32/CMakeFiles/arch__arm__core__aarch32.dir/all: zephyr/CMakeFiles/zephyr_generated_headers.dir/all
+zephyr/arch/arch/arm/core/aarch32/CMakeFiles/arch__arm__core__aarch32.dir/all: zephyr/CMakeFiles/kobj_types_h_target.dir/all
 zephyr/arch/arch/arm/core/aarch32/CMakeFiles/arch__arm__core__aarch32.dir/all: zephyr/CMakeFiles/syscall_list_h_target.dir/all
+zephyr/arch/arch/arm/core/aarch32/CMakeFiles/arch__arm__core__aarch32.dir/all: zephyr/CMakeFiles/driver_validation_h_target.dir/all
 	$(MAKE) $(MAKESILENT) -f zephyr\arch\arch\arm\core\aarch32\CMakeFiles\arch__arm__core__aarch32.dir\build.make zephyr/arch/arch/arm/core/aarch32/CMakeFiles/arch__arm__core__aarch32.dir/depend
 	$(MAKE) $(MAKESILENT) -f zephyr\arch\arch\arm\core\aarch32\CMakeFiles\arch__arm__core__aarch32.dir\build.make zephyr/arch/arch/arm/core/aarch32/CMakeFiles/arch__arm__core__aarch32.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles --progress-num=7,8,9,10,11,12,13 "Built target arch__arm__core__aarch32"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles --progress-num=8,9,10,11,12,13 "Built target arch__arm__core__aarch32"
 .PHONY : zephyr/arch/arch/arm/core/aarch32/CMakeFiles/arch__arm__core__aarch32.dir/all
 
 # Build rule for subdir invocation for target.
 zephyr/arch/arch/arm/core/aarch32/CMakeFiles/arch__arm__core__aarch32.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 12
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 10
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 zephyr/arch/arch/arm/core/aarch32/CMakeFiles/arch__arm__core__aarch32.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 0
 .PHONY : zephyr/arch/arch/arm/core/aarch32/CMakeFiles/arch__arm__core__aarch32.dir/rule
@@ -3403,13 +3403,13 @@ zephyr/arch/arch/arm/core/aarch32/CMakeFiles/arch__arm__core__aarch32.dir/clean:
 # Target rules for target zephyr/arch/arch/arm/core/aarch32/cortex_m/CMakeFiles/arch__arm__core__aarch32__cortex_m.dir
 
 # All Build rule for target.
-zephyr/arch/arch/arm/core/aarch32/cortex_m/CMakeFiles/arch__arm__core__aarch32__cortex_m.dir/all: zephyr/CMakeFiles/kobj_types_h_target.dir/all
-zephyr/arch/arch/arm/core/aarch32/cortex_m/CMakeFiles/arch__arm__core__aarch32__cortex_m.dir/all: zephyr/CMakeFiles/driver_validation_h_target.dir/all
 zephyr/arch/arch/arm/core/aarch32/cortex_m/CMakeFiles/arch__arm__core__aarch32__cortex_m.dir/all: zephyr/CMakeFiles/zephyr_generated_headers.dir/all
+zephyr/arch/arch/arm/core/aarch32/cortex_m/CMakeFiles/arch__arm__core__aarch32__cortex_m.dir/all: zephyr/CMakeFiles/kobj_types_h_target.dir/all
 zephyr/arch/arch/arm/core/aarch32/cortex_m/CMakeFiles/arch__arm__core__aarch32__cortex_m.dir/all: zephyr/CMakeFiles/syscall_list_h_target.dir/all
+zephyr/arch/arch/arm/core/aarch32/cortex_m/CMakeFiles/arch__arm__core__aarch32__cortex_m.dir/all: zephyr/CMakeFiles/driver_validation_h_target.dir/all
 	$(MAKE) $(MAKESILENT) -f zephyr\arch\arch\arm\core\aarch32\cortex_m\CMakeFiles\arch__arm__core__aarch32__cortex_m.dir\build.make zephyr/arch/arch/arm/core/aarch32/cortex_m/CMakeFiles/arch__arm__core__aarch32__cortex_m.dir/depend
 	$(MAKE) $(MAKESILENT) -f zephyr\arch\arch\arm\core\aarch32\cortex_m\CMakeFiles\arch__arm__core__aarch32__cortex_m.dir\build.make zephyr/arch/arch/arm/core/aarch32/cortex_m/CMakeFiles/arch__arm__core__aarch32__cortex_m.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles --progress-num=14,15,16,17,18 "Built target arch__arm__core__aarch32__cortex_m"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles --progress-num=14,15,16,17,18,19 "Built target arch__arm__core__aarch32__cortex_m"
 .PHONY : zephyr/arch/arch/arm/core/aarch32/cortex_m/CMakeFiles/arch__arm__core__aarch32__cortex_m.dir/all
 
 # Build rule for subdir invocation for target.
@@ -3432,10 +3432,10 @@ zephyr/arch/arch/arm/core/aarch32/cortex_m/CMakeFiles/arch__arm__core__aarch32__
 # Target rules for target zephyr/lib/libc/minimal/CMakeFiles/lib__libc__minimal.dir
 
 # All Build rule for target.
-zephyr/lib/libc/minimal/CMakeFiles/lib__libc__minimal.dir/all: zephyr/CMakeFiles/kobj_types_h_target.dir/all
-zephyr/lib/libc/minimal/CMakeFiles/lib__libc__minimal.dir/all: zephyr/CMakeFiles/driver_validation_h_target.dir/all
 zephyr/lib/libc/minimal/CMakeFiles/lib__libc__minimal.dir/all: zephyr/CMakeFiles/zephyr_generated_headers.dir/all
+zephyr/lib/libc/minimal/CMakeFiles/lib__libc__minimal.dir/all: zephyr/CMakeFiles/kobj_types_h_target.dir/all
 zephyr/lib/libc/minimal/CMakeFiles/lib__libc__minimal.dir/all: zephyr/CMakeFiles/syscall_list_h_target.dir/all
+zephyr/lib/libc/minimal/CMakeFiles/lib__libc__minimal.dir/all: zephyr/CMakeFiles/driver_validation_h_target.dir/all
 	$(MAKE) $(MAKESILENT) -f zephyr\lib\libc\minimal\CMakeFiles\lib__libc__minimal.dir\build.make zephyr/lib/libc/minimal/CMakeFiles/lib__libc__minimal.dir/depend
 	$(MAKE) $(MAKESILENT) -f zephyr\lib\libc\minimal\CMakeFiles\lib__libc__minimal.dir\build.make zephyr/lib/libc/minimal/CMakeFiles/lib__libc__minimal.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles --progress-num=66,67,68,69,70,71,72,73,74,75,76,77,78 "Built target lib__libc__minimal"
@@ -3443,7 +3443,7 @@ zephyr/lib/libc/minimal/CMakeFiles/lib__libc__minimal.dir/all: zephyr/CMakeFiles
 
 # Build rule for subdir invocation for target.
 zephyr/lib/libc/minimal/CMakeFiles/lib__libc__minimal.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 18
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 17
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 zephyr/lib/libc/minimal/CMakeFiles/lib__libc__minimal.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 0
 .PHONY : zephyr/lib/libc/minimal/CMakeFiles/lib__libc__minimal.dir/rule
@@ -3461,10 +3461,10 @@ zephyr/lib/libc/minimal/CMakeFiles/lib__libc__minimal.dir/clean:
 # Target rules for target zephyr/lib/libc/common/CMakeFiles/lib__libc__common.dir
 
 # All Build rule for target.
-zephyr/lib/libc/common/CMakeFiles/lib__libc__common.dir/all: zephyr/CMakeFiles/kobj_types_h_target.dir/all
-zephyr/lib/libc/common/CMakeFiles/lib__libc__common.dir/all: zephyr/CMakeFiles/driver_validation_h_target.dir/all
 zephyr/lib/libc/common/CMakeFiles/lib__libc__common.dir/all: zephyr/CMakeFiles/zephyr_generated_headers.dir/all
+zephyr/lib/libc/common/CMakeFiles/lib__libc__common.dir/all: zephyr/CMakeFiles/kobj_types_h_target.dir/all
 zephyr/lib/libc/common/CMakeFiles/lib__libc__common.dir/all: zephyr/CMakeFiles/syscall_list_h_target.dir/all
+zephyr/lib/libc/common/CMakeFiles/lib__libc__common.dir/all: zephyr/CMakeFiles/driver_validation_h_target.dir/all
 	$(MAKE) $(MAKESILENT) -f zephyr\lib\libc\common\CMakeFiles\lib__libc__common.dir\build.make zephyr/lib/libc/common/CMakeFiles/lib__libc__common.dir/depend
 	$(MAKE) $(MAKESILENT) -f zephyr\lib\libc\common\CMakeFiles\lib__libc__common.dir\build.make zephyr/lib/libc/common/CMakeFiles/lib__libc__common.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles --progress-num=64,65 "Built target lib__libc__common"
@@ -3472,7 +3472,7 @@ zephyr/lib/libc/common/CMakeFiles/lib__libc__common.dir/all: zephyr/CMakeFiles/s
 
 # Build rule for subdir invocation for target.
 zephyr/lib/libc/common/CMakeFiles/lib__libc__common.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 zephyr/lib/libc/common/CMakeFiles/lib__libc__common.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 0
 .PHONY : zephyr/lib/libc/common/CMakeFiles/lib__libc__common.dir/rule
@@ -3491,8 +3491,8 @@ zephyr/lib/libc/common/CMakeFiles/lib__libc__common.dir/clean:
 
 # All Build rule for target.
 zephyr/lib/posix/CMakeFiles/lib__posix.dir/all: zephyr/CMakeFiles/kobj_types_h_target.dir/all
-zephyr/lib/posix/CMakeFiles/lib__posix.dir/all: zephyr/CMakeFiles/driver_validation_h_target.dir/all
 zephyr/lib/posix/CMakeFiles/lib__posix.dir/all: zephyr/CMakeFiles/syscall_list_h_target.dir/all
+zephyr/lib/posix/CMakeFiles/lib__posix.dir/all: zephyr/CMakeFiles/driver_validation_h_target.dir/all
 	$(MAKE) $(MAKESILENT) -f zephyr\lib\posix\CMakeFiles\lib__posix.dir\build.make zephyr/lib/posix/CMakeFiles/lib__posix.dir/depend
 	$(MAKE) $(MAKESILENT) -f zephyr\lib\posix\CMakeFiles\lib__posix.dir\build.make zephyr/lib/posix/CMakeFiles/lib__posix.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles --progress-num=79 "Built target lib__posix"
@@ -3500,7 +3500,7 @@ zephyr/lib/posix/CMakeFiles/lib__posix.dir/all: zephyr/CMakeFiles/syscall_list_h
 
 # Build rule for subdir invocation for target.
 zephyr/lib/posix/CMakeFiles/lib__posix.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 zephyr/lib/posix/CMakeFiles/lib__posix.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 0
 .PHONY : zephyr/lib/posix/CMakeFiles/lib__posix.dir/rule
@@ -3518,18 +3518,18 @@ zephyr/lib/posix/CMakeFiles/lib__posix.dir/clean:
 # Target rules for target zephyr/drivers/interrupt_controller/CMakeFiles/drivers__interrupt_controller.dir
 
 # All Build rule for target.
-zephyr/drivers/interrupt_controller/CMakeFiles/drivers__interrupt_controller.dir/all: zephyr/CMakeFiles/kobj_types_h_target.dir/all
-zephyr/drivers/interrupt_controller/CMakeFiles/drivers__interrupt_controller.dir/all: zephyr/CMakeFiles/driver_validation_h_target.dir/all
 zephyr/drivers/interrupt_controller/CMakeFiles/drivers__interrupt_controller.dir/all: zephyr/CMakeFiles/zephyr_generated_headers.dir/all
+zephyr/drivers/interrupt_controller/CMakeFiles/drivers__interrupt_controller.dir/all: zephyr/CMakeFiles/kobj_types_h_target.dir/all
 zephyr/drivers/interrupt_controller/CMakeFiles/drivers__interrupt_controller.dir/all: zephyr/CMakeFiles/syscall_list_h_target.dir/all
+zephyr/drivers/interrupt_controller/CMakeFiles/drivers__interrupt_controller.dir/all: zephyr/CMakeFiles/driver_validation_h_target.dir/all
 	$(MAKE) $(MAKESILENT) -f zephyr\drivers\interrupt_controller\CMakeFiles\drivers__interrupt_controller.dir\build.make zephyr/drivers/interrupt_controller/CMakeFiles/drivers__interrupt_controller.dir/depend
 	$(MAKE) $(MAKESILENT) -f zephyr\drivers\interrupt_controller\CMakeFiles\drivers__interrupt_controller.dir\build.make zephyr/drivers/interrupt_controller/CMakeFiles/drivers__interrupt_controller.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles --progress-num=31 "Built target drivers__interrupt_controller"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles --progress-num=32 "Built target drivers__interrupt_controller"
 .PHONY : zephyr/drivers/interrupt_controller/CMakeFiles/drivers__interrupt_controller.dir/all
 
 # Build rule for subdir invocation for target.
 zephyr/drivers/interrupt_controller/CMakeFiles/drivers__interrupt_controller.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 zephyr/drivers/interrupt_controller/CMakeFiles/drivers__interrupt_controller.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 0
 .PHONY : zephyr/drivers/interrupt_controller/CMakeFiles/drivers__interrupt_controller.dir/rule
@@ -3547,10 +3547,10 @@ zephyr/drivers/interrupt_controller/CMakeFiles/drivers__interrupt_controller.dir
 # Target rules for target zephyr/drivers/adc/CMakeFiles/drivers__adc.dir
 
 # All Build rule for target.
-zephyr/drivers/adc/CMakeFiles/drivers__adc.dir/all: zephyr/CMakeFiles/kobj_types_h_target.dir/all
-zephyr/drivers/adc/CMakeFiles/drivers__adc.dir/all: zephyr/CMakeFiles/driver_validation_h_target.dir/all
 zephyr/drivers/adc/CMakeFiles/drivers__adc.dir/all: zephyr/CMakeFiles/zephyr_generated_headers.dir/all
+zephyr/drivers/adc/CMakeFiles/drivers__adc.dir/all: zephyr/CMakeFiles/kobj_types_h_target.dir/all
 zephyr/drivers/adc/CMakeFiles/drivers__adc.dir/all: zephyr/CMakeFiles/syscall_list_h_target.dir/all
+zephyr/drivers/adc/CMakeFiles/drivers__adc.dir/all: zephyr/CMakeFiles/driver_validation_h_target.dir/all
 	$(MAKE) $(MAKESILENT) -f zephyr\drivers\adc\CMakeFiles\drivers__adc.dir\build.make zephyr/drivers/adc/CMakeFiles/drivers__adc.dir/depend
 	$(MAKE) $(MAKESILENT) -f zephyr\drivers\adc\CMakeFiles\drivers__adc.dir\build.make zephyr/drivers/adc/CMakeFiles/drivers__adc.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles --progress-num=23,24 "Built target drivers__adc"
@@ -3558,7 +3558,7 @@ zephyr/drivers/adc/CMakeFiles/drivers__adc.dir/all: zephyr/CMakeFiles/syscall_li
 
 # Build rule for subdir invocation for target.
 zephyr/drivers/adc/CMakeFiles/drivers__adc.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 zephyr/drivers/adc/CMakeFiles/drivers__adc.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 0
 .PHONY : zephyr/drivers/adc/CMakeFiles/drivers__adc.dir/rule
@@ -3576,10 +3576,10 @@ zephyr/drivers/adc/CMakeFiles/drivers__adc.dir/clean:
 # Target rules for target zephyr/drivers/clock_control/CMakeFiles/drivers__clock_control.dir
 
 # All Build rule for target.
-zephyr/drivers/clock_control/CMakeFiles/drivers__clock_control.dir/all: zephyr/CMakeFiles/kobj_types_h_target.dir/all
-zephyr/drivers/clock_control/CMakeFiles/drivers__clock_control.dir/all: zephyr/CMakeFiles/driver_validation_h_target.dir/all
 zephyr/drivers/clock_control/CMakeFiles/drivers__clock_control.dir/all: zephyr/CMakeFiles/zephyr_generated_headers.dir/all
+zephyr/drivers/clock_control/CMakeFiles/drivers__clock_control.dir/all: zephyr/CMakeFiles/kobj_types_h_target.dir/all
 zephyr/drivers/clock_control/CMakeFiles/drivers__clock_control.dir/all: zephyr/CMakeFiles/syscall_list_h_target.dir/all
+zephyr/drivers/clock_control/CMakeFiles/drivers__clock_control.dir/all: zephyr/CMakeFiles/driver_validation_h_target.dir/all
 	$(MAKE) $(MAKESILENT) -f zephyr\drivers\clock_control\CMakeFiles\drivers__clock_control.dir\build.make zephyr/drivers/clock_control/CMakeFiles/drivers__clock_control.dir/depend
 	$(MAKE) $(MAKESILENT) -f zephyr\drivers\clock_control\CMakeFiles\drivers__clock_control.dir\build.make zephyr/drivers/clock_control/CMakeFiles/drivers__clock_control.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles --progress-num=25,26 "Built target drivers__clock_control"
@@ -3587,7 +3587,7 @@ zephyr/drivers/clock_control/CMakeFiles/drivers__clock_control.dir/all: zephyr/C
 
 # Build rule for subdir invocation for target.
 zephyr/drivers/clock_control/CMakeFiles/drivers__clock_control.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 zephyr/drivers/clock_control/CMakeFiles/drivers__clock_control.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 0
 .PHONY : zephyr/drivers/clock_control/CMakeFiles/drivers__clock_control.dir/rule
@@ -3605,10 +3605,10 @@ zephyr/drivers/clock_control/CMakeFiles/drivers__clock_control.dir/clean:
 # Target rules for target zephyr/drivers/console/CMakeFiles/drivers__console.dir
 
 # All Build rule for target.
-zephyr/drivers/console/CMakeFiles/drivers__console.dir/all: zephyr/CMakeFiles/kobj_types_h_target.dir/all
-zephyr/drivers/console/CMakeFiles/drivers__console.dir/all: zephyr/CMakeFiles/driver_validation_h_target.dir/all
 zephyr/drivers/console/CMakeFiles/drivers__console.dir/all: zephyr/CMakeFiles/zephyr_generated_headers.dir/all
+zephyr/drivers/console/CMakeFiles/drivers__console.dir/all: zephyr/CMakeFiles/kobj_types_h_target.dir/all
 zephyr/drivers/console/CMakeFiles/drivers__console.dir/all: zephyr/CMakeFiles/syscall_list_h_target.dir/all
+zephyr/drivers/console/CMakeFiles/drivers__console.dir/all: zephyr/CMakeFiles/driver_validation_h_target.dir/all
 	$(MAKE) $(MAKESILENT) -f zephyr\drivers\console\CMakeFiles\drivers__console.dir\build.make zephyr/drivers/console/CMakeFiles/drivers__console.dir/depend
 	$(MAKE) $(MAKESILENT) -f zephyr\drivers\console\CMakeFiles\drivers__console.dir\build.make zephyr/drivers/console/CMakeFiles/drivers__console.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles --progress-num=27 "Built target drivers__console"
@@ -3616,7 +3616,7 @@ zephyr/drivers/console/CMakeFiles/drivers__console.dir/all: zephyr/CMakeFiles/sy
 
 # Build rule for subdir invocation for target.
 zephyr/drivers/console/CMakeFiles/drivers__console.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 zephyr/drivers/console/CMakeFiles/drivers__console.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 0
 .PHONY : zephyr/drivers/console/CMakeFiles/drivers__console.dir/rule
@@ -3634,10 +3634,10 @@ zephyr/drivers/console/CMakeFiles/drivers__console.dir/clean:
 # Target rules for target zephyr/drivers/gpio/CMakeFiles/drivers__gpio.dir
 
 # All Build rule for target.
-zephyr/drivers/gpio/CMakeFiles/drivers__gpio.dir/all: zephyr/CMakeFiles/kobj_types_h_target.dir/all
-zephyr/drivers/gpio/CMakeFiles/drivers__gpio.dir/all: zephyr/CMakeFiles/driver_validation_h_target.dir/all
 zephyr/drivers/gpio/CMakeFiles/drivers__gpio.dir/all: zephyr/CMakeFiles/zephyr_generated_headers.dir/all
+zephyr/drivers/gpio/CMakeFiles/drivers__gpio.dir/all: zephyr/CMakeFiles/kobj_types_h_target.dir/all
 zephyr/drivers/gpio/CMakeFiles/drivers__gpio.dir/all: zephyr/CMakeFiles/syscall_list_h_target.dir/all
+zephyr/drivers/gpio/CMakeFiles/drivers__gpio.dir/all: zephyr/CMakeFiles/driver_validation_h_target.dir/all
 	$(MAKE) $(MAKESILENT) -f zephyr\drivers\gpio\CMakeFiles\drivers__gpio.dir\build.make zephyr/drivers/gpio/CMakeFiles/drivers__gpio.dir/depend
 	$(MAKE) $(MAKESILENT) -f zephyr\drivers\gpio\CMakeFiles\drivers__gpio.dir\build.make zephyr/drivers/gpio/CMakeFiles/drivers__gpio.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles --progress-num=28 "Built target drivers__gpio"
@@ -3645,7 +3645,7 @@ zephyr/drivers/gpio/CMakeFiles/drivers__gpio.dir/all: zephyr/CMakeFiles/syscall_
 
 # Build rule for subdir invocation for target.
 zephyr/drivers/gpio/CMakeFiles/drivers__gpio.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 zephyr/drivers/gpio/CMakeFiles/drivers__gpio.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 0
 .PHONY : zephyr/drivers/gpio/CMakeFiles/drivers__gpio.dir/rule
@@ -3663,13 +3663,13 @@ zephyr/drivers/gpio/CMakeFiles/drivers__gpio.dir/clean:
 # Target rules for target zephyr/drivers/i2c/CMakeFiles/drivers__i2c.dir
 
 # All Build rule for target.
-zephyr/drivers/i2c/CMakeFiles/drivers__i2c.dir/all: zephyr/CMakeFiles/kobj_types_h_target.dir/all
-zephyr/drivers/i2c/CMakeFiles/drivers__i2c.dir/all: zephyr/CMakeFiles/driver_validation_h_target.dir/all
 zephyr/drivers/i2c/CMakeFiles/drivers__i2c.dir/all: zephyr/CMakeFiles/zephyr_generated_headers.dir/all
+zephyr/drivers/i2c/CMakeFiles/drivers__i2c.dir/all: zephyr/CMakeFiles/kobj_types_h_target.dir/all
 zephyr/drivers/i2c/CMakeFiles/drivers__i2c.dir/all: zephyr/CMakeFiles/syscall_list_h_target.dir/all
+zephyr/drivers/i2c/CMakeFiles/drivers__i2c.dir/all: zephyr/CMakeFiles/driver_validation_h_target.dir/all
 	$(MAKE) $(MAKESILENT) -f zephyr\drivers\i2c\CMakeFiles\drivers__i2c.dir\build.make zephyr/drivers/i2c/CMakeFiles/drivers__i2c.dir/depend
 	$(MAKE) $(MAKESILENT) -f zephyr\drivers\i2c\CMakeFiles\drivers__i2c.dir\build.make zephyr/drivers/i2c/CMakeFiles/drivers__i2c.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles --progress-num=29,30 "Built target drivers__i2c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles --progress-num=29,30,31 "Built target drivers__i2c"
 .PHONY : zephyr/drivers/i2c/CMakeFiles/drivers__i2c.dir/all
 
 # Build rule for subdir invocation for target.
@@ -3692,18 +3692,18 @@ zephyr/drivers/i2c/CMakeFiles/drivers__i2c.dir/clean:
 # Target rules for target zephyr/drivers/pinctrl/CMakeFiles/drivers__pinctrl.dir
 
 # All Build rule for target.
-zephyr/drivers/pinctrl/CMakeFiles/drivers__pinctrl.dir/all: zephyr/CMakeFiles/kobj_types_h_target.dir/all
-zephyr/drivers/pinctrl/CMakeFiles/drivers__pinctrl.dir/all: zephyr/CMakeFiles/driver_validation_h_target.dir/all
 zephyr/drivers/pinctrl/CMakeFiles/drivers__pinctrl.dir/all: zephyr/CMakeFiles/zephyr_generated_headers.dir/all
+zephyr/drivers/pinctrl/CMakeFiles/drivers__pinctrl.dir/all: zephyr/CMakeFiles/kobj_types_h_target.dir/all
 zephyr/drivers/pinctrl/CMakeFiles/drivers__pinctrl.dir/all: zephyr/CMakeFiles/syscall_list_h_target.dir/all
+zephyr/drivers/pinctrl/CMakeFiles/drivers__pinctrl.dir/all: zephyr/CMakeFiles/driver_validation_h_target.dir/all
 	$(MAKE) $(MAKESILENT) -f zephyr\drivers\pinctrl\CMakeFiles\drivers__pinctrl.dir\build.make zephyr/drivers/pinctrl/CMakeFiles/drivers__pinctrl.dir/depend
 	$(MAKE) $(MAKESILENT) -f zephyr\drivers\pinctrl\CMakeFiles\drivers__pinctrl.dir\build.make zephyr/drivers/pinctrl/CMakeFiles/drivers__pinctrl.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles --progress-num=32,33 "Built target drivers__pinctrl"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles --progress-num=33,34 "Built target drivers__pinctrl"
 .PHONY : zephyr/drivers/pinctrl/CMakeFiles/drivers__pinctrl.dir/all
 
 # Build rule for subdir invocation for target.
 zephyr/drivers/pinctrl/CMakeFiles/drivers__pinctrl.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 zephyr/drivers/pinctrl/CMakeFiles/drivers__pinctrl.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 0
 .PHONY : zephyr/drivers/pinctrl/CMakeFiles/drivers__pinctrl.dir/rule
@@ -3721,18 +3721,18 @@ zephyr/drivers/pinctrl/CMakeFiles/drivers__pinctrl.dir/clean:
 # Target rules for target zephyr/drivers/reset/CMakeFiles/drivers__reset.dir
 
 # All Build rule for target.
-zephyr/drivers/reset/CMakeFiles/drivers__reset.dir/all: zephyr/CMakeFiles/kobj_types_h_target.dir/all
-zephyr/drivers/reset/CMakeFiles/drivers__reset.dir/all: zephyr/CMakeFiles/driver_validation_h_target.dir/all
 zephyr/drivers/reset/CMakeFiles/drivers__reset.dir/all: zephyr/CMakeFiles/zephyr_generated_headers.dir/all
+zephyr/drivers/reset/CMakeFiles/drivers__reset.dir/all: zephyr/CMakeFiles/kobj_types_h_target.dir/all
 zephyr/drivers/reset/CMakeFiles/drivers__reset.dir/all: zephyr/CMakeFiles/syscall_list_h_target.dir/all
+zephyr/drivers/reset/CMakeFiles/drivers__reset.dir/all: zephyr/CMakeFiles/driver_validation_h_target.dir/all
 	$(MAKE) $(MAKESILENT) -f zephyr\drivers\reset\CMakeFiles\drivers__reset.dir\build.make zephyr/drivers/reset/CMakeFiles/drivers__reset.dir/depend
 	$(MAKE) $(MAKESILENT) -f zephyr\drivers\reset\CMakeFiles\drivers__reset.dir\build.make zephyr/drivers/reset/CMakeFiles/drivers__reset.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles --progress-num=34 "Built target drivers__reset"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles --progress-num=35 "Built target drivers__reset"
 .PHONY : zephyr/drivers/reset/CMakeFiles/drivers__reset.dir/all
 
 # Build rule for subdir invocation for target.
 zephyr/drivers/reset/CMakeFiles/drivers__reset.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 zephyr/drivers/reset/CMakeFiles/drivers__reset.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 0
 .PHONY : zephyr/drivers/reset/CMakeFiles/drivers__reset.dir/rule
@@ -3751,16 +3751,16 @@ zephyr/drivers/reset/CMakeFiles/drivers__reset.dir/clean:
 
 # All Build rule for target.
 zephyr/drivers/sensor/CMakeFiles/drivers__sensor.dir/all: zephyr/CMakeFiles/kobj_types_h_target.dir/all
-zephyr/drivers/sensor/CMakeFiles/drivers__sensor.dir/all: zephyr/CMakeFiles/driver_validation_h_target.dir/all
 zephyr/drivers/sensor/CMakeFiles/drivers__sensor.dir/all: zephyr/CMakeFiles/syscall_list_h_target.dir/all
+zephyr/drivers/sensor/CMakeFiles/drivers__sensor.dir/all: zephyr/CMakeFiles/driver_validation_h_target.dir/all
 	$(MAKE) $(MAKESILENT) -f zephyr\drivers\sensor\CMakeFiles\drivers__sensor.dir\build.make zephyr/drivers/sensor/CMakeFiles/drivers__sensor.dir/depend
 	$(MAKE) $(MAKESILENT) -f zephyr\drivers\sensor\CMakeFiles\drivers__sensor.dir\build.make zephyr/drivers/sensor/CMakeFiles/drivers__sensor.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles --progress-num=35,36 "Built target drivers__sensor"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles --progress-num=36 "Built target drivers__sensor"
 .PHONY : zephyr/drivers/sensor/CMakeFiles/drivers__sensor.dir/all
 
 # Build rule for subdir invocation for target.
 zephyr/drivers/sensor/CMakeFiles/drivers__sensor.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 zephyr/drivers/sensor/CMakeFiles/drivers__sensor.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 0
 .PHONY : zephyr/drivers/sensor/CMakeFiles/drivers__sensor.dir/rule
@@ -3778,10 +3778,10 @@ zephyr/drivers/sensor/CMakeFiles/drivers__sensor.dir/clean:
 # Target rules for target zephyr/drivers/sensor/bme280/CMakeFiles/drivers__sensor__bme280.dir
 
 # All Build rule for target.
-zephyr/drivers/sensor/bme280/CMakeFiles/drivers__sensor__bme280.dir/all: zephyr/CMakeFiles/kobj_types_h_target.dir/all
-zephyr/drivers/sensor/bme280/CMakeFiles/drivers__sensor__bme280.dir/all: zephyr/CMakeFiles/driver_validation_h_target.dir/all
 zephyr/drivers/sensor/bme280/CMakeFiles/drivers__sensor__bme280.dir/all: zephyr/CMakeFiles/zephyr_generated_headers.dir/all
+zephyr/drivers/sensor/bme280/CMakeFiles/drivers__sensor__bme280.dir/all: zephyr/CMakeFiles/kobj_types_h_target.dir/all
 zephyr/drivers/sensor/bme280/CMakeFiles/drivers__sensor__bme280.dir/all: zephyr/CMakeFiles/syscall_list_h_target.dir/all
+zephyr/drivers/sensor/bme280/CMakeFiles/drivers__sensor__bme280.dir/all: zephyr/CMakeFiles/driver_validation_h_target.dir/all
 	$(MAKE) $(MAKESILENT) -f zephyr\drivers\sensor\bme280\CMakeFiles\drivers__sensor__bme280.dir\build.make zephyr/drivers/sensor/bme280/CMakeFiles/drivers__sensor__bme280.dir/depend
 	$(MAKE) $(MAKESILENT) -f zephyr\drivers\sensor\bme280\CMakeFiles\drivers__sensor__bme280.dir\build.make zephyr/drivers/sensor/bme280/CMakeFiles/drivers__sensor__bme280.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles --progress-num=37,38 "Built target drivers__sensor__bme280"
@@ -3789,7 +3789,7 @@ zephyr/drivers/sensor/bme280/CMakeFiles/drivers__sensor__bme280.dir/all: zephyr/
 
 # Build rule for subdir invocation for target.
 zephyr/drivers/sensor/bme280/CMakeFiles/drivers__sensor__bme280.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 zephyr/drivers/sensor/bme280/CMakeFiles/drivers__sensor__bme280.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 0
 .PHONY : zephyr/drivers/sensor/bme280/CMakeFiles/drivers__sensor__bme280.dir/rule
@@ -3807,13 +3807,13 @@ zephyr/drivers/sensor/bme280/CMakeFiles/drivers__sensor__bme280.dir/clean:
 # Target rules for target zephyr/drivers/sensor/stm32_temp/CMakeFiles/drivers__sensor__stm32_temp.dir
 
 # All Build rule for target.
-zephyr/drivers/sensor/stm32_temp/CMakeFiles/drivers__sensor__stm32_temp.dir/all: zephyr/CMakeFiles/kobj_types_h_target.dir/all
-zephyr/drivers/sensor/stm32_temp/CMakeFiles/drivers__sensor__stm32_temp.dir/all: zephyr/CMakeFiles/driver_validation_h_target.dir/all
 zephyr/drivers/sensor/stm32_temp/CMakeFiles/drivers__sensor__stm32_temp.dir/all: zephyr/CMakeFiles/zephyr_generated_headers.dir/all
+zephyr/drivers/sensor/stm32_temp/CMakeFiles/drivers__sensor__stm32_temp.dir/all: zephyr/CMakeFiles/kobj_types_h_target.dir/all
 zephyr/drivers/sensor/stm32_temp/CMakeFiles/drivers__sensor__stm32_temp.dir/all: zephyr/CMakeFiles/syscall_list_h_target.dir/all
+zephyr/drivers/sensor/stm32_temp/CMakeFiles/drivers__sensor__stm32_temp.dir/all: zephyr/CMakeFiles/driver_validation_h_target.dir/all
 	$(MAKE) $(MAKESILENT) -f zephyr\drivers\sensor\stm32_temp\CMakeFiles\drivers__sensor__stm32_temp.dir\build.make zephyr/drivers/sensor/stm32_temp/CMakeFiles/drivers__sensor__stm32_temp.dir/depend
 	$(MAKE) $(MAKESILENT) -f zephyr\drivers\sensor\stm32_temp\CMakeFiles\drivers__sensor__stm32_temp.dir\build.make zephyr/drivers/sensor/stm32_temp/CMakeFiles/drivers__sensor__stm32_temp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles --progress-num=39 "Built target drivers__sensor__stm32_temp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles --progress-num=39,40 "Built target drivers__sensor__stm32_temp"
 .PHONY : zephyr/drivers/sensor/stm32_temp/CMakeFiles/drivers__sensor__stm32_temp.dir/all
 
 # Build rule for subdir invocation for target.
@@ -3836,18 +3836,18 @@ zephyr/drivers/sensor/stm32_temp/CMakeFiles/drivers__sensor__stm32_temp.dir/clea
 # Target rules for target zephyr/drivers/sensor/stm32_vref/CMakeFiles/drivers__sensor__stm32_vref.dir
 
 # All Build rule for target.
-zephyr/drivers/sensor/stm32_vref/CMakeFiles/drivers__sensor__stm32_vref.dir/all: zephyr/CMakeFiles/kobj_types_h_target.dir/all
-zephyr/drivers/sensor/stm32_vref/CMakeFiles/drivers__sensor__stm32_vref.dir/all: zephyr/CMakeFiles/driver_validation_h_target.dir/all
 zephyr/drivers/sensor/stm32_vref/CMakeFiles/drivers__sensor__stm32_vref.dir/all: zephyr/CMakeFiles/zephyr_generated_headers.dir/all
+zephyr/drivers/sensor/stm32_vref/CMakeFiles/drivers__sensor__stm32_vref.dir/all: zephyr/CMakeFiles/kobj_types_h_target.dir/all
 zephyr/drivers/sensor/stm32_vref/CMakeFiles/drivers__sensor__stm32_vref.dir/all: zephyr/CMakeFiles/syscall_list_h_target.dir/all
+zephyr/drivers/sensor/stm32_vref/CMakeFiles/drivers__sensor__stm32_vref.dir/all: zephyr/CMakeFiles/driver_validation_h_target.dir/all
 	$(MAKE) $(MAKESILENT) -f zephyr\drivers\sensor\stm32_vref\CMakeFiles\drivers__sensor__stm32_vref.dir\build.make zephyr/drivers/sensor/stm32_vref/CMakeFiles/drivers__sensor__stm32_vref.dir/depend
 	$(MAKE) $(MAKESILENT) -f zephyr\drivers\sensor\stm32_vref\CMakeFiles\drivers__sensor__stm32_vref.dir\build.make zephyr/drivers/sensor/stm32_vref/CMakeFiles/drivers__sensor__stm32_vref.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles --progress-num=40 "Built target drivers__sensor__stm32_vref"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles --progress-num=41 "Built target drivers__sensor__stm32_vref"
 .PHONY : zephyr/drivers/sensor/stm32_vref/CMakeFiles/drivers__sensor__stm32_vref.dir/all
 
 # Build rule for subdir invocation for target.
 zephyr/drivers/sensor/stm32_vref/CMakeFiles/drivers__sensor__stm32_vref.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 zephyr/drivers/sensor/stm32_vref/CMakeFiles/drivers__sensor__stm32_vref.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 0
 .PHONY : zephyr/drivers/sensor/stm32_vref/CMakeFiles/drivers__sensor__stm32_vref.dir/rule
@@ -3865,18 +3865,18 @@ zephyr/drivers/sensor/stm32_vref/CMakeFiles/drivers__sensor__stm32_vref.dir/clea
 # Target rules for target zephyr/drivers/serial/CMakeFiles/drivers__serial.dir
 
 # All Build rule for target.
-zephyr/drivers/serial/CMakeFiles/drivers__serial.dir/all: zephyr/CMakeFiles/kobj_types_h_target.dir/all
-zephyr/drivers/serial/CMakeFiles/drivers__serial.dir/all: zephyr/CMakeFiles/driver_validation_h_target.dir/all
 zephyr/drivers/serial/CMakeFiles/drivers__serial.dir/all: zephyr/CMakeFiles/zephyr_generated_headers.dir/all
+zephyr/drivers/serial/CMakeFiles/drivers__serial.dir/all: zephyr/CMakeFiles/kobj_types_h_target.dir/all
 zephyr/drivers/serial/CMakeFiles/drivers__serial.dir/all: zephyr/CMakeFiles/syscall_list_h_target.dir/all
+zephyr/drivers/serial/CMakeFiles/drivers__serial.dir/all: zephyr/CMakeFiles/driver_validation_h_target.dir/all
 	$(MAKE) $(MAKESILENT) -f zephyr\drivers\serial\CMakeFiles\drivers__serial.dir\build.make zephyr/drivers/serial/CMakeFiles/drivers__serial.dir/depend
 	$(MAKE) $(MAKESILENT) -f zephyr\drivers\serial\CMakeFiles\drivers__serial.dir\build.make zephyr/drivers/serial/CMakeFiles/drivers__serial.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles --progress-num=41,42 "Built target drivers__serial"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles --progress-num=42 "Built target drivers__serial"
 .PHONY : zephyr/drivers/serial/CMakeFiles/drivers__serial.dir/all
 
 # Build rule for subdir invocation for target.
 zephyr/drivers/serial/CMakeFiles/drivers__serial.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 zephyr/drivers/serial/CMakeFiles/drivers__serial.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 0
 .PHONY : zephyr/drivers/serial/CMakeFiles/drivers__serial.dir/rule
@@ -3894,13 +3894,13 @@ zephyr/drivers/serial/CMakeFiles/drivers__serial.dir/clean:
 # Target rules for target zephyr/drivers/timer/CMakeFiles/drivers__timer.dir
 
 # All Build rule for target.
-zephyr/drivers/timer/CMakeFiles/drivers__timer.dir/all: zephyr/CMakeFiles/kobj_types_h_target.dir/all
-zephyr/drivers/timer/CMakeFiles/drivers__timer.dir/all: zephyr/CMakeFiles/driver_validation_h_target.dir/all
 zephyr/drivers/timer/CMakeFiles/drivers__timer.dir/all: zephyr/CMakeFiles/zephyr_generated_headers.dir/all
+zephyr/drivers/timer/CMakeFiles/drivers__timer.dir/all: zephyr/CMakeFiles/kobj_types_h_target.dir/all
 zephyr/drivers/timer/CMakeFiles/drivers__timer.dir/all: zephyr/CMakeFiles/syscall_list_h_target.dir/all
+zephyr/drivers/timer/CMakeFiles/drivers__timer.dir/all: zephyr/CMakeFiles/driver_validation_h_target.dir/all
 	$(MAKE) $(MAKESILENT) -f zephyr\drivers\timer\CMakeFiles\drivers__timer.dir\build.make zephyr/drivers/timer/CMakeFiles/drivers__timer.dir/depend
 	$(MAKE) $(MAKESILENT) -f zephyr\drivers\timer\CMakeFiles\drivers__timer.dir\build.make zephyr/drivers/timer/CMakeFiles/drivers__timer.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles --progress-num=43 "Built target drivers__timer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles --progress-num=43,44 "Built target drivers__timer"
 .PHONY : zephyr/drivers/timer/CMakeFiles/drivers__timer.dir/all
 
 # Build rule for subdir invocation for target.
@@ -3923,10 +3923,10 @@ zephyr/drivers/timer/CMakeFiles/drivers__timer.dir/clean:
 # Target rules for target modules/stm32/stm32cube/CMakeFiles/..__modules__hal__stm32__stm32cube.dir
 
 # All Build rule for target.
-modules/stm32/stm32cube/CMakeFiles/..__modules__hal__stm32__stm32cube.dir/all: zephyr/CMakeFiles/kobj_types_h_target.dir/all
-modules/stm32/stm32cube/CMakeFiles/..__modules__hal__stm32__stm32cube.dir/all: zephyr/CMakeFiles/driver_validation_h_target.dir/all
 modules/stm32/stm32cube/CMakeFiles/..__modules__hal__stm32__stm32cube.dir/all: zephyr/CMakeFiles/zephyr_generated_headers.dir/all
+modules/stm32/stm32cube/CMakeFiles/..__modules__hal__stm32__stm32cube.dir/all: zephyr/CMakeFiles/kobj_types_h_target.dir/all
 modules/stm32/stm32cube/CMakeFiles/..__modules__hal__stm32__stm32cube.dir/all: zephyr/CMakeFiles/syscall_list_h_target.dir/all
+modules/stm32/stm32cube/CMakeFiles/..__modules__hal__stm32__stm32cube.dir/all: zephyr/CMakeFiles/driver_validation_h_target.dir/all
 	$(MAKE) $(MAKESILENT) -f modules\stm32\stm32cube\CMakeFiles\..__modules__hal__stm32__stm32cube.dir\build.make modules/stm32/stm32cube/CMakeFiles/..__modules__hal__stm32__stm32cube.dir/depend
 	$(MAKE) $(MAKESILENT) -f modules\stm32\stm32cube\CMakeFiles\..__modules__hal__stm32__stm32cube.dir\build.make modules/stm32/stm32cube/CMakeFiles/..__modules__hal__stm32__stm32cube.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles --progress-num=1,2,3,4 "Built target ..__modules__hal__stm32__stm32cube"
@@ -3934,7 +3934,7 @@ modules/stm32/stm32cube/CMakeFiles/..__modules__hal__stm32__stm32cube.dir/all: z
 
 # Build rule for subdir invocation for target.
 modules/stm32/stm32cube/CMakeFiles/..__modules__hal__stm32__stm32cube.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 modules/stm32/stm32cube/CMakeFiles/..__modules__hal__stm32__stm32cube.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 0
 .PHONY : modules/stm32/stm32cube/CMakeFiles/..__modules__hal__stm32__stm32cube.dir/rule
@@ -3952,10 +3952,10 @@ modules/stm32/stm32cube/CMakeFiles/..__modules__hal__stm32__stm32cube.dir/clean:
 # Target rules for target zephyr/kernel/CMakeFiles/kernel.dir
 
 # All Build rule for target.
-zephyr/kernel/CMakeFiles/kernel.dir/all: zephyr/CMakeFiles/kobj_types_h_target.dir/all
-zephyr/kernel/CMakeFiles/kernel.dir/all: zephyr/CMakeFiles/driver_validation_h_target.dir/all
 zephyr/kernel/CMakeFiles/kernel.dir/all: zephyr/CMakeFiles/zephyr_generated_headers.dir/all
+zephyr/kernel/CMakeFiles/kernel.dir/all: zephyr/CMakeFiles/kobj_types_h_target.dir/all
 zephyr/kernel/CMakeFiles/kernel.dir/all: zephyr/CMakeFiles/syscall_list_h_target.dir/all
+zephyr/kernel/CMakeFiles/kernel.dir/all: zephyr/CMakeFiles/driver_validation_h_target.dir/all
 	$(MAKE) $(MAKESILENT) -f zephyr\kernel\CMakeFiles\kernel.dir\build.make zephyr/kernel/CMakeFiles/kernel.dir/depend
 	$(MAKE) $(MAKESILENT) -f zephyr\kernel\CMakeFiles\kernel.dir\build.make zephyr/kernel/CMakeFiles/kernel.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles --progress-num=46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62 "Built target kernel"
@@ -3963,7 +3963,7 @@ zephyr/kernel/CMakeFiles/kernel.dir/all: zephyr/CMakeFiles/syscall_list_h_target
 
 # Build rule for subdir invocation for target.
 zephyr/kernel/CMakeFiles/kernel.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 22
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 21
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 zephyr/kernel/CMakeFiles/kernel.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 0
 .PHONY : zephyr/kernel/CMakeFiles/kernel.dir/rule
@@ -3984,12 +3984,12 @@ zephyr/kernel/CMakeFiles/kernel.dir/clean:
 zephyr/cmake/flash/CMakeFiles/flash.dir/all:
 	$(MAKE) $(MAKESILENT) -f zephyr\cmake\flash\CMakeFiles\flash.dir\build.make zephyr/cmake/flash/CMakeFiles/flash.dir/depend
 	$(MAKE) $(MAKESILENT) -f zephyr\cmake\flash\CMakeFiles\flash.dir\build.make zephyr/cmake/flash/CMakeFiles/flash.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles --progress-num=44 "Built target flash"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles --progress-num= "Built target flash"
 .PHONY : zephyr/cmake/flash/CMakeFiles/flash.dir/all
 
 # Build rule for subdir invocation for target.
 zephyr/cmake/flash/CMakeFiles/flash.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 zephyr/cmake/flash/CMakeFiles/flash.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 0
 .PHONY : zephyr/cmake/flash/CMakeFiles/flash.dir/rule
@@ -4010,12 +4010,12 @@ zephyr/cmake/flash/CMakeFiles/flash.dir/clean:
 zephyr/cmake/flash/CMakeFiles/debug.dir/all:
 	$(MAKE) $(MAKESILENT) -f zephyr\cmake\flash\CMakeFiles\debug.dir\build.make zephyr/cmake/flash/CMakeFiles/debug.dir/depend
 	$(MAKE) $(MAKESILENT) -f zephyr\cmake\flash\CMakeFiles\debug.dir\build.make zephyr/cmake/flash/CMakeFiles/debug.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles --progress-num=21 "Built target debug"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles --progress-num= "Built target debug"
 .PHONY : zephyr/cmake/flash/CMakeFiles/debug.dir/all
 
 # Build rule for subdir invocation for target.
 zephyr/cmake/flash/CMakeFiles/debug.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 zephyr/cmake/flash/CMakeFiles/debug.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 0
 .PHONY : zephyr/cmake/flash/CMakeFiles/debug.dir/rule
@@ -4036,12 +4036,12 @@ zephyr/cmake/flash/CMakeFiles/debug.dir/clean:
 zephyr/cmake/flash/CMakeFiles/debugserver.dir/all:
 	$(MAKE) $(MAKESILENT) -f zephyr\cmake\flash\CMakeFiles\debugserver.dir\build.make zephyr/cmake/flash/CMakeFiles/debugserver.dir/depend
 	$(MAKE) $(MAKESILENT) -f zephyr\cmake\flash\CMakeFiles\debugserver.dir\build.make zephyr/cmake/flash/CMakeFiles/debugserver.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles --progress-num= "Built target debugserver"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles --progress-num=22 "Built target debugserver"
 .PHONY : zephyr/cmake/flash/CMakeFiles/debugserver.dir/all
 
 # Build rule for subdir invocation for target.
 zephyr/cmake/flash/CMakeFiles/debugserver.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 1
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 zephyr/cmake/flash/CMakeFiles/debugserver.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 0
 .PHONY : zephyr/cmake/flash/CMakeFiles/debugserver.dir/rule
@@ -4062,12 +4062,12 @@ zephyr/cmake/flash/CMakeFiles/debugserver.dir/clean:
 zephyr/cmake/flash/CMakeFiles/attach.dir/all:
 	$(MAKE) $(MAKESILENT) -f zephyr\cmake\flash\CMakeFiles\attach.dir\build.make zephyr/cmake/flash/CMakeFiles/attach.dir/depend
 	$(MAKE) $(MAKESILENT) -f zephyr\cmake\flash\CMakeFiles\attach.dir\build.make zephyr/cmake/flash/CMakeFiles/attach.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles --progress-num= "Built target attach"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles --progress-num=21 "Built target attach"
 .PHONY : zephyr/cmake/flash/CMakeFiles/attach.dir/all
 
 # Build rule for subdir invocation for target.
 zephyr/cmake/flash/CMakeFiles/attach.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 1
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 zephyr/cmake/flash/CMakeFiles/attach.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 0
 .PHONY : zephyr/cmake/flash/CMakeFiles/attach.dir/rule
@@ -4119,7 +4119,7 @@ zephyr/cmake/reports/CMakeFiles/ram_report.dir/all: zephyr/CMakeFiles/zephyr_fin
 
 # Build rule for subdir invocation for target.
 zephyr/cmake/reports/CMakeFiles/ram_report.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 95
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 96
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 zephyr/cmake/reports/CMakeFiles/ram_report.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 0
 .PHONY : zephyr/cmake/reports/CMakeFiles/ram_report.dir/rule
@@ -4145,7 +4145,7 @@ zephyr/cmake/reports/CMakeFiles/rom_report.dir/all: zephyr/CMakeFiles/zephyr_fin
 
 # Build rule for subdir invocation for target.
 zephyr/cmake/reports/CMakeFiles/rom_report.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 95
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 96
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 zephyr/cmake/reports/CMakeFiles/rom_report.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 0
 .PHONY : zephyr/cmake/reports/CMakeFiles/rom_report.dir/rule
@@ -4171,7 +4171,7 @@ zephyr/cmake/reports/CMakeFiles/footprint.dir/all: zephyr/CMakeFiles/zephyr_fina
 
 # Build rule for subdir invocation for target.
 zephyr/cmake/reports/CMakeFiles/footprint.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 95
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 96
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 zephyr/cmake/reports/CMakeFiles/footprint.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles 0
 .PHONY : zephyr/cmake/reports/CMakeFiles/footprint.dir/rule
