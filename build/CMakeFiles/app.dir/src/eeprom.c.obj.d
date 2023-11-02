@@ -11,6 +11,9 @@ CMakeFiles/app.dir/src/eeprom.c.obj: \
  c:\users\luukv\zephyr-sdk-0.16.1\arm-zephyr-eabi\lib\gcc\arm-zephyr-eabi\12.2.0\include\stdarg.h \
  c:\users\luukv\zephyr-sdk-0.16.1\arm-zephyr-eabi\lib\gcc\arm-zephyr-eabi\12.2.0\include\stddef.h \
  C:\Users\luukv\zephyrproject\zephyr\lib\libc\minimal\include/stdint.h \
+ C:\Users\luukv\zephyrproject\zephyr\lib\libc\minimal\include/time.h \
+ C:\Users\luukv\zephyrproject\zephyr\lib\libc\minimal\include/sys/_types.h \
+ C:\Users\luukv\zephyrproject\zephyr\lib\libc\minimal\include/sys/_timespec.h \
  C:\Users\luukv\zephyrproject\zephyr\include/zephyr/kernel.h \
  C:\Users\luukv\zephyrproject\zephyr\include/zephyr/kernel_includes.h \
  C:\Users\luukv\zephyrproject\zephyr\include/zephyr/types.h \
@@ -126,5 +129,4 @@ CMakeFiles/app.dir/src/eeprom.c.obj: \
  C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\zephyr\include\generated/syscalls/sensor.h \
  C:\Users\luukv\zephyrproject\zephyr\include/zephyr/drivers/eeprom.h \
  C:\Users\luukv\zephyrproject\zephyr\lib\libc\minimal\include/sys/types.h \
- C:\Users\luukv\zephyrproject\zephyr\lib\libc\minimal\include/sys/_types.h \
  C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\zephyr\include\generated/syscalls/eeprom.h

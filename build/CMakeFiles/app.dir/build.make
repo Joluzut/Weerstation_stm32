@@ -96,10 +96,24 @@ CMakeFiles/app.dir/src/eeprom_24lc64.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/app.dir/src/eeprom_24lc64.c.s"
 	C:\Users\luukv\zephyr-sdk-0.16.1\arm-zephyr-eabi\bin\arm-zephyr-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\src\eeprom_24lc64.c -o CMakeFiles\app.dir\src\eeprom_24lc64.c.s
 
+CMakeFiles/app.dir/src/esp8266.c.obj: CMakeFiles/app.dir/flags.make
+CMakeFiles/app.dir/src/esp8266.c.obj: C:/Users/luukv/zephyrproject/zephyr/samples/sensor/eeprom/src/esp8266.c
+CMakeFiles/app.dir/src/esp8266.c.obj: CMakeFiles/app.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/app.dir/src/esp8266.c.obj"
+	C:\Users\luukv\zephyr-sdk-0.16.1\arm-zephyr-eabi\bin\arm-zephyr-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/app.dir/src/esp8266.c.obj -MF CMakeFiles\app.dir\src\esp8266.c.obj.d -o CMakeFiles\app.dir\src\esp8266.c.obj -c C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\src\esp8266.c
+
+CMakeFiles/app.dir/src/esp8266.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/app.dir/src/esp8266.c.i"
+	C:\Users\luukv\zephyr-sdk-0.16.1\arm-zephyr-eabi\bin\arm-zephyr-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\src\esp8266.c > CMakeFiles\app.dir\src\esp8266.c.i
+
+CMakeFiles/app.dir/src/esp8266.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/app.dir/src/esp8266.c.s"
+	C:\Users\luukv\zephyr-sdk-0.16.1\arm-zephyr-eabi\bin\arm-zephyr-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\src\esp8266.c -o CMakeFiles\app.dir\src\esp8266.c.s
+
 CMakeFiles/app.dir/src/main.c.obj: CMakeFiles/app.dir/flags.make
 CMakeFiles/app.dir/src/main.c.obj: C:/Users/luukv/zephyrproject/zephyr/samples/sensor/eeprom/src/main.c
 CMakeFiles/app.dir/src/main.c.obj: CMakeFiles/app.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/app.dir/src/main.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/app.dir/src/main.c.obj"
 	C:\Users\luukv\zephyr-sdk-0.16.1\arm-zephyr-eabi\bin\arm-zephyr-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/app.dir/src/main.c.obj -MF CMakeFiles\app.dir\src\main.c.obj.d -o CMakeFiles\app.dir\src\main.c.obj -c C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\src\main.c
 
 CMakeFiles/app.dir/src/main.c.i: cmake_force
@@ -110,21 +124,39 @@ CMakeFiles/app.dir/src/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/app.dir/src/main.c.s"
 	C:\Users\luukv\zephyr-sdk-0.16.1\arm-zephyr-eabi\bin\arm-zephyr-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\src\main.c -o CMakeFiles\app.dir\src\main.c.s
 
+CMakeFiles/app.dir/src/rtc.c.obj: CMakeFiles/app.dir/flags.make
+CMakeFiles/app.dir/src/rtc.c.obj: C:/Users/luukv/zephyrproject/zephyr/samples/sensor/eeprom/src/rtc.c
+CMakeFiles/app.dir/src/rtc.c.obj: CMakeFiles/app.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/app.dir/src/rtc.c.obj"
+	C:\Users\luukv\zephyr-sdk-0.16.1\arm-zephyr-eabi\bin\arm-zephyr-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/app.dir/src/rtc.c.obj -MF CMakeFiles\app.dir\src\rtc.c.obj.d -o CMakeFiles\app.dir\src\rtc.c.obj -c C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\src\rtc.c
+
+CMakeFiles/app.dir/src/rtc.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/app.dir/src/rtc.c.i"
+	C:\Users\luukv\zephyr-sdk-0.16.1\arm-zephyr-eabi\bin\arm-zephyr-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\src\rtc.c > CMakeFiles\app.dir\src\rtc.c.i
+
+CMakeFiles/app.dir/src/rtc.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/app.dir/src/rtc.c.s"
+	C:\Users\luukv\zephyr-sdk-0.16.1\arm-zephyr-eabi\bin\arm-zephyr-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\src\rtc.c -o CMakeFiles\app.dir\src\rtc.c.s
+
 # Object files for target app
 app_OBJECTS = \
 "CMakeFiles/app.dir/src/eeprom.c.obj" \
 "CMakeFiles/app.dir/src/eeprom_24lc64.c.obj" \
-"CMakeFiles/app.dir/src/main.c.obj"
+"CMakeFiles/app.dir/src/esp8266.c.obj" \
+"CMakeFiles/app.dir/src/main.c.obj" \
+"CMakeFiles/app.dir/src/rtc.c.obj"
 
 # External object files for target app
 app_EXTERNAL_OBJECTS =
 
 app/libapp.a: CMakeFiles/app.dir/src/eeprom.c.obj
 app/libapp.a: CMakeFiles/app.dir/src/eeprom_24lc64.c.obj
+app/libapp.a: CMakeFiles/app.dir/src/esp8266.c.obj
 app/libapp.a: CMakeFiles/app.dir/src/main.c.obj
+app/libapp.a: CMakeFiles/app.dir/src/rtc.c.obj
 app/libapp.a: CMakeFiles/app.dir/build.make
 app/libapp.a: CMakeFiles/app.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C static library app\libapp.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C static library app\libapp.a"
 	$(CMAKE_COMMAND) -P CMakeFiles\app.dir\cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\app.dir\link.txt --verbose=$(VERBOSE)
 

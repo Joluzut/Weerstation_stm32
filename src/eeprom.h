@@ -15,7 +15,7 @@ typedef struct
     uint32_t time;
 }storageData;
 
-storageData returnStorageData();
+storageData returnStorageData(int counter);
 void writeEeprom( int counter, int8_t data );
 void writeBigEeprom( int counter, int32_t data);
 int8_t readEeprom( int counter);

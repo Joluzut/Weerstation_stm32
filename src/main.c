@@ -67,7 +67,7 @@ void eeprom()
 	int counterWrite = 0;
 	int counterRead = 0;
 	int8_t recieved;
-	int32_t time = 1698849621;
+	int32_t time = getEpochTime();
 	int32_t recievedtime;
 	while (1) {
         sensor_sample_fetch(sensor);

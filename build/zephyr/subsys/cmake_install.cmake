@@ -1,8 +1,8 @@
-# Install script for directory: /Users/dinordi/zephyrproject/zephyr/subsys
+# Install script for directory: C:/Users/luukv/zephyrproject/zephyr/subsys
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/usr/local")
+  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/Zephyr-Kernel")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -34,101 +34,101 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "/Users/dinordi/zephyr-sdk-0.16.1/arm-zephyr-eabi/bin/arm-zephyr-eabi-objdump")
+  set(CMAKE_OBJDUMP "C:/Users/luukv/zephyr-sdk-0.16.1/arm-zephyr-eabi/bin/arm-zephyr-eabi-objdump.exe")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/dinordi/zephyrproject/zephyr/samples/basic/Weerstation_stm32/build/zephyr/subsys/canbus/cmake_install.cmake")
+  include("C:/Users/luukv/zephyrproject/zephyr/samples/sensor/eeprom/build/zephyr/subsys/canbus/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/dinordi/zephyrproject/zephyr/samples/basic/Weerstation_stm32/build/zephyr/subsys/debug/cmake_install.cmake")
+  include("C:/Users/luukv/zephyrproject/zephyr/samples/sensor/eeprom/build/zephyr/subsys/debug/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/dinordi/zephyrproject/zephyr/samples/basic/Weerstation_stm32/build/zephyr/subsys/fb/cmake_install.cmake")
+  include("C:/Users/luukv/zephyrproject/zephyr/samples/sensor/eeprom/build/zephyr/subsys/fb/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/dinordi/zephyrproject/zephyr/samples/basic/Weerstation_stm32/build/zephyr/subsys/fs/cmake_install.cmake")
+  include("C:/Users/luukv/zephyrproject/zephyr/samples/sensor/eeprom/build/zephyr/subsys/fs/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/dinordi/zephyrproject/zephyr/samples/basic/Weerstation_stm32/build/zephyr/subsys/ipc/cmake_install.cmake")
+  include("C:/Users/luukv/zephyrproject/zephyr/samples/sensor/eeprom/build/zephyr/subsys/ipc/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/dinordi/zephyrproject/zephyr/samples/basic/Weerstation_stm32/build/zephyr/subsys/logging/cmake_install.cmake")
+  include("C:/Users/luukv/zephyrproject/zephyr/samples/sensor/eeprom/build/zephyr/subsys/logging/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/dinordi/zephyrproject/zephyr/samples/basic/Weerstation_stm32/build/zephyr/subsys/mgmt/cmake_install.cmake")
+  include("C:/Users/luukv/zephyrproject/zephyr/samples/sensor/eeprom/build/zephyr/subsys/mgmt/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/dinordi/zephyrproject/zephyr/samples/basic/Weerstation_stm32/build/zephyr/subsys/modbus/cmake_install.cmake")
+  include("C:/Users/luukv/zephyrproject/zephyr/samples/sensor/eeprom/build/zephyr/subsys/modbus/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/dinordi/zephyrproject/zephyr/samples/basic/Weerstation_stm32/build/zephyr/subsys/pm/cmake_install.cmake")
+  include("C:/Users/luukv/zephyrproject/zephyr/samples/sensor/eeprom/build/zephyr/subsys/pm/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/dinordi/zephyrproject/zephyr/samples/basic/Weerstation_stm32/build/zephyr/subsys/portability/cmake_install.cmake")
+  include("C:/Users/luukv/zephyrproject/zephyr/samples/sensor/eeprom/build/zephyr/subsys/portability/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/dinordi/zephyrproject/zephyr/samples/basic/Weerstation_stm32/build/zephyr/subsys/random/cmake_install.cmake")
+  include("C:/Users/luukv/zephyrproject/zephyr/samples/sensor/eeprom/build/zephyr/subsys/random/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/dinordi/zephyrproject/zephyr/samples/basic/Weerstation_stm32/build/zephyr/subsys/rtio/cmake_install.cmake")
+  include("C:/Users/luukv/zephyrproject/zephyr/samples/sensor/eeprom/build/zephyr/subsys/rtio/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/dinordi/zephyrproject/zephyr/samples/basic/Weerstation_stm32/build/zephyr/subsys/sd/cmake_install.cmake")
+  include("C:/Users/luukv/zephyrproject/zephyr/samples/sensor/eeprom/build/zephyr/subsys/sd/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/dinordi/zephyrproject/zephyr/samples/basic/Weerstation_stm32/build/zephyr/subsys/stats/cmake_install.cmake")
+  include("C:/Users/luukv/zephyrproject/zephyr/samples/sensor/eeprom/build/zephyr/subsys/stats/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/dinordi/zephyrproject/zephyr/samples/basic/Weerstation_stm32/build/zephyr/subsys/storage/cmake_install.cmake")
+  include("C:/Users/luukv/zephyrproject/zephyr/samples/sensor/eeprom/build/zephyr/subsys/storage/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/dinordi/zephyrproject/zephyr/samples/basic/Weerstation_stm32/build/zephyr/subsys/task_wdt/cmake_install.cmake")
+  include("C:/Users/luukv/zephyrproject/zephyr/samples/sensor/eeprom/build/zephyr/subsys/task_wdt/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/dinordi/zephyrproject/zephyr/samples/basic/Weerstation_stm32/build/zephyr/subsys/testsuite/cmake_install.cmake")
+  include("C:/Users/luukv/zephyrproject/zephyr/samples/sensor/eeprom/build/zephyr/subsys/testsuite/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/dinordi/zephyrproject/zephyr/samples/basic/Weerstation_stm32/build/zephyr/subsys/tracing/cmake_install.cmake")
+  include("C:/Users/luukv/zephyrproject/zephyr/samples/sensor/eeprom/build/zephyr/subsys/tracing/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/dinordi/zephyrproject/zephyr/samples/basic/Weerstation_stm32/build/zephyr/subsys/usb/cmake_install.cmake")
+  include("C:/Users/luukv/zephyrproject/zephyr/samples/sensor/eeprom/build/zephyr/subsys/usb/cmake_install.cmake")
 endif()
 

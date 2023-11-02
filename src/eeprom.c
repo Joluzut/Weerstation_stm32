@@ -78,10 +78,23 @@ int32_t readBigEeprom(int counter)
 	return data;
 }
 
-storageData returnStorageData()
+storageData returnStorageData(int counter)
 {
+	int dataCounter = counter;
 	storageData data;
-
-
+	data.time = readBigEeprom(dataCounter);
+	dataCounter = dataCounter + 4;
+	data.temp1 = readEeprom(dataCounter);
+	dataCounter++;
+	data.temp2 = readEeprom(dataCounter);
+	dataCounter++;
+	data.press1 = readEeprom(dataCounter);
+	dataCounter++;
+	data.press2 = readEeprom(dataCounter);
+	dataCounter++;
+	data.humid1 = readEeprom(dataCounter);
+	dataCounter++;
+	data.humid2 = readEeprom(dataCounter);
+	dataCounter++;
 	return data;
 }
