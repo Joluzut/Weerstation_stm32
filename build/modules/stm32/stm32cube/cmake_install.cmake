@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/luukv/zephyrproject/modules/hal/stm32/stm32cube
+# Install script for directory: /Users/dinordi/zephyrproject/modules/hal/stm32/stm32cube
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/Zephyr-Kernel")
+  set(CMAKE_INSTALL_PREFIX "/usr/local")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -34,11 +34,11 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "C:/Users/luukv/zephyr-sdk-0.16.1/arm-zephyr-eabi/bin/arm-zephyr-eabi-objdump.exe")
+  set(CMAKE_OBJDUMP "/Users/dinordi/zephyr-sdk-0.16.1/arm-zephyr-eabi/bin/arm-zephyr-eabi-objdump")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/luukv/zephyrproject/zephyr/samples/sensor/eeprom/build/modules/stm32/stm32cube/stm32f0xx/cmake_install.cmake")
+  include("/Users/dinordi/zephyrproject/zephyr/samples/basic/Weerstation_stm32/build/modules/stm32/stm32cube/stm32f0xx/cmake_install.cmake")
 endif()
 

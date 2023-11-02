@@ -7,6 +7,61 @@ DT_COMPAT_ADAFRUIT_FEATHER_HEADER := adafruit-feather-header
 config DT_HAS_ADAFRUIT_FEATHER_HEADER_ENABLED
 	def_bool $(dt_compat_enabled,$(DT_COMPAT_ADAFRUIT_FEATHER_HEADER))
 
+DT_COMPAT_ADI_AD5628 := adi,ad5628
+
+config DT_HAS_ADI_AD5628_ENABLED
+	def_bool $(dt_compat_enabled,$(DT_COMPAT_ADI_AD5628))
+
+DT_COMPAT_ADI_AD5648 := adi,ad5648
+
+config DT_HAS_ADI_AD5648_ENABLED
+	def_bool $(dt_compat_enabled,$(DT_COMPAT_ADI_AD5648))
+
+DT_COMPAT_ADI_AD5668 := adi,ad5668
+
+config DT_HAS_ADI_AD5668_ENABLED
+	def_bool $(dt_compat_enabled,$(DT_COMPAT_ADI_AD5668))
+
+DT_COMPAT_ADI_AD5672 := adi,ad5672
+
+config DT_HAS_ADI_AD5672_ENABLED
+	def_bool $(dt_compat_enabled,$(DT_COMPAT_ADI_AD5672))
+
+DT_COMPAT_ADI_AD5674 := adi,ad5674
+
+config DT_HAS_ADI_AD5674_ENABLED
+	def_bool $(dt_compat_enabled,$(DT_COMPAT_ADI_AD5674))
+
+DT_COMPAT_ADI_AD5676 := adi,ad5676
+
+config DT_HAS_ADI_AD5676_ENABLED
+	def_bool $(dt_compat_enabled,$(DT_COMPAT_ADI_AD5676))
+
+DT_COMPAT_ADI_AD5679 := adi,ad5679
+
+config DT_HAS_ADI_AD5679_ENABLED
+	def_bool $(dt_compat_enabled,$(DT_COMPAT_ADI_AD5679))
+
+DT_COMPAT_ADI_AD5684 := adi,ad5684
+
+config DT_HAS_ADI_AD5684_ENABLED
+	def_bool $(dt_compat_enabled,$(DT_COMPAT_ADI_AD5684))
+
+DT_COMPAT_ADI_AD5686 := adi,ad5686
+
+config DT_HAS_ADI_AD5686_ENABLED
+	def_bool $(dt_compat_enabled,$(DT_COMPAT_ADI_AD5686))
+
+DT_COMPAT_ADI_AD5687 := adi,ad5687
+
+config DT_HAS_ADI_AD5687_ENABLED
+	def_bool $(dt_compat_enabled,$(DT_COMPAT_ADI_AD5687))
+
+DT_COMPAT_ADI_AD5689 := adi,ad5689
+
+config DT_HAS_ADI_AD5689_ENABLED
+	def_bool $(dt_compat_enabled,$(DT_COMPAT_ADI_AD5689))
+
 DT_COMPAT_ADI_ADIN1110 := adi,adin1110
 
 config DT_HAS_ADI_ADIN1110_ENABLED
@@ -111,6 +166,11 @@ DT_COMPAT_AMBIQ_I2C := ambiq,i2c
 
 config DT_HAS_AMBIQ_I2C_ENABLED
 	def_bool $(dt_compat_enabled,$(DT_COMPAT_AMBIQ_I2C))
+
+DT_COMPAT_AMBIQ_MSPI := ambiq,mspi
+
+config DT_HAS_AMBIQ_MSPI_ENABLED
+	def_bool $(dt_compat_enabled,$(DT_COMPAT_AMBIQ_MSPI))
 
 DT_COMPAT_AMBIQ_PWRCTRL := ambiq,pwrctrl
 
@@ -1327,6 +1387,11 @@ DT_COMPAT_FCS_FXL6408 := fcs,fxl6408
 config DT_HAS_FCS_FXL6408_ENABLED
 	def_bool $(dt_compat_enabled,$(DT_COMPAT_FCS_FXL6408))
 
+DT_COMPAT_FINTEK_F75303 := fintek,f75303
+
+config DT_HAS_FINTEK_F75303_ENABLED
+	def_bool $(dt_compat_enabled,$(DT_COMPAT_FINTEK_F75303))
+
 DT_COMPAT_FIXED_CLOCK := fixed-clock
 
 config DT_HAS_FIXED_CLOCK_ENABLED
@@ -2046,6 +2111,11 @@ DT_COMPAT_INTEL_SEDI_I2C := intel,sedi-i2c
 
 config DT_HAS_INTEL_SEDI_I2C_ENABLED
 	def_bool $(dt_compat_enabled,$(DT_COMPAT_INTEL_SEDI_I2C))
+
+DT_COMPAT_INTEL_SEDI_IPM := intel,sedi-ipm
+
+config DT_HAS_INTEL_SEDI_IPM_ENABLED
+	def_bool $(dt_compat_enabled,$(DT_COMPAT_INTEL_SEDI_IPM))
 
 DT_COMPAT_INTEL_SEDI_UART := intel,sedi-uart
 
@@ -4302,6 +4372,16 @@ DT_COMPAT_NXP_S32_CLOCK := nxp,s32-clock
 config DT_HAS_NXP_S32_CLOCK_ENABLED
 	def_bool $(dt_compat_enabled,$(DT_COMPAT_NXP_S32_CLOCK))
 
+DT_COMPAT_NXP_S32_EMIOS := nxp,s32-emios
+
+config DT_HAS_NXP_S32_EMIOS_ENABLED
+	def_bool $(dt_compat_enabled,$(DT_COMPAT_NXP_S32_EMIOS))
+
+DT_COMPAT_NXP_S32_EMIOS_PWM := nxp,s32-emios-pwm
+
+config DT_HAS_NXP_S32_EMIOS_PWM_ENABLED
+	def_bool $(dt_compat_enabled,$(DT_COMPAT_NXP_S32_EMIOS_PWM))
+
 DT_COMPAT_NXP_S32_GMAC := nxp,s32-gmac
 
 config DT_HAS_NXP_S32_GMAC_ENABLED
@@ -4866,6 +4946,11 @@ DT_COMPAT_SBS_DEFAULT_SBS_GAUGE := sbs,default-sbs-gauge
 
 config DT_HAS_SBS_DEFAULT_SBS_GAUGE_ENABLED
 	def_bool $(dt_compat_enabled,$(DT_COMPAT_SBS_DEFAULT_SBS_GAUGE))
+
+DT_COMPAT_SBS_SBS_CHARGER := sbs,sbs-charger
+
+config DT_HAS_SBS_SBS_CHARGER_ENABLED
+	def_bool $(dt_compat_enabled,$(DT_COMPAT_SBS_SBS_CHARGER))
 
 DT_COMPAT_SBS_SBS_GAUGE := sbs,sbs-gauge
 
@@ -7346,6 +7431,11 @@ DT_COMPAT_ZEPHYR_GSM_PPP := zephyr,gsm-ppp
 
 config DT_HAS_ZEPHYR_GSM_PPP_ENABLED
 	def_bool $(dt_compat_enabled,$(DT_COMPAT_ZEPHYR_GSM_PPP))
+
+DT_COMPAT_ZEPHYR_I2C_DUMP_ALLOWLIST := zephyr,i2c-dump-allowlist
+
+config DT_HAS_ZEPHYR_I2C_DUMP_ALLOWLIST_ENABLED
+	def_bool $(dt_compat_enabled,$(DT_COMPAT_ZEPHYR_I2C_DUMP_ALLOWLIST))
 
 DT_COMPAT_ZEPHYR_I2C_EMUL_CONTROLLER := zephyr,i2c-emul-controller
 

@@ -4,23 +4,27 @@
 		(Z_SYSCALL_OBJ(ptr, K_OBJ_DRIVER_##driver_upper_case) || \
 		 Z_SYSCALL_DRIVER_OP(ptr, driver_lower_case##_driver_api, op))
                 
+#define Z_SYSCALL_DRIVER_ADC(ptr, op) Z_SYSCALL_DRIVER_GEN(ptr, op, adc, ADC)
+
 #define Z_SYSCALL_DRIVER_GPIO(ptr, op) Z_SYSCALL_DRIVER_GEN(ptr, op, gpio, GPIO)
 
 #define Z_SYSCALL_DRIVER_I2C(ptr, op) Z_SYSCALL_DRIVER_GEN(ptr, op, i2c, I2C)
 
 #define Z_SYSCALL_DRIVER_RESET(ptr, op) Z_SYSCALL_DRIVER_GEN(ptr, op, reset, RESET)
 
+#define Z_SYSCALL_DRIVER_SENSOR(ptr, op) Z_SYSCALL_DRIVER_GEN(ptr, op, sensor, SENSOR)
+
 #define Z_SYSCALL_DRIVER_UART(ptr, op) Z_SYSCALL_DRIVER_GEN(ptr, op, uart, UART)
 
 #define Z_SYSCALL_DRIVER_CRYPTO(ptr, op) Z_SYSCALL_DRIVER_GEN(ptr, op, crypto, CRYPTO)
-
-#define Z_SYSCALL_DRIVER_ADC(ptr, op) Z_SYSCALL_DRIVER_GEN(ptr, op, adc, ADC)
 
 #define Z_SYSCALL_DRIVER_AUXDISPLAY(ptr, op) Z_SYSCALL_DRIVER_GEN(ptr, op, auxdisplay, AUXDISPLAY)
 
 #define Z_SYSCALL_DRIVER_BBRAM(ptr, op) Z_SYSCALL_DRIVER_GEN(ptr, op, bbram, BBRAM)
 
 #define Z_SYSCALL_DRIVER_CAN(ptr, op) Z_SYSCALL_DRIVER_GEN(ptr, op, can, CAN)
+
+#define Z_SYSCALL_DRIVER_CHARGER(ptr, op) Z_SYSCALL_DRIVER_GEN(ptr, op, charger, CHARGER)
 
 #define Z_SYSCALL_DRIVER_COREDUMP(ptr, op) Z_SYSCALL_DRIVER_GEN(ptr, op, coredump, COREDUMP)
 
@@ -87,8 +91,6 @@
 #define Z_SYSCALL_DRIVER_RTC(ptr, op) Z_SYSCALL_DRIVER_GEN(ptr, op, rtc, RTC)
 
 #define Z_SYSCALL_DRIVER_SDHC(ptr, op) Z_SYSCALL_DRIVER_GEN(ptr, op, sdhc, SDHC)
-
-#define Z_SYSCALL_DRIVER_SENSOR(ptr, op) Z_SYSCALL_DRIVER_GEN(ptr, op, sensor, SENSOR)
 
 #define Z_SYSCALL_DRIVER_SMBUS(ptr, op) Z_SYSCALL_DRIVER_GEN(ptr, op, smbus, SMBUS)
 

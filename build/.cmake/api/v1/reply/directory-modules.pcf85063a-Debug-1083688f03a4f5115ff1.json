@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "modules/pcf85063a",
+		"source" : "/Users/dinordi/zephyrproject/pcf85063a"
+	}
+}

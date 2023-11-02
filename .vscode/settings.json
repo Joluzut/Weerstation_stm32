@@ -1,0 +1,9 @@
+{
+    "files.associations": {
+        "esp8266.h": "c",
+        "eeprom.h": "c",
+        "printk.h": "c",
+        "__assert.h": "c",
+        "variant": "c"
+    }
+}
