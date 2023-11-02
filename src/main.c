@@ -53,15 +53,7 @@ static char rx_buf2[128];
     
 // }
 
-void send_str(const struct device *dev, const char *str) {
-    int msg_len = strlen(str);
- 
-    printk("Device %s sending: \"%s\"\n", dev->name, str);
-    for (int i = 0; i < msg_len; i++) {
-        uart_poll_out(dev, str[i]);
-    }
- 
-}
+
 
 void uartTest()
 {
@@ -82,13 +74,13 @@ void uartTest()
 	while(1)
 	{
         char* resp;
-        resp = sendESP("AT+RST\r\n", uart_dev, rst);
-        printk("%s", resp);
-        k_sleep(K_MSEC(10000));
+        // resp = sendESP("AT+RST\r\n", uart_dev, rst);
+        // printk("%s", resp);
+        // k_sleep(K_MSEC(3000));
 
         resp = sendESP("AT+CWJAP=\"iPhone van Joey\",\"123456789\"\r\n", uart_dev, at);
         printk("%s", resp);
-        k_sleep(K_MSEC(12000));
+        k_sleep(K_MSEC(100));
 
         resp = sendESP("AT+CIPSNTPCFG=1,1,\"0.nl.pool.ntp.org\"\r\n", uart_dev, at);
         printk("%s", resp);
@@ -96,10 +88,23 @@ void uartTest()
 
         resp = sendESP("AT+CIPSNTPTIME?\r\n", uart_dev, at);
         printk("%s", resp);
-        k_sleep(K_MSEC(2000));
+        k_sleep(K_MSEC(1000));
         parseTime(resp, rtc_dev);
-		printk("Epoch Time: %lld\n", getEpochTime(rtc_dev));
-		
+		// printk("Epoch Time: %lld\n", getEpochTime(rtc_dev));
+        k_sleep(K_MSEC(3000));
+
+        measurementStruct meas = sendMeasurement(9,15, 100,92, 46,12, getEpochTime(rtc_dev), uart_dev);
+		printk("Measurement sending: %s, %s, %s", meas.tcp, meas.cipsend, meas.request);
+        resp = sendESP(meas.tcp, uart_dev, at);
+        printk("%s", resp);
+        k_sleep(K_MSEC(1500));
+        resp = sendESP(meas.cipsend, uart_dev, at);
+        printk("%s", resp);
+        k_sleep(K_MSEC(1000));
+        resp = sendESP(meas.request, uart_dev, at);
+        printk("%s", resp);
+        k_sleep(K_MSEC(10000));
+
 	}
 
 }
