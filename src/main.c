@@ -6,7 +6,7 @@
 
 // #include <zephyr/kernel.h>
 // #include <zephyr/device.h>
-// #include <zephyr/devicetree.h>
+#include <zephyr/devicetree.h>
 #include <zephyr/drivers/sensor.h>
 #include <zephyr/drivers/eeprom.h>
 #include <zephyr/sys/printk.h>
@@ -58,6 +58,68 @@ void startup(const struct device *uart_dev, const struct device *rtc_dev)
     }
 }
 
+void eeprom()
+{
+	const struct device *sensor = DEVICE_DT_GET_ANY(bosch_bme280);
+	
+    struct sensor_value temp, press, humidity;
+	int8_t * data[6];
+	int counterWrite = 0;
+	int counterRead = 0;
+	int8_t recieved;
+	int32_t time = 1698849621;
+	int32_t recievedtime;
+	while (1) {
+        sensor_sample_fetch(sensor);
+    	sensor_channel_get(sensor, SENSOR_CHAN_AMBIENT_TEMP, &temp);
+    	sensor_channel_get(sensor, SENSOR_CHAN_PRESS, &press);
+    	sensor_channel_get(sensor, SENSOR_CHAN_HUMIDITY, &humidity);
+
+        data[0] = temp.val1;
+		data[1] = temp.val2/10000;
+        data[2] = press.val1;
+		data[3] = press.val2/10000;
+        data[4] = humidity.val1;
+		data[5] = humidity.val2/10000;    
+
+		printk("\n%d %d.%02d %d.%02d %d.%02d %d\n",
+        time, data[0], data[1], data[2], data[3], data[4], data[5], counterWrite/10);
+
+		writeBigEeprom(counterWrite,time);
+		counterWrite = counterWrite + 4;
+		time++;
+		k_sleep(K_MSEC(5));
+		for(int x = 0; x<6; x++)
+		{
+		writeEeprom(counterWrite,data[x]);
+		counterWrite++;
+		k_sleep(K_MSEC(5));
+		}
+
+		recievedtime = readBigEeprom(counterRead);
+		counterRead = counterRead + 4;
+		printk("(%d)", recievedtime);
+		k_sleep(K_MSEC(5));
+		for(int x = 0; x<6; x++)
+		{
+		recieved = readEeprom(counterRead);
+		printk("(%d)", recieved);
+		counterRead++;
+		k_sleep(K_MSEC(5));
+		}
+
+		if(counterWrite > 14400)
+		{
+			counterWrite = 0;
+		}
+
+		if(counterRead > 14400)
+		{
+			counterRead = 0;
+		}
+		k_sleep(K_MSEC(1));
+	}
+}
 
 void uartTest()
 {
@@ -109,18 +171,8 @@ void uartTest()
 
 int main(void)
 {
-	
+	eeprom();
+	uartTest();
 
-    struct sensor_value temp, press, humidity;
-	int8_t * data[6];
-	int counterWrite = 0;
-	int counterRead = 0;
-	int8_t recieved;
-	int32_t time = 1698849621;
-	int32_t recievedtime;
-	while (1) {
-		
-		uartTest();
-	}
 	return 0;
 }

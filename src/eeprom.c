@@ -77,3 +77,11 @@ int32_t readBigEeprom(int counter)
 	data = (uint32_t)(*eeprom_data);
 	return data;
 }
+
+storageData returnStorageData()
+{
+	storageData data;
+
+
+	return data;
+}
