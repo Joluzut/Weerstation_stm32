@@ -1,11 +1,11 @@
 #include "esp8266.h"
 
-K_MSGQ_DEFINE(uart_msgq, 2, 280, 4);
+K_MSGQ_DEFINE(uart_msgq, 2, 270, 4);
 char send_buf[256];
 
 void send_str(const struct device *dev, const char *str) {
     int msg_len = strlen(str);
- 
+    
     printk("Device %s sending: \"%s\"\n", dev->name, str);
     for (int i = 0; i < msg_len; i++) {
         uart_poll_out(dev, str[i]);
@@ -39,7 +39,7 @@ measurementStruct sendMeasurement(int temp1, int temp2, int press1, int press2, 
 
 char* sendESP(const char* str, const struct device *uart_dev, status stat)
 {
-
+    
     snprintf(send_buf, 200, str);
     send_str(uart_dev, send_buf);
     
@@ -64,6 +64,7 @@ char* returnUsartStr(status stat)
     }
     char* check;
     char* check2;
+   
 
     switch(stat)
     {
@@ -81,14 +82,19 @@ char* returnUsartStr(status stat)
             check2 = "ERROR\r\n";
 
     }
+   
+    
     while(1)
     {
+
+
         ret = k_msgq_get(&uart_msgq, &c, K_FOREVER);
         if (ret == 0) {
             // printk("Received: %c\n", uart_data);
             rx_buf[rx_buf_pos] = c;
             rx_buf_pos++;
         }
+
         
         // check = "OK\r\n";
         // char* check = "OK\r\n";
@@ -119,6 +125,8 @@ void readUsart(const struct device *uart_dev, void *user_data)
         if (ret != 0) {
             printk("Failed to put data into message queue\n");
         }
+        
+
     } else if (ret == -EAGAIN) {
         // No data available, handle it accordingly
     } else {
