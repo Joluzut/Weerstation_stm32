@@ -818,6 +818,19 @@ drivers__timer/fast:
 .PHONY : drivers__timer/fast
 
 #=============================================================================
+# Target rules for targets named drivers__rtc
+
+# Build rule for target.
+drivers__rtc: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 drivers__rtc
+.PHONY : drivers__rtc
+
+# fast build rule for target.
+drivers__rtc/fast:
+	$(MAKE) $(MAKESILENT) -f zephyr\drivers\rtc\CMakeFiles\drivers__rtc.dir\build.make zephyr/drivers/rtc/CMakeFiles/drivers__rtc.dir/build
+.PHONY : drivers__rtc/fast
+
+#=============================================================================
 # Target rules for targets named ..__modules__hal__stm32__stm32cube
 
 # Build rule for target.
@@ -947,6 +960,30 @@ footprint/fast:
 	$(MAKE) $(MAKESILENT) -f zephyr\cmake\reports\CMakeFiles\footprint.dir\build.make zephyr/cmake/reports/CMakeFiles/footprint.dir/build
 .PHONY : footprint/fast
 
+src/eeprom.obj: src/eeprom.c.obj
+.PHONY : src/eeprom.obj
+
+# target to build an object file
+src/eeprom.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\app.dir\build.make CMakeFiles/app.dir/src/eeprom.c.obj
+.PHONY : src/eeprom.c.obj
+
+src/eeprom.i: src/eeprom.c.i
+.PHONY : src/eeprom.i
+
+# target to preprocess a source file
+src/eeprom.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\app.dir\build.make CMakeFiles/app.dir/src/eeprom.c.i
+.PHONY : src/eeprom.c.i
+
+src/eeprom.s: src/eeprom.c.s
+.PHONY : src/eeprom.s
+
+# target to generate assembly for a file
+src/eeprom.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\app.dir\build.make CMakeFiles/app.dir/src/eeprom.c.s
+.PHONY : src/eeprom.c.s
+
 src/eeprom_24lc64.obj: src/eeprom_24lc64.c.obj
 .PHONY : src/eeprom_24lc64.obj
 
@@ -971,6 +1008,30 @@ src/eeprom_24lc64.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\app.dir\build.make CMakeFiles/app.dir/src/eeprom_24lc64.c.s
 .PHONY : src/eeprom_24lc64.c.s
 
+src/esp8266.obj: src/esp8266.c.obj
+.PHONY : src/esp8266.obj
+
+# target to build an object file
+src/esp8266.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\app.dir\build.make CMakeFiles/app.dir/src/esp8266.c.obj
+.PHONY : src/esp8266.c.obj
+
+src/esp8266.i: src/esp8266.c.i
+.PHONY : src/esp8266.i
+
+# target to preprocess a source file
+src/esp8266.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\app.dir\build.make CMakeFiles/app.dir/src/esp8266.c.i
+.PHONY : src/esp8266.c.i
+
+src/esp8266.s: src/esp8266.c.s
+.PHONY : src/esp8266.s
+
+# target to generate assembly for a file
+src/esp8266.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\app.dir\build.make CMakeFiles/app.dir/src/esp8266.c.s
+.PHONY : src/esp8266.c.s
+
 src/main.obj: src/main.c.obj
 .PHONY : src/main.obj
 
@@ -994,6 +1055,30 @@ src/main.s: src/main.c.s
 src/main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\app.dir\build.make CMakeFiles/app.dir/src/main.c.s
 .PHONY : src/main.c.s
+
+src/rtc.obj: src/rtc.c.obj
+.PHONY : src/rtc.obj
+
+# target to build an object file
+src/rtc.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\app.dir\build.make CMakeFiles/app.dir/src/rtc.c.obj
+.PHONY : src/rtc.c.obj
+
+src/rtc.i: src/rtc.c.i
+.PHONY : src/rtc.i
+
+# target to preprocess a source file
+src/rtc.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\app.dir\build.make CMakeFiles/app.dir/src/rtc.c.i
+.PHONY : src/rtc.c.i
+
+src/rtc.s: src/rtc.c.s
+.PHONY : src/rtc.s
+
+# target to generate assembly for a file
+src/rtc.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\app.dir\build.make CMakeFiles/app.dir/src/rtc.c.s
+.PHONY : src/rtc.c.s
 
 # Help Target
 help:
@@ -1052,6 +1137,7 @@ help:
 	@echo ... drivers__interrupt_controller
 	@echo ... drivers__pinctrl
 	@echo ... drivers__reset
+	@echo ... drivers__rtc
 	@echo ... drivers__sensor
 	@echo ... drivers__sensor__bme280
 	@echo ... drivers__sensor__stm32_temp
@@ -1067,12 +1153,21 @@ help:
 	@echo ... zephyr
 	@echo ... zephyr_final
 	@echo ... zephyr_pre0
+	@echo ... src/eeprom.obj
+	@echo ... src/eeprom.i
+	@echo ... src/eeprom.s
 	@echo ... src/eeprom_24lc64.obj
 	@echo ... src/eeprom_24lc64.i
 	@echo ... src/eeprom_24lc64.s
+	@echo ... src/esp8266.obj
+	@echo ... src/esp8266.i
+	@echo ... src/esp8266.s
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s
+	@echo ... src/rtc.obj
+	@echo ... src/rtc.i
+	@echo ... src/rtc.s
 .PHONY : help
 
 

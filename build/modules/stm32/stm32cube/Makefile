@@ -225,6 +225,30 @@ stm32f0xx/drivers/src/stm32f0xx_ll_i2c.c.s:
 	cd /d C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build && $(MAKE) $(MAKESILENT) -f modules\stm32\stm32cube\CMakeFiles\..__modules__hal__stm32__stm32cube.dir\build.make modules/stm32/stm32cube/CMakeFiles/..__modules__hal__stm32__stm32cube.dir/stm32f0xx/drivers/src/stm32f0xx_ll_i2c.c.s
 .PHONY : stm32f0xx/drivers/src/stm32f0xx_ll_i2c.c.s
 
+stm32f0xx/drivers/src/stm32f0xx_ll_pwr.obj: stm32f0xx/drivers/src/stm32f0xx_ll_pwr.c.obj
+.PHONY : stm32f0xx/drivers/src/stm32f0xx_ll_pwr.obj
+
+# target to build an object file
+stm32f0xx/drivers/src/stm32f0xx_ll_pwr.c.obj:
+	cd /d C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build && $(MAKE) $(MAKESILENT) -f modules\stm32\stm32cube\CMakeFiles\..__modules__hal__stm32__stm32cube.dir\build.make modules/stm32/stm32cube/CMakeFiles/..__modules__hal__stm32__stm32cube.dir/stm32f0xx/drivers/src/stm32f0xx_ll_pwr.c.obj
+.PHONY : stm32f0xx/drivers/src/stm32f0xx_ll_pwr.c.obj
+
+stm32f0xx/drivers/src/stm32f0xx_ll_pwr.i: stm32f0xx/drivers/src/stm32f0xx_ll_pwr.c.i
+.PHONY : stm32f0xx/drivers/src/stm32f0xx_ll_pwr.i
+
+# target to preprocess a source file
+stm32f0xx/drivers/src/stm32f0xx_ll_pwr.c.i:
+	cd /d C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build && $(MAKE) $(MAKESILENT) -f modules\stm32\stm32cube\CMakeFiles\..__modules__hal__stm32__stm32cube.dir\build.make modules/stm32/stm32cube/CMakeFiles/..__modules__hal__stm32__stm32cube.dir/stm32f0xx/drivers/src/stm32f0xx_ll_pwr.c.i
+.PHONY : stm32f0xx/drivers/src/stm32f0xx_ll_pwr.c.i
+
+stm32f0xx/drivers/src/stm32f0xx_ll_pwr.s: stm32f0xx/drivers/src/stm32f0xx_ll_pwr.c.s
+.PHONY : stm32f0xx/drivers/src/stm32f0xx_ll_pwr.s
+
+# target to generate assembly for a file
+stm32f0xx/drivers/src/stm32f0xx_ll_pwr.c.s:
+	cd /d C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build && $(MAKE) $(MAKESILENT) -f modules\stm32\stm32cube\CMakeFiles\..__modules__hal__stm32__stm32cube.dir\build.make modules/stm32/stm32cube/CMakeFiles/..__modules__hal__stm32__stm32cube.dir/stm32f0xx/drivers/src/stm32f0xx_ll_pwr.c.s
+.PHONY : stm32f0xx/drivers/src/stm32f0xx_ll_pwr.c.s
+
 stm32f0xx/drivers/src/stm32f0xx_ll_rcc.obj: stm32f0xx/drivers/src/stm32f0xx_ll_rcc.c.obj
 .PHONY : stm32f0xx/drivers/src/stm32f0xx_ll_rcc.obj
 
@@ -248,6 +272,30 @@ stm32f0xx/drivers/src/stm32f0xx_ll_rcc.s: stm32f0xx/drivers/src/stm32f0xx_ll_rcc
 stm32f0xx/drivers/src/stm32f0xx_ll_rcc.c.s:
 	cd /d C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build && $(MAKE) $(MAKESILENT) -f modules\stm32\stm32cube\CMakeFiles\..__modules__hal__stm32__stm32cube.dir\build.make modules/stm32/stm32cube/CMakeFiles/..__modules__hal__stm32__stm32cube.dir/stm32f0xx/drivers/src/stm32f0xx_ll_rcc.c.s
 .PHONY : stm32f0xx/drivers/src/stm32f0xx_ll_rcc.c.s
+
+stm32f0xx/drivers/src/stm32f0xx_ll_rtc.obj: stm32f0xx/drivers/src/stm32f0xx_ll_rtc.c.obj
+.PHONY : stm32f0xx/drivers/src/stm32f0xx_ll_rtc.obj
+
+# target to build an object file
+stm32f0xx/drivers/src/stm32f0xx_ll_rtc.c.obj:
+	cd /d C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build && $(MAKE) $(MAKESILENT) -f modules\stm32\stm32cube\CMakeFiles\..__modules__hal__stm32__stm32cube.dir\build.make modules/stm32/stm32cube/CMakeFiles/..__modules__hal__stm32__stm32cube.dir/stm32f0xx/drivers/src/stm32f0xx_ll_rtc.c.obj
+.PHONY : stm32f0xx/drivers/src/stm32f0xx_ll_rtc.c.obj
+
+stm32f0xx/drivers/src/stm32f0xx_ll_rtc.i: stm32f0xx/drivers/src/stm32f0xx_ll_rtc.c.i
+.PHONY : stm32f0xx/drivers/src/stm32f0xx_ll_rtc.i
+
+# target to preprocess a source file
+stm32f0xx/drivers/src/stm32f0xx_ll_rtc.c.i:
+	cd /d C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build && $(MAKE) $(MAKESILENT) -f modules\stm32\stm32cube\CMakeFiles\..__modules__hal__stm32__stm32cube.dir\build.make modules/stm32/stm32cube/CMakeFiles/..__modules__hal__stm32__stm32cube.dir/stm32f0xx/drivers/src/stm32f0xx_ll_rtc.c.i
+.PHONY : stm32f0xx/drivers/src/stm32f0xx_ll_rtc.c.i
+
+stm32f0xx/drivers/src/stm32f0xx_ll_rtc.s: stm32f0xx/drivers/src/stm32f0xx_ll_rtc.c.s
+.PHONY : stm32f0xx/drivers/src/stm32f0xx_ll_rtc.s
+
+# target to generate assembly for a file
+stm32f0xx/drivers/src/stm32f0xx_ll_rtc.c.s:
+	cd /d C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build && $(MAKE) $(MAKESILENT) -f modules\stm32\stm32cube\CMakeFiles\..__modules__hal__stm32__stm32cube.dir\build.make modules/stm32/stm32cube/CMakeFiles/..__modules__hal__stm32__stm32cube.dir/stm32f0xx/drivers/src/stm32f0xx_ll_rtc.c.s
+.PHONY : stm32f0xx/drivers/src/stm32f0xx_ll_rtc.c.s
 
 stm32f0xx/drivers/src/stm32f0xx_ll_utils.obj: stm32f0xx/drivers/src/stm32f0xx_ll_utils.c.obj
 .PHONY : stm32f0xx/drivers/src/stm32f0xx_ll_utils.obj
@@ -318,9 +366,15 @@ help:
 	@echo ... stm32f0xx/drivers/src/stm32f0xx_ll_i2c.obj
 	@echo ... stm32f0xx/drivers/src/stm32f0xx_ll_i2c.i
 	@echo ... stm32f0xx/drivers/src/stm32f0xx_ll_i2c.s
+	@echo ... stm32f0xx/drivers/src/stm32f0xx_ll_pwr.obj
+	@echo ... stm32f0xx/drivers/src/stm32f0xx_ll_pwr.i
+	@echo ... stm32f0xx/drivers/src/stm32f0xx_ll_pwr.s
 	@echo ... stm32f0xx/drivers/src/stm32f0xx_ll_rcc.obj
 	@echo ... stm32f0xx/drivers/src/stm32f0xx_ll_rcc.i
 	@echo ... stm32f0xx/drivers/src/stm32f0xx_ll_rcc.s
+	@echo ... stm32f0xx/drivers/src/stm32f0xx_ll_rtc.obj
+	@echo ... stm32f0xx/drivers/src/stm32f0xx_ll_rtc.i
+	@echo ... stm32f0xx/drivers/src/stm32f0xx_ll_rtc.s
 	@echo ... stm32f0xx/drivers/src/stm32f0xx_ll_utils.obj
 	@echo ... stm32f0xx/drivers/src/stm32f0xx_ll_utils.i
 	@echo ... stm32f0xx/drivers/src/stm32f0xx_ll_utils.s

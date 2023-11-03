@@ -1,0 +1,57 @@
+{
+
+    "version": "0.2.0",
+
+    "configurations": [
+
+
+        // {
+
+        //     "name": "Cortex Debug",
+
+        //     "cwd": "${workspaceFolder}",
+
+        //     "armToolchainPath": "C:\\Users\\luukv\\zephyr-sdk-0.16.1\\arm-zephyr-eabi\\bin",
+
+        //     "toolchainPrefix": "arm-zephyr-eabi",
+
+        //     "executable": "C:\\Users\\luukv\\zephyrproject\\zephyr\\samples\\sensor\\Weerstation\\build\\zephyr\\zephyr.elf",
+
+        //     "request": "launch",
+
+        //     "type": "cortex-debug",
+
+        //     "runToEntryPoint": "main",
+
+        //     "servertype": "openocd",
+
+        //     "configFiles": ["C:\\Users\\luukv\\zephyrproject\\zephyr\\boards\\arm\\nucleo_f030r8\\support\\openocd.cfg"]
+
+        //  }]}
+        {
+
+            "name": "Cortex Debug",
+
+            "cwd": "${workspaceFolder}",
+
+            "armToolchainPath": "/Users/dinordi/zephyr-sdk-0.16.1/arm-zephyr-eabi/bin",
+
+            "toolchainPrefix": "arm-zephyr-eabi",
+
+            "executable": "/Users/dinordi/zephyrproject/zephyr/samples/basic/Weerstation_stm32/build/zephyr/zephyr.elf",
+
+            "request": "launch",
+
+            "type": "cortex-debug",
+
+            "runToEntryPoint": "main",
+
+            "servertype": "openocd",
+
+            "configFiles": ["/Users/dinordi/zephyrproject/zephyr/boards/arm/nucleo_f030r8/support/openocd.cfg"]
+
+        }
+
+    ]
+
+}

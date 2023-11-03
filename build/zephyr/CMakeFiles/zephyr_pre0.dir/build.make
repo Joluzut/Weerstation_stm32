@@ -113,6 +113,7 @@ zephyr/zephyr_pre0.elf: zephyr/drivers/sensor/stm32_temp/libdrivers__sensor__stm
 zephyr/zephyr_pre0.elf: zephyr/drivers/sensor/stm32_vref/libdrivers__sensor__stm32_vref.a
 zephyr/zephyr_pre0.elf: zephyr/drivers/serial/libdrivers__serial.a
 zephyr/zephyr_pre0.elf: zephyr/drivers/timer/libdrivers__timer.a
+zephyr/zephyr_pre0.elf: zephyr/drivers/rtc/libdrivers__rtc.a
 zephyr/zephyr_pre0.elf: modules/stm32/stm32cube/lib..__modules__hal__stm32__stm32cube.a
 zephyr/zephyr_pre0.elf: zephyr/kernel/libkernel.a
 zephyr/zephyr_pre0.elf: zephyr/arch/common/libisr_tables.a

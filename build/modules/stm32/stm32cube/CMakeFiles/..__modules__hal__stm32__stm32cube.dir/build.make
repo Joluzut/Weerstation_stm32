@@ -138,10 +138,24 @@ modules/stm32/stm32cube/CMakeFiles/..__modules__hal__stm32__stm32cube.dir/stm32f
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/..__modules__hal__stm32__stm32cube.dir/stm32f0xx/drivers/src/stm32f0xx_ll_i2c.c.s"
 	cd /d C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\modules\stm32\stm32cube && C:\Users\luukv\zephyr-sdk-0.16.1\arm-zephyr-eabi\bin\arm-zephyr-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\luukv\zephyrproject\modules\hal\stm32\stm32cube\stm32f0xx\drivers\src\stm32f0xx_ll_i2c.c -o CMakeFiles\..__modules__hal__stm32__stm32cube.dir\stm32f0xx\drivers\src\stm32f0xx_ll_i2c.c.s
 
+modules/stm32/stm32cube/CMakeFiles/..__modules__hal__stm32__stm32cube.dir/stm32f0xx/drivers/src/stm32f0xx_ll_pwr.c.obj: modules/stm32/stm32cube/CMakeFiles/..__modules__hal__stm32__stm32cube.dir/flags.make
+modules/stm32/stm32cube/CMakeFiles/..__modules__hal__stm32__stm32cube.dir/stm32f0xx/drivers/src/stm32f0xx_ll_pwr.c.obj: C:/Users/luukv/zephyrproject/modules/hal/stm32/stm32cube/stm32f0xx/drivers/src/stm32f0xx_ll_pwr.c
+modules/stm32/stm32cube/CMakeFiles/..__modules__hal__stm32__stm32cube.dir/stm32f0xx/drivers/src/stm32f0xx_ll_pwr.c.obj: modules/stm32/stm32cube/CMakeFiles/..__modules__hal__stm32__stm32cube.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object modules/stm32/stm32cube/CMakeFiles/..__modules__hal__stm32__stm32cube.dir/stm32f0xx/drivers/src/stm32f0xx_ll_pwr.c.obj"
+	cd /d C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\modules\stm32\stm32cube && C:\Users\luukv\zephyr-sdk-0.16.1\arm-zephyr-eabi\bin\arm-zephyr-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT modules/stm32/stm32cube/CMakeFiles/..__modules__hal__stm32__stm32cube.dir/stm32f0xx/drivers/src/stm32f0xx_ll_pwr.c.obj -MF CMakeFiles\..__modules__hal__stm32__stm32cube.dir\stm32f0xx\drivers\src\stm32f0xx_ll_pwr.c.obj.d -o CMakeFiles\..__modules__hal__stm32__stm32cube.dir\stm32f0xx\drivers\src\stm32f0xx_ll_pwr.c.obj -c C:\Users\luukv\zephyrproject\modules\hal\stm32\stm32cube\stm32f0xx\drivers\src\stm32f0xx_ll_pwr.c
+
+modules/stm32/stm32cube/CMakeFiles/..__modules__hal__stm32__stm32cube.dir/stm32f0xx/drivers/src/stm32f0xx_ll_pwr.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/..__modules__hal__stm32__stm32cube.dir/stm32f0xx/drivers/src/stm32f0xx_ll_pwr.c.i"
+	cd /d C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\modules\stm32\stm32cube && C:\Users\luukv\zephyr-sdk-0.16.1\arm-zephyr-eabi\bin\arm-zephyr-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\luukv\zephyrproject\modules\hal\stm32\stm32cube\stm32f0xx\drivers\src\stm32f0xx_ll_pwr.c > CMakeFiles\..__modules__hal__stm32__stm32cube.dir\stm32f0xx\drivers\src\stm32f0xx_ll_pwr.c.i
+
+modules/stm32/stm32cube/CMakeFiles/..__modules__hal__stm32__stm32cube.dir/stm32f0xx/drivers/src/stm32f0xx_ll_pwr.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/..__modules__hal__stm32__stm32cube.dir/stm32f0xx/drivers/src/stm32f0xx_ll_pwr.c.s"
+	cd /d C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\modules\stm32\stm32cube && C:\Users\luukv\zephyr-sdk-0.16.1\arm-zephyr-eabi\bin\arm-zephyr-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\luukv\zephyrproject\modules\hal\stm32\stm32cube\stm32f0xx\drivers\src\stm32f0xx_ll_pwr.c -o CMakeFiles\..__modules__hal__stm32__stm32cube.dir\stm32f0xx\drivers\src\stm32f0xx_ll_pwr.c.s
+
 modules/stm32/stm32cube/CMakeFiles/..__modules__hal__stm32__stm32cube.dir/stm32f0xx/drivers/src/stm32f0xx_ll_rcc.c.obj: modules/stm32/stm32cube/CMakeFiles/..__modules__hal__stm32__stm32cube.dir/flags.make
 modules/stm32/stm32cube/CMakeFiles/..__modules__hal__stm32__stm32cube.dir/stm32f0xx/drivers/src/stm32f0xx_ll_rcc.c.obj: C:/Users/luukv/zephyrproject/modules/hal/stm32/stm32cube/stm32f0xx/drivers/src/stm32f0xx_ll_rcc.c
 modules/stm32/stm32cube/CMakeFiles/..__modules__hal__stm32__stm32cube.dir/stm32f0xx/drivers/src/stm32f0xx_ll_rcc.c.obj: modules/stm32/stm32cube/CMakeFiles/..__modules__hal__stm32__stm32cube.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object modules/stm32/stm32cube/CMakeFiles/..__modules__hal__stm32__stm32cube.dir/stm32f0xx/drivers/src/stm32f0xx_ll_rcc.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object modules/stm32/stm32cube/CMakeFiles/..__modules__hal__stm32__stm32cube.dir/stm32f0xx/drivers/src/stm32f0xx_ll_rcc.c.obj"
 	cd /d C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\modules\stm32\stm32cube && C:\Users\luukv\zephyr-sdk-0.16.1\arm-zephyr-eabi\bin\arm-zephyr-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT modules/stm32/stm32cube/CMakeFiles/..__modules__hal__stm32__stm32cube.dir/stm32f0xx/drivers/src/stm32f0xx_ll_rcc.c.obj -MF CMakeFiles\..__modules__hal__stm32__stm32cube.dir\stm32f0xx\drivers\src\stm32f0xx_ll_rcc.c.obj.d -o CMakeFiles\..__modules__hal__stm32__stm32cube.dir\stm32f0xx\drivers\src\stm32f0xx_ll_rcc.c.obj -c C:\Users\luukv\zephyrproject\modules\hal\stm32\stm32cube\stm32f0xx\drivers\src\stm32f0xx_ll_rcc.c
 
 modules/stm32/stm32cube/CMakeFiles/..__modules__hal__stm32__stm32cube.dir/stm32f0xx/drivers/src/stm32f0xx_ll_rcc.c.i: cmake_force
@@ -152,10 +166,24 @@ modules/stm32/stm32cube/CMakeFiles/..__modules__hal__stm32__stm32cube.dir/stm32f
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/..__modules__hal__stm32__stm32cube.dir/stm32f0xx/drivers/src/stm32f0xx_ll_rcc.c.s"
 	cd /d C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\modules\stm32\stm32cube && C:\Users\luukv\zephyr-sdk-0.16.1\arm-zephyr-eabi\bin\arm-zephyr-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\luukv\zephyrproject\modules\hal\stm32\stm32cube\stm32f0xx\drivers\src\stm32f0xx_ll_rcc.c -o CMakeFiles\..__modules__hal__stm32__stm32cube.dir\stm32f0xx\drivers\src\stm32f0xx_ll_rcc.c.s
 
+modules/stm32/stm32cube/CMakeFiles/..__modules__hal__stm32__stm32cube.dir/stm32f0xx/drivers/src/stm32f0xx_ll_rtc.c.obj: modules/stm32/stm32cube/CMakeFiles/..__modules__hal__stm32__stm32cube.dir/flags.make
+modules/stm32/stm32cube/CMakeFiles/..__modules__hal__stm32__stm32cube.dir/stm32f0xx/drivers/src/stm32f0xx_ll_rtc.c.obj: C:/Users/luukv/zephyrproject/modules/hal/stm32/stm32cube/stm32f0xx/drivers/src/stm32f0xx_ll_rtc.c
+modules/stm32/stm32cube/CMakeFiles/..__modules__hal__stm32__stm32cube.dir/stm32f0xx/drivers/src/stm32f0xx_ll_rtc.c.obj: modules/stm32/stm32cube/CMakeFiles/..__modules__hal__stm32__stm32cube.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object modules/stm32/stm32cube/CMakeFiles/..__modules__hal__stm32__stm32cube.dir/stm32f0xx/drivers/src/stm32f0xx_ll_rtc.c.obj"
+	cd /d C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\modules\stm32\stm32cube && C:\Users\luukv\zephyr-sdk-0.16.1\arm-zephyr-eabi\bin\arm-zephyr-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT modules/stm32/stm32cube/CMakeFiles/..__modules__hal__stm32__stm32cube.dir/stm32f0xx/drivers/src/stm32f0xx_ll_rtc.c.obj -MF CMakeFiles\..__modules__hal__stm32__stm32cube.dir\stm32f0xx\drivers\src\stm32f0xx_ll_rtc.c.obj.d -o CMakeFiles\..__modules__hal__stm32__stm32cube.dir\stm32f0xx\drivers\src\stm32f0xx_ll_rtc.c.obj -c C:\Users\luukv\zephyrproject\modules\hal\stm32\stm32cube\stm32f0xx\drivers\src\stm32f0xx_ll_rtc.c
+
+modules/stm32/stm32cube/CMakeFiles/..__modules__hal__stm32__stm32cube.dir/stm32f0xx/drivers/src/stm32f0xx_ll_rtc.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/..__modules__hal__stm32__stm32cube.dir/stm32f0xx/drivers/src/stm32f0xx_ll_rtc.c.i"
+	cd /d C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\modules\stm32\stm32cube && C:\Users\luukv\zephyr-sdk-0.16.1\arm-zephyr-eabi\bin\arm-zephyr-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\luukv\zephyrproject\modules\hal\stm32\stm32cube\stm32f0xx\drivers\src\stm32f0xx_ll_rtc.c > CMakeFiles\..__modules__hal__stm32__stm32cube.dir\stm32f0xx\drivers\src\stm32f0xx_ll_rtc.c.i
+
+modules/stm32/stm32cube/CMakeFiles/..__modules__hal__stm32__stm32cube.dir/stm32f0xx/drivers/src/stm32f0xx_ll_rtc.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/..__modules__hal__stm32__stm32cube.dir/stm32f0xx/drivers/src/stm32f0xx_ll_rtc.c.s"
+	cd /d C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\modules\stm32\stm32cube && C:\Users\luukv\zephyr-sdk-0.16.1\arm-zephyr-eabi\bin\arm-zephyr-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\luukv\zephyrproject\modules\hal\stm32\stm32cube\stm32f0xx\drivers\src\stm32f0xx_ll_rtc.c -o CMakeFiles\..__modules__hal__stm32__stm32cube.dir\stm32f0xx\drivers\src\stm32f0xx_ll_rtc.c.s
+
 modules/stm32/stm32cube/CMakeFiles/..__modules__hal__stm32__stm32cube.dir/stm32f0xx/drivers/src/stm32f0xx_ll_utils.c.obj: modules/stm32/stm32cube/CMakeFiles/..__modules__hal__stm32__stm32cube.dir/flags.make
 modules/stm32/stm32cube/CMakeFiles/..__modules__hal__stm32__stm32cube.dir/stm32f0xx/drivers/src/stm32f0xx_ll_utils.c.obj: C:/Users/luukv/zephyrproject/modules/hal/stm32/stm32cube/stm32f0xx/drivers/src/stm32f0xx_ll_utils.c
 modules/stm32/stm32cube/CMakeFiles/..__modules__hal__stm32__stm32cube.dir/stm32f0xx/drivers/src/stm32f0xx_ll_utils.c.obj: modules/stm32/stm32cube/CMakeFiles/..__modules__hal__stm32__stm32cube.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object modules/stm32/stm32cube/CMakeFiles/..__modules__hal__stm32__stm32cube.dir/stm32f0xx/drivers/src/stm32f0xx_ll_utils.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object modules/stm32/stm32cube/CMakeFiles/..__modules__hal__stm32__stm32cube.dir/stm32f0xx/drivers/src/stm32f0xx_ll_utils.c.obj"
 	cd /d C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\modules\stm32\stm32cube && C:\Users\luukv\zephyr-sdk-0.16.1\arm-zephyr-eabi\bin\arm-zephyr-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT modules/stm32/stm32cube/CMakeFiles/..__modules__hal__stm32__stm32cube.dir/stm32f0xx/drivers/src/stm32f0xx_ll_utils.c.obj -MF CMakeFiles\..__modules__hal__stm32__stm32cube.dir\stm32f0xx\drivers\src\stm32f0xx_ll_utils.c.obj.d -o CMakeFiles\..__modules__hal__stm32__stm32cube.dir\stm32f0xx\drivers\src\stm32f0xx_ll_utils.c.obj -c C:\Users\luukv\zephyrproject\modules\hal\stm32\stm32cube\stm32f0xx\drivers\src\stm32f0xx_ll_utils.c
 
 modules/stm32/stm32cube/CMakeFiles/..__modules__hal__stm32__stm32cube.dir/stm32f0xx/drivers/src/stm32f0xx_ll_utils.c.i: cmake_force
@@ -173,7 +201,9 @@ ____modules__hal__stm32__stm32cube_OBJECTS = \
 "CMakeFiles/..__modules__hal__stm32__stm32cube.dir/stm32f0xx/drivers/src/stm32f0xx_hal_rcc.c.obj" \
 "CMakeFiles/..__modules__hal__stm32__stm32cube.dir/stm32f0xx/drivers/src/stm32f0xx_hal_rcc_ex.c.obj" \
 "CMakeFiles/..__modules__hal__stm32__stm32cube.dir/stm32f0xx/drivers/src/stm32f0xx_ll_i2c.c.obj" \
+"CMakeFiles/..__modules__hal__stm32__stm32cube.dir/stm32f0xx/drivers/src/stm32f0xx_ll_pwr.c.obj" \
 "CMakeFiles/..__modules__hal__stm32__stm32cube.dir/stm32f0xx/drivers/src/stm32f0xx_ll_rcc.c.obj" \
+"CMakeFiles/..__modules__hal__stm32__stm32cube.dir/stm32f0xx/drivers/src/stm32f0xx_ll_rtc.c.obj" \
 "CMakeFiles/..__modules__hal__stm32__stm32cube.dir/stm32f0xx/drivers/src/stm32f0xx_ll_utils.c.obj"
 
 # External object files for target ..__modules__hal__stm32__stm32cube
@@ -184,11 +214,13 @@ modules/stm32/stm32cube/lib..__modules__hal__stm32__stm32cube.a: modules/stm32/s
 modules/stm32/stm32cube/lib..__modules__hal__stm32__stm32cube.a: modules/stm32/stm32cube/CMakeFiles/..__modules__hal__stm32__stm32cube.dir/stm32f0xx/drivers/src/stm32f0xx_hal_rcc.c.obj
 modules/stm32/stm32cube/lib..__modules__hal__stm32__stm32cube.a: modules/stm32/stm32cube/CMakeFiles/..__modules__hal__stm32__stm32cube.dir/stm32f0xx/drivers/src/stm32f0xx_hal_rcc_ex.c.obj
 modules/stm32/stm32cube/lib..__modules__hal__stm32__stm32cube.a: modules/stm32/stm32cube/CMakeFiles/..__modules__hal__stm32__stm32cube.dir/stm32f0xx/drivers/src/stm32f0xx_ll_i2c.c.obj
+modules/stm32/stm32cube/lib..__modules__hal__stm32__stm32cube.a: modules/stm32/stm32cube/CMakeFiles/..__modules__hal__stm32__stm32cube.dir/stm32f0xx/drivers/src/stm32f0xx_ll_pwr.c.obj
 modules/stm32/stm32cube/lib..__modules__hal__stm32__stm32cube.a: modules/stm32/stm32cube/CMakeFiles/..__modules__hal__stm32__stm32cube.dir/stm32f0xx/drivers/src/stm32f0xx_ll_rcc.c.obj
+modules/stm32/stm32cube/lib..__modules__hal__stm32__stm32cube.a: modules/stm32/stm32cube/CMakeFiles/..__modules__hal__stm32__stm32cube.dir/stm32f0xx/drivers/src/stm32f0xx_ll_rtc.c.obj
 modules/stm32/stm32cube/lib..__modules__hal__stm32__stm32cube.a: modules/stm32/stm32cube/CMakeFiles/..__modules__hal__stm32__stm32cube.dir/stm32f0xx/drivers/src/stm32f0xx_ll_utils.c.obj
 modules/stm32/stm32cube/lib..__modules__hal__stm32__stm32cube.a: modules/stm32/stm32cube/CMakeFiles/..__modules__hal__stm32__stm32cube.dir/build.make
 modules/stm32/stm32cube/lib..__modules__hal__stm32__stm32cube.a: modules/stm32/stm32cube/CMakeFiles/..__modules__hal__stm32__stm32cube.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking C static library lib..__modules__hal__stm32__stm32cube.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking C static library lib..__modules__hal__stm32__stm32cube.a"
 	cd /d C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\modules\stm32\stm32cube && $(CMAKE_COMMAND) -P CMakeFiles\..__modules__hal__stm32__stm32cube.dir\cmake_clean_target.cmake
 	cd /d C:\Users\luukv\zephyrproject\zephyr\samples\sensor\eeprom\build\modules\stm32\stm32cube && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\..__modules__hal__stm32__stm32cube.dir\link.txt --verbose=$(VERBOSE)
 

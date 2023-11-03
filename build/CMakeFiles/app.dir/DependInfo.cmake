@@ -8,8 +8,11 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "C:/Users/luukv/zephyrproject/zephyr/samples/sensor/eeprom/src/eeprom.c" "CMakeFiles/app.dir/src/eeprom.c.obj" "gcc" "CMakeFiles/app.dir/src/eeprom.c.obj.d"
   "C:/Users/luukv/zephyrproject/zephyr/samples/sensor/eeprom/src/eeprom_24lc64.c" "CMakeFiles/app.dir/src/eeprom_24lc64.c.obj" "gcc" "CMakeFiles/app.dir/src/eeprom_24lc64.c.obj.d"
+  "C:/Users/luukv/zephyrproject/zephyr/samples/sensor/eeprom/src/esp8266.c" "CMakeFiles/app.dir/src/esp8266.c.obj" "gcc" "CMakeFiles/app.dir/src/esp8266.c.obj.d"
   "C:/Users/luukv/zephyrproject/zephyr/samples/sensor/eeprom/src/main.c" "CMakeFiles/app.dir/src/main.c.obj" "gcc" "CMakeFiles/app.dir/src/main.c.obj.d"
+  "C:/Users/luukv/zephyrproject/zephyr/samples/sensor/eeprom/src/rtc.c" "CMakeFiles/app.dir/src/rtc.c.obj" "gcc" "CMakeFiles/app.dir/src/rtc.c.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.
