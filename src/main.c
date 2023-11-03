@@ -169,14 +169,12 @@ int main(void)
 
 	
 
-	eeprom(rtc_dev);
-	sendToDatabase(uart_dev, rtc_dev);
 
 	while(1)
 	{
 		if(connected == 0)
 		{
-		startup(uart_dev, rtc_dev);
+			startup(uart_dev, rtc_dev);
 		}
 		eeprom(rtc_dev);
 
