@@ -37,7 +37,7 @@ void parseTime(char* response, const struct device *rtc)
     const char* wdays[] = {"Mon", "Tue", "Wed", "Thu", "Fri", "Sat",
     "Sun"};
 
-    printk("Wday: %s, month: %s, mday: %d, Hours: %d, minutes: %d, seconds: %d, year: %d\n", wday, month, parsed_time.tm_mday, hours, minutes, seconds, year);
+    // printk("Wday: %s, month: %s, mday: %d, Hours: %d, minutes: %d, seconds: %d, year: %d\n", wday, month, parsed_time.tm_mday, hours, minutes, seconds, year);
 
     for (int i = 0; i < 12; ++i) {
         if (strcmp(month, months[i]) == 0) {
@@ -61,7 +61,7 @@ void parseTime(char* response, const struct device *rtc)
     parsed_time.tm_hour = hours;
     parsed_time.tm_min = minutes;
     parsed_time.tm_sec = seconds;
-    printk("Parsed seconds: %d", parsed_time.tm_sec);
+    // printk("Parsed seconds: %d", parsed_time.tm_sec);
     printk("Parsed Date and Time: %s", asctime(&parsed_time));
 
     rtc_set_time(rtc, &parsed_time);

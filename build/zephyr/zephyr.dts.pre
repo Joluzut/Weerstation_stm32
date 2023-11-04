@@ -1486,6 +1486,7 @@ arduino_spi: &spi1 {};
 
 
 };
+# 61 "/Users/dinordi/zephyrproject/zephyr/samples/basic/Weerstation_stm32/boards/nucleo_f030r8.overlay"
 &rtc {
     status="okay";
     clocks = < &rcc 0x1c 0x10000000 >, < &rcc 0x002 ((((0x20) & 0xFFU) << 0U) | (((8) & 0x1FU) << 8U) | (((3) & 0x7U) << 13U) | (((1) & 0x7U) << 16U)) >;
