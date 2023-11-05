@@ -8,8 +8,8 @@
 #include "esp8266.h"
 #include "eeprom.h"
 
-#define STACKSIZE 512
-#define STACKSIZE_WIFI 512
+#define STACKSIZE 128
+#define STACKSIZE_WIFI 512 //Wifi thread uses sscanf so more stack size is needed.
 
 
 #define rtc_device_node DT_NODELABEL(rtc) //RTC node
@@ -23,7 +23,7 @@ K_SEM_DEFINE(wifi_ready, 0, 1);  // Semaphore to signal Wi-Fi connection
 K_SEM_DEFINE(wifi_fail, 0, 1);  // Semaphore to signal Wi-Fi connection
 K_SEM_DEFINE(data_ready, 0, 1);      // Semaphore to signal data is ready for upload
 K_SEM_DEFINE(upload_completed, 0, 1); // Semaphore to signal completed data upload
-K_SEM_DEFINE(test, 0, 1); 
+// K_SEM_DEFINE(test, 0, 1); 
 
 
 
@@ -37,13 +37,6 @@ void sleepDevice()
 	while(1)
 	{
 		k_sem_take(&upload_completed, K_FOREVER);
-		if(firstCon == 1)
-		{
-			k_sem_give(&wifi_fail);
-			continue;
-		}
-		printk("sleepdevice...\n");
-
 		k_sleep(K_SECONDS(5));
 
 		if(connected == 0)
@@ -61,49 +54,41 @@ void wifi_connect()
 	{
 		k_sem_take(&wifi_fail, K_FOREVER);
 		
-		// while(1) //Test uart on startup
-		// {
-		// 	char* resp;
-        // 	resp = sendESP("AT\r\n", uart_dev, at);
-        // 	printk("%s", resp);
-		// }
-
 		char* resp;																	
-        // resp = sendESP("AT+CWJAP=\"iPhone van Joey\",\"123456789\"\r\n", uart_dev, at);
-        // printk("%s", resp);
-        // k_sleep(K_MSEC(100));
-        // const char *lastFourCharacters = resp + strlen(resp) - strlen("FAIL\r\n");
-        // if(strcmp(lastFourCharacters, "FAIL\r\n") == 0)
-        // {
-		// 	if(firstCon == 1)
-		// 	{
-		// 		printk("FAIL on startup, trying again...\n");
-		// 		k_sem_give(&wifi_fail);
-        //     	continue;
-		// 	}
-		// 	k_sem_give(&upload_completed);
-		// 	continue;
-        // }
-        // resp = sendESP("AT+CIPSNTPCFG=1,1,\"0.nl.pool.ntp.org\"\r\n", uart_dev, at);
-        // printk("%s", resp);
-        // k_sleep(K_MSEC(1000));
-
-        resp = sendESP("AT+CIPSNTPTIME?\r\n", uart_dev, at);							// Comment vanaf hier
+        resp = sendESP("AT+CWJAP=\"iPhone van Joey\",\"123456789\"\r\n", uart_dev, at);
         printk("%s", resp);
-        k_sleep(K_MSEC(200));
+        k_sleep(K_MSEC(100));
+        const char *lastFourCharacters = resp + strlen(resp) - strlen("FAIL\r\n");
+        if(strcmp(lastFourCharacters, "FAIL\r\n") == 0)
+        {
+			if(firstCon == 1)
+			{
+				printk("FAIL on startup, trying again...\n");
+				k_sem_give(&wifi_fail);
+            	continue;
+			}
+			k_sem_give(&upload_completed);
+			continue;
+        }
+        resp = sendESP("AT+CIPSNTPCFG=1,1,\"0.nl.pool.ntp.org\"\r\n", uart_dev, at);
+        printk("%s", resp);
+        k_sleep(K_MSEC(100));
+
+        resp = sendESP("AT+CIPSNTPTIME?\r\n", uart_dev, at);						
+        printk("%s", resp);
+        k_sleep(K_MSEC(100));
         struct tm parsed_time = parseTime(resp, rtc_dev);
-        // k_sleep(K_MSEC(1000));														//Tot hier, om threads wél te laten werken
 
 		connected=1;
 		firstCon = 0;
-		printk("Giving test\n");
-		k_sem_give(&test);
+
+		k_sem_give(&wifi_ready);
 	}
 }
 
 void eeprom_thread() {
     while (1) {
-		k_sem_take(&test, K_FOREVER);
+		k_sem_take(&wifi_ready, K_FOREVER);
         printk("EEPROM\n");
         // Perform EEPROM operations
 		const struct device *sensor = DEVICE_DT_GET_ANY(bosch_bme280);
@@ -164,6 +149,8 @@ void eeprom_thread() {
 		}
 		k_sleep(K_MSEC(1));
 
+
+		backlogAmount++;
         // Signal that data is ready for upload
         k_sem_give(&data_ready);
     }
@@ -175,34 +162,37 @@ void upload_thread() {
 		// Wait for data to be ready for upload
 		k_sem_take(&data_ready, K_FOREVER);
 
-		// Perform data upload to the database
 		char recv_buf[1024];
-
 		char* resp;
-		storageData data = returnStorageData(0);//Needs correct index instead of just 0
-		measurementStruct meas = sendMeasurement(data.temp1,data.temp2, data.press1,data.press2, data.humid1,data.humid2, data.time, uart_dev);
-		resp = sendESP(meas.tcp, uart_dev, tcp);//CIPSTART
-		printk("%s", resp);
-		k_sleep(K_MSEC(1500));
 
-		resp = sendESP(meas.cipsend, uart_dev, tcp);//CIPSEND=
-		printk("%s", resp);
-		k_sleep(K_MSEC(500));
-		const char *lastFourCharacters = resp + strlen(resp) - strlen("ERROR\r\n");
-		if(strcmp(lastFourCharacters, "ERROR\r\n") == 0)//If it fails connection must have been lost
+		do
 		{
-			connected = 0;
-			k_sem_give(&upload_completed);
-			return;
-		}
-		else{
-			resp = sendESP(meas.request, uart_dev, tcp);//GET REQUEST
+			storageData data = returnStorageData(0);											//Needs correct index instead of just 0
+			measurementStruct meas = sendMeasurement(data.temp1,data.temp2, data.press1,data.press2, data.humid1,data.humid2, data.time, uart_dev);
+			
+			resp = sendESP(meas.tcp, uart_dev, tcp);											//CIPSTART
 			printk("%s", resp);
-			k_sleep(K_MSEC(100));
-		}
+			k_sleep(K_MSEC(1500));
 
-		// Signal that data upload is completed
-		k_sem_give(&upload_completed);
+			resp = sendESP(meas.cipsend, uart_dev, tcp);										//CIPSEND=
+			printk("%s", resp);
+			k_sleep(K_MSEC(200));
+			const char *lastFourCharacters = resp + strlen(resp) - strlen("ERROR\r\n");
+			if(strcmp(lastFourCharacters, "ERROR\r\n") == 0)									//If it fails, connection must have been lost so jump out of do-while and sleep
+			{
+				connected = 0;
+				k_sem_give(&upload_completed);
+				break;
+			}
+			else{//Successfull request
+				resp = sendESP(meas.request, uart_dev, tcp);									//GET REQUEST
+				printk("%s", resp);
+				backlogAmount--;
+				
+			}
+		}while(backlogAmount != 0);
+
+		k_sem_give(&upload_completed);		
 	}
     
 }
@@ -226,7 +216,7 @@ void main(void) {
 	int ret = uart_irq_callback_user_data_set(uart_dev, readUsart, NULL);
     uart_irq_rx_enable(uart_dev);
 
-	k_sem_give(&upload_completed);
+	k_sem_give(&wifi_fail);
     // Wait forever
     k_sleep(K_FOREVER);
 }
