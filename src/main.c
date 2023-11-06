@@ -29,7 +29,8 @@ K_SEM_DEFINE(upload_completed, 0, 1); // Semaphore to signal completed data uplo
 
 
 int connected = 0;
-int backlogAmount = 0;
+int backlogStart = 0;
+int counterWrite = 0;
 int firstCon = 1;
 
 void sleepDevice() 
@@ -94,11 +95,8 @@ void eeprom_thread() {
 		const struct device *sensor = DEVICE_DT_GET_ANY(bosch_bme280);
 		struct sensor_value temp, press, humidity;
 		int8_t * data[6];
-		int counterWrite = 0;
-		int counterRead = 0;
 		int8_t recieved;
 		int32_t time = getEpochTime(rtc_dev);
-		int32_t recievedtime;
 		
 		sensor_sample_fetch(sensor);
 		sensor_channel_get(sensor, SENSOR_CHAN_AMBIENT_TEMP, &temp);
@@ -126,31 +124,10 @@ void eeprom_thread() {
 		k_sleep(K_MSEC(5));
 		}
 
-		recievedtime = readBigEeprom(counterRead);
-		counterRead = counterRead + 4;
-		printk("(%d)", recievedtime);
-		k_sleep(K_MSEC(5));
-		for(int x = 0; x<6; x++)
-		{
-		recieved = readEeprom(counterRead);
-		printk("(%d)", recieved);
-		counterRead++;
-		k_sleep(K_MSEC(5));
-		}
-
 		if(counterWrite > 14400)
 		{
 			counterWrite = 0;
 		}
-
-		if(counterRead > 14400)
-		{
-			counterRead = 0;
-		}
-		k_sleep(K_MSEC(1));
-
-
-		backlogAmount++;
         // Signal that data is ready for upload
         k_sem_give(&data_ready);
     }
@@ -167,7 +144,8 @@ void upload_thread() {
 
 		do
 		{
-			storageData data = returnStorageData(0);											//Needs correct index instead of just 0
+			storageData data = returnStorageData(backlogStart);											//Needs correct index instead of just 0
+			backlogStart + 10;
 			measurementStruct meas = sendMeasurement(data.temp1,data.temp2, data.press1,data.press2, data.humid1,data.humid2, data.time, uart_dev);
 			
 			resp = sendESP(meas.tcp, uart_dev, tcp);											//CIPSTART
@@ -187,11 +165,14 @@ void upload_thread() {
 			else{//Successfull request
 				resp = sendESP(meas.request, uart_dev, tcp);									//GET REQUEST
 				printk("%s", resp);
-				backlogAmount--;
 				
 			}
-		}while(backlogAmount != 0);
-
+			if(backlogStart > 14400)
+			{
+				backlogStart = 0;
+			}
+		}while(backlogStart != counterWrite);
+		backlogStart = counterWrite;
 		k_sem_give(&upload_completed);		
 	}
     
