@@ -10,7 +10,7 @@ void syncRTC(const char* time, const struct device *dev, struct tm *timeStruct)/
     rtc_set_time(dev, timeStruct);
 }
 
-parsed_time parseTime(char* response, const struct device *rtc)
+void parseTime(char* response, const struct device *rtc)
 {
     printk("Received time: %s\n", response);
     struct tm parsed_time = {
@@ -64,7 +64,6 @@ parsed_time parseTime(char* response, const struct device *rtc)
     // printk("Parsed seconds: %d", parsed_time.tm_sec);
     printk("Parsed Date and Time: %s", asctime(&parsed_time));
     rtc_set_time(rtc, &parsed_time);
-    return parsed_time;
 }
 
 time_t getEpochTime(const struct device *dev)

@@ -9,4 +9,4 @@ typedef struct tm parsed_time;
 
 void syncRTC(const char* time, const struct device *dev, struct tm *timeStruct);
 time_t getEpochTime(const struct device *dev);
-parsed_time parseTime(char* response, const struct device *rtc);
+void parseTime(char* response, const struct device *rtc);
