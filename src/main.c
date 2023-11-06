@@ -8,10 +8,10 @@
 #include "esp8266.h"
 #include "eeprom.h"
 
-#define STACKSIZE_UPLOAD 600
-#define STACKSIZE_WIFI 350
-#define STACKSIZE_SLEEP 512
-#define STACKSIZE_EEPROM 512
+#define STACKSIZE_UPLOAD 1200
+#define STACKSIZE_WIFI 315 //smaller does not work
+#define STACKSIZE_SLEEP 256
+#define STACKSIZE_EEPROM 450 // smaller does not work
 
 
 #define rtc_device_node DT_NODELABEL(rtc) //RTC node
@@ -42,17 +42,19 @@ void sleepDevice()
 		if(firstCon==1)
 		{
 			k_sem_take(&wifi_ready, K_FOREVER);
+			printk("Wifi connected first time\n");
 			k_sem_give(&sleep_done);
 			continue;
 		}
 		printk("Waiting for upload Comleted\n\n\n\n\n\n\n\n");
 
 		k_sem_take(&upload_completed, K_FOREVER);
-		k_sleep(K_SECONDS(5));
 		printk("Sleepdevice...\n");
+		k_sleep(K_SECONDS(5));
 
 		if(connected == 0)
 		{
+			printk("Retry wifi connect\n");
 			k_sem_give(&wifi_fail);
 			continue;
 		}
@@ -181,7 +183,8 @@ void upload_thread() {
 
 		// char recv_buf[1024];
 		char* resp;
-
+		resp = sendESP("AT\r\n", uart_dev, at);
+		printk("%s", resp);
 		do
 		{
 			storageData data = returnStorageData(0);											//Needs correct index instead of just 0
@@ -205,7 +208,7 @@ void upload_thread() {
 			else{//Successfull request
 				printk("Upload done\n");
 
-				resp = sendESP(meas.request, uart_dev, tcp);									//GET REQUEST
+				resp = sendESP(meas.request, uart_dev, req);									//GET REQUEST
 				printk("%s", resp);
 				backlogAmount--;
 				

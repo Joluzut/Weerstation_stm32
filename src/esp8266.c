@@ -56,6 +56,7 @@ char* getNTPTime()
 char* returnUsartStr(status stat)
 {
     int ret;
+    uint8_t ok = 0;
     uint16_t c;
     rx_buf_pos = 0;
     for(int i = 0; i< sizeof(rx_buf); i++)
@@ -80,13 +81,16 @@ char* returnUsartStr(status stat)
         case tcp:
             check = "OK\r\n";
             check2 = "ERROR\r\n";
+        case req:
+            check = "OK\r\n";
+            check2 = "ERROR\r\n";
 
     }
    
     
     while(1)
     {
-
+        
 
         ret = k_msgq_get(&uart_msgq, &c, K_FOREVER);
         if (ret == 0) {
@@ -105,7 +109,18 @@ char* returnUsartStr(status stat)
 
         if(strcmp(check, lastFourCharacters) == 0)
         {
-            return rx_buf;
+            if(stat == req)
+            {
+                ok++;
+                if(ok==3)
+                {
+                    return rx_buf;
+                }
+            }
+            else
+            {
+                return rx_buf;
+            }
         }
         else if(strcmp(check2, lastFourCharacters2) == 0)
         {
