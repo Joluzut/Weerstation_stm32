@@ -5,7 +5,7 @@
 #include <zephyr/drivers/counter.h>
 #include "time.h"
 
-
+typedef struct tm parsed_time;
 
 void syncRTC(const char* time, const struct device *dev, struct tm *timeStruct);
 time_t getEpochTime(const struct device *dev);

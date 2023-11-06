@@ -31,13 +31,13 @@ void parseTime(char* response, const struct device *rtc)
                               wday, month, &parsed_time.tm_mday,
                               &hours, &minutes, &seconds, &year);
 
-    // Convert the month abbreviation to month number
+    // // Convert the month abbreviation to month number
     const char* months[] = {"Jan", "Feb", "Mar", "Apr", "May", "Jun",
                             "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
     const char* wdays[] = {"Mon", "Tue", "Wed", "Thu", "Fri", "Sat",
     "Sun"};
 
-    printk("Wday: %s, month: %s, mday: %d, Hours: %d, minutes: %d, seconds: %d, year: %d\n", wday, month, parsed_time.tm_mday, hours, minutes, seconds, year);
+    // // printk("Wday: %s, month: %s, mday: %d, Hours: %d, minutes: %d, seconds: %d, year: %d\n", wday, month, parsed_time.tm_mday, hours, minutes, seconds, year);
 
     for (int i = 0; i < 12; ++i) {
         if (strcmp(month, months[i]) == 0) {
@@ -48,23 +48,23 @@ void parseTime(char* response, const struct device *rtc)
         {
             if(strcmp(wday, wdays[i]) == 0)
             {
-                parsed_time.tm_wday = i;
+                parsed_time.tm_wday = i+1;
                 break;
             }
         }
     }
 
-    // Adjust year (assuming 1900-based year count)
+    // // Adjust year (assuming 1900-based year count)
     parsed_time.tm_year = year - 1900;
 
-    // Set remaining time components
+    // // Set remaining time components
     parsed_time.tm_hour = hours;
     parsed_time.tm_min = minutes;
     parsed_time.tm_sec = seconds;
-    printk("Parsed seconds: %d", parsed_time.tm_sec);
-    printk("Parsed Date and Time: %s", asctime(&parsed_time));
-
+    // printk("Parsed seconds: %d", parsed_time.tm_sec);
     rtc_set_time(rtc, &parsed_time);
+    rtc_get_time(rtc, &parsed_time);
+    printk("Parsed Date and Time: %s", asctime(&parsed_time));
 }
 
 time_t getEpochTime(const struct device *dev)
@@ -85,6 +85,6 @@ time_t getEpochTime(const struct device *dev)
         printk("Failed to convert time to Epoch time\n");
         return NULL;
     }
-    printk("Test\n");
+    // printk("Test\n");
     return epochTime;
 }

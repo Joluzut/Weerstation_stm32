@@ -1486,6 +1486,7 @@ arduino_spi: &spi1 {};
 
 
 };
+
 &rtc {
     status="okay";
     clocks = < &rcc 0x1c 0x10000000 >, < &rcc 0x002 ((((0x20) & 0xFFU) << 0U) | (((8) & 0x1FU) << 8U) | (((3) & 0x7U) << 13U) | (((1) & 0x7U) << 16U)) >;
@@ -1495,6 +1496,11 @@ arduino_spi: &spi1 {};
     status="okay";
     driving-capability = < 0x1 >;
     /delete-property/ lse-bypass;
+};
+
+&timers3{
+ status = "okay";
+ label = "timer3";
 };
 # 1 "<command-line>" 2
 # 1 "/Users/dinordi/zephyrproject/zephyr/misc/empty_file.c"
