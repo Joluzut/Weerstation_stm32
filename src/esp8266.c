@@ -25,12 +25,12 @@ measurementStruct sendMeasurement(int temp1, int temp2, int press1, int press2, 
     strftime(formattedDate, sizeof(formattedDate), "%Y-%m-%d", timeInfo);
     strftime(formattedTime, sizeof(formattedTime), "%H:%M:%S", timeInfo);
 
-    printk("%s%%20%s\n", formattedDate, formattedTime);
+    // printk("%s%%20%s\n", formattedDate, formattedTime);
 
     char request[500]; // Make sure the buffer is large enough to hold the formatted string
     snprintf(request, sizeof(request), "GET /weerstation_get.php?api_key=tPmAT5Ab3j7F9&temp=%d.%d&press=%d.%d&humid=%d.%d&timestamp=%s%%%%20%s HTTP/1.1\r\nHost: joey.lvannoort.com\r\n\r\n", temp1, temp2, press1, press2, humid1, humid2,formattedDate, formattedTime);
     meas.request = request;
-    printk("Request: %s\n", request);
+    // printk("Request: %s\n", request);
     char* requestsize[16];
     snprintf(requestsize,sizeof(requestsize),"AT+CIPSEND=%d\r\n", (strlen(request)-1));
     meas.cipsend=requestsize;
