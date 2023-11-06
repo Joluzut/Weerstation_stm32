@@ -41,23 +41,6 @@ timings = <64000000 I2C_BITRATE_STANDARD 0x10707DBC>,
 //16.384
 };
 
-// &usart1 {
-// 	pinctrl-0 = < &usart1_tx_pc13 &usart1_rx_pc14 >;
-// };
-// &usart1 {
-// 	// usart1: serial@40013800 {
-// 	// 	compatible = "st,stm32-usart", "st,stm32-uart";
-// 	// 	reg = < 0x40013800 0x400 >;
-// 	// 	clocks = < &rcc 0x18 0x4000 >;
-// 	// 	resets = < &rctl 0x18e >;
-// 	// 	interrupts = < 0x1b 0x0 >;
-// 		status = "okay";
-// 		// pinctrl-0 = < &usart1_tx_pc13 &usart1_rx_pc14 >;
-// 	// 	pinctrl-names = "default";
-// 	// 	current-speed = < 0x1c200 >;
-// 	// };
-// };
-
 &rtc {
     status="okay";
     clocks = < &rcc 0x1c 0x10000000 >, < &rcc STM32_SRC_LSE RTC_SEL(1) >;
@@ -67,4 +50,9 @@ timings = <64000000 I2C_BITRATE_STANDARD 0x10707DBC>,
     status="okay";
     driving-capability = < 0x1 >;
     /delete-property/ lse-bypass;
+};
+
+&timers3{
+	status = "okay";
+	label = "timer3";
 };

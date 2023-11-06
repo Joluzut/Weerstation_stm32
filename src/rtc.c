@@ -62,8 +62,9 @@ void parseTime(char* response, const struct device *rtc)
     parsed_time.tm_min = minutes;
     parsed_time.tm_sec = seconds;
     // printk("Parsed seconds: %d", parsed_time.tm_sec);
-    printk("Parsed Date and Time: %s", asctime(&parsed_time));
     rtc_set_time(rtc, &parsed_time);
+    rtc_get_time(rtc, &parsed_time);
+    printk("Parsed Date and Time: %s", asctime(&parsed_time));
 }
 
 time_t getEpochTime(const struct device *dev)

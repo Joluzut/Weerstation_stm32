@@ -56,6 +56,7 @@ int8_t readEeprom(int counter)
 	}
 	
 	data = (uint8_t)(*eeprom_data);
+	k_sleep(K_MSEC(10));
 	return data;
 }
 
@@ -75,6 +76,7 @@ int32_t readBigEeprom(int counter)
 	}
 	
 	data = (uint32_t)(*eeprom_data);
+	k_sleep(K_MSEC(10));
 	return data;
 }
 
