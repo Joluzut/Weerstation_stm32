@@ -1,2 +1,0 @@
-C:\Users\luukv\zephyr-sdk-0.16.1\arm-zephyr-eabi\bin\arm-zephyr-eabi-ar.exe qc liblib__libc__common.a CMakeFiles/lib__libc__common.dir/source/stdlib/abort.c.obj CMakeFiles/lib__libc__common.dir/source/stdlib/malloc.c.obj CMakeFiles/lib__libc__common.dir/source/string/strnlen.c.obj
-C:\Users\luukv\zephyr-sdk-0.16.1\arm-zephyr-eabi\bin\arm-zephyr-eabi-ranlib.exe liblib__libc__common.a

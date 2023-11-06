@@ -15,7 +15,8 @@
 typedef enum{
     rst=0,
     at,
-    tcp
+    tcp,
+    req
 }status;
 typedef struct
 {

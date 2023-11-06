@@ -51,6 +51,7 @@ case K_OBJ_DRIVER_CRYPTO: ret = "crypto driver"; break;
 case K_OBJ_DRIVER_AUXDISPLAY: ret = "auxdisplay driver"; break;
 case K_OBJ_DRIVER_BBRAM: ret = "bbram driver"; break;
 case K_OBJ_DRIVER_CAN: ret = "can driver"; break;
+case K_OBJ_DRIVER_CHARGER: ret = "charger driver"; break;
 case K_OBJ_DRIVER_COREDUMP: ret = "coredump driver"; break;
 case K_OBJ_DRIVER_COUNTER: ret = "counter driver"; break;
 case K_OBJ_DRIVER_DAC: ret = "dac driver"; break;

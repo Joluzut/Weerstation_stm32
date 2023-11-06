@@ -56,6 +56,7 @@ char* getNTPTime()
 char* returnUsartStr(status stat)
 {
     int ret;
+    uint8_t ok = 0;
     uint16_t c;
     rx_buf_pos = 0;
     for(int i = 0; i< sizeof(rx_buf); i++)
@@ -64,6 +65,8 @@ char* returnUsartStr(status stat)
     }
     char* check;
     char* check2;
+    char* check3;
+
    
 
     switch(stat)
@@ -80,15 +83,21 @@ char* returnUsartStr(status stat)
         case tcp:
             check = "OK\r\n";
             check2 = "ERROR\r\n";
+        case req:
+            check = "OK\r\n";
+            check2 = "WIFI DISCONNECT\r\n";
+            check3 = "ERROR\r\n";
+
 
     }
    
     
     while(1)
     {
-
+        
 
         ret = k_msgq_get(&uart_msgq, &c, K_FOREVER);
+        printk("%c", c);
         if (ret == 0) {
             // printk("Received: %c\n", uart_data);
             rx_buf[rx_buf_pos] = c;
@@ -100,17 +109,38 @@ char* returnUsartStr(status stat)
         // char* check = "OK\r\n";
 
         const char *lastFourCharacters = rx_buf + strlen(rx_buf) - strlen(check);
-        // printk("last4char: %s\n", lastFourCharacters);
         const char *lastFourCharacters2 = rx_buf + strlen(rx_buf) - strlen(check2);
+        const char *lastFourCharacters3 = rx_buf + strlen(rx_buf) - strlen(check3);
+
+        // printk("last4char: %s\n", lastFourCharacters2);
 
         if(strcmp(check, lastFourCharacters) == 0)
         {
-            return rx_buf;
+            if(stat == req)
+            {
+                ok++;
+                if(ok==3)
+                {
+                    return rx_buf;
+                }
+            }
+            else
+            {
+                return rx_buf;
+            }
         }
         else if(strcmp(check2, lastFourCharacters2) == 0)
         {
             return rx_buf;
         }
+        else if(strcmp(check3, lastFourCharacters3) == 0)
+        {
+            return rx_buf;
+        }
+        // else
+        // {
+        //     printk("None");
+        // }
     }
 }
 
@@ -121,6 +151,7 @@ void readUsart(const struct device *uart_dev, void *user_data)
     
     ret = uart_poll_in(uart_dev, &c);
     if (ret == 0) {
+        
         ret = k_msgq_put(&uart_msgq, &c, K_NO_WAIT);
         if (ret != 0) {
             printk("Failed to put data into message queue\n");

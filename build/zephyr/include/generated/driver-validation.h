@@ -26,6 +26,8 @@
 
 #define Z_SYSCALL_DRIVER_CAN(ptr, op) Z_SYSCALL_DRIVER_GEN(ptr, op, can, CAN)
 
+#define Z_SYSCALL_DRIVER_CHARGER(ptr, op) Z_SYSCALL_DRIVER_GEN(ptr, op, charger, CHARGER)
+
 #define Z_SYSCALL_DRIVER_COREDUMP(ptr, op) Z_SYSCALL_DRIVER_GEN(ptr, op, coredump, COREDUMP)
 
 #define Z_SYSCALL_DRIVER_COUNTER(ptr, op) Z_SYSCALL_DRIVER_GEN(ptr, op, counter, COUNTER)

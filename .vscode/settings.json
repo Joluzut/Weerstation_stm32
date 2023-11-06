@@ -4,6 +4,8 @@
         "eeprom.h": "c",
         "printk.h": "c",
         "__assert.h": "c",
-        "variant": "c"
+        "variant": "c",
+        "atomic": "c",
+        "bitset": "c"
     }
 }
