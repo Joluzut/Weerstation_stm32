@@ -72,7 +72,6 @@ void sleepDevice()
 void wifi_connect() 
 {
 	printk("TEST wifi\n");
-
 	while(1)
 	{
 		k_sem_take(&wifi_fail, K_FOREVER);
@@ -98,7 +97,7 @@ void wifi_connect()
 		{
 			resp = sendESP("AT+CIPSNTPCFG=1,1,\"0.nl.pool.ntp.org\"\r\n", uart_dev, at);
 			// printk("%s", resp);
-			k_sleep(K_MSEC(300));
+			k_sleep(K_MSEC(500));
 
 			resp = sendESP("AT+CIPSNTPTIME?\r\n", uart_dev, at);						
 			// printk("%s", resp);
@@ -127,6 +126,7 @@ void eeprom_thread() {
 		int8_t * data[6];
 		int8_t recieved;
 		int32_t time = getEpochTime(rtc_dev);
+		printk("Returned time: %d\n", time);
 		
 		sensor_sample_fetch(sensor);
 		sensor_channel_get(sensor, SENSOR_CHAN_AMBIENT_TEMP, &temp);
@@ -149,10 +149,11 @@ void eeprom_thread() {
 		k_sleep(K_MSEC(10));
 		for(int x = 0; x<6; x++)
 		{
-		writeEeprom(counterWrite,data[x]);
-		counterWrite++;
-		k_sleep(K_MSEC(10));
+			writeEeprom(counterWrite,data[x]);
+			counterWrite++;
+			k_sleep(K_MSEC(10));
 		}
+
 		if(counterWrite > 14400)
 		{
 			counterWrite = 0;
@@ -171,12 +172,13 @@ void eeprom_thread() {
 
 void upload_thread() {
 	printk("TEST upload\n");
+	int32_t lastTime;
 
 	while(1)
 	{
 		// Wait for data to be ready for upload
 		k_sem_take(&data_ready, K_FOREVER);
-
+		uint8_t sent = 0;
 		if(connected==0)
 		{
 			k_sem_give(&upload_completed);
@@ -190,13 +192,26 @@ void upload_thread() {
 		do
 		{
 			storageData data = returnStorageData(backlogStart);											//Needs correct index instead of just 0
-			measurementStruct meas = sendMeasurement(data.temp1,data.temp2, data.press1,data.press2, data.humid1,data.humid2, data.time, uart_dev);
+			measurementStruct meas;
+
+			if(data.time < 1696118400)
+			{
+				meas = sendMeasurement(data.temp1,data.temp2, data.press1,data.press2, data.humid1,data.humid2, lastTime+60, uart_dev);
+				lastTime += 60;
+			}
+			else
+			{
+				meas = sendMeasurement(data.temp1,data.temp2, data.press1,data.press2, data.humid1,data.humid2, data.time, uart_dev);
+				lastTime = data.time;
+			}
+
+			 
 		printk("COUNTERWRITE: %d\n", counterWrite);
 		printk("BACKLOGSTART: %d\n", backlogStart);
 			
 			resp = sendESP(meas.tcp, uart_dev, tcp);											//CIPSTART
 			// printk("%s", resp);
-			k_sleep(K_MSEC(1500));
+			k_sleep(K_MSEC(500));
 			const char *lastFourCharacters;
 			lastFourCharacters = resp + strlen(resp) - strlen("ERROR\r\n");
 			if(strcmp(lastFourCharacters, "ERROR\r\n") == 0)									//If it fails, connection must have been lost so jump out of do-while and sleep
@@ -219,8 +234,6 @@ void upload_thread() {
 				break;
 			}
 			else{//Successfull request
-				printk("Upload done\n");
-
 				resp = sendESP(meas.request, uart_dev, req);									//GET REQUEST
 				lastFourCharacters = resp + strlen(resp) - strlen("ERROR\r\n");
 				if(strcmp(lastFourCharacters, "ERROR\r\n") == 0)									//If it fails, connection must have been lost so jump out of do-while and sleep
@@ -233,6 +246,7 @@ void upload_thread() {
 				// printk("%s", resp);
 				
 			}
+			sent++;
 			backlogStart += 10;
 			if(backlogStart > 14400)
 			{
@@ -241,7 +255,8 @@ void upload_thread() {
 			k_sleep(K_MSEC(100));
 			resp = sendESP("AT+CIPCLOSE\r\n", uart_dev, at);	
 
-		}while(backlogStart != counterWrite);
+		}while(backlogStart != counterWrite || sent > 24);
+
 		if(connected != 0)
 		{
 			backlogStart = counterWrite;

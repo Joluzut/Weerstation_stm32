@@ -56,7 +56,7 @@ int8_t readEeprom(int counter)
 	}
 	
 	data = (uint8_t)(*eeprom_data);
-	k_sleep(K_MSEC(10));
+	k_sleep(K_USEC(5));
 	return data;
 }
 
@@ -64,7 +64,7 @@ int32_t readBigEeprom(int counter)
 {
 	int ret;
 	int32_t data;
-	int32_t eeprom_data[sizeof(int32_t)];
+	int32_t eeprom_data[sizeof(int8_t)];
 
 	if (counter < 7200) {
 		ret = eeprom_read(dev1, counter, eeprom_data, sizeof(eeprom_data));
@@ -76,7 +76,7 @@ int32_t readBigEeprom(int counter)
 	}
 	
 	data = (uint32_t)(*eeprom_data);
-	k_sleep(K_MSEC(10));
+	k_sleep(K_USEC(10));
 	return data;
 }
 
@@ -97,6 +97,7 @@ storageData returnStorageData(int counter)
 	data.humid1 = readEeprom(dataCounter);
 	dataCounter++;
 	data.humid2 = readEeprom(dataCounter);
-	dataCounter++;
+	// dataCounter++;
+	printk("Time read from eeprom: %d\n", data.time);
 	return data;
 }
