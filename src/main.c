@@ -255,7 +255,7 @@ void upload_thread() {
 			k_sleep(K_MSEC(100));
 			resp = sendESP("AT+CIPCLOSE\r\n", uart_dev, at);	
 
-		}while(backlogStart != counterWrite || sent > 24);
+		}while(backlogStart != counterWrite || sent > 47);
 
 		if(connected != 0)
 		{
