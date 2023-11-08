@@ -67,7 +67,7 @@ void parseTime(char* response, const struct device *rtc)
     printk("Parsed Date and Time: %s", asctime(&parsed_time));
 }
 
-time_t getEpochTime(const struct device *dev)
+int32_t getEpochTime(const struct device *dev)
 {
     struct tm timeStruct = {
         .tm_year = 2023-1900,
@@ -79,7 +79,7 @@ time_t getEpochTime(const struct device *dev)
     };
     // Convert the parsed time to Epoch time
     rtc_get_time(dev, &timeStruct);
-    time_t epochTime = mktime(&timeStruct);
+    int32_t epochTime = mktime(&timeStruct);
 
     if (epochTime == -1) {
         printk("Failed to convert time to Epoch time\n");

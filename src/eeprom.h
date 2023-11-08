@@ -12,7 +12,7 @@ typedef struct
     int8_t press2;
     int8_t humid1;
     int8_t humid2;
-    uint32_t time;
+    int32_t time;
 }storageData;
 
 storageData returnStorageData(int counter);

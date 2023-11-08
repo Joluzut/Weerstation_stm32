@@ -77,8 +77,8 @@ void wifi_connect()
 		k_sem_take(&wifi_fail, K_FOREVER);
 
 		char* resp;																	
-        resp = sendESP("AT+CWJAP=\"iPhone van Joey\",\"123456789\"\r\n", uart_dev, at);
-		// resp = sendESP("AT+CWJAP=\"vNoort\",\"Jol!no2020\"\r\n", uart_dev, at);
+        // resp = sendESP("AT+CWJAP=\"iPhone van Joey\",\"123456789\"\r\n", uart_dev, at);
+		resp = sendESP("AT+CWJAP=\"vNoort\",\"Jol!no2020\"\r\n", uart_dev, at);
         // printk("%s", resp);
         k_sleep(K_MSEC(300));
         const char *lastFourCharacters = resp + strlen(resp) - strlen("FAIL\r\n");
@@ -126,6 +126,7 @@ void eeprom_thread() {
 		int8_t * data[6];
 		int8_t recieved;
 		int32_t time = getEpochTime(rtc_dev);
+		// printk("Time_t size: %d", sizeof(int64_t));
 		printk("Returned time: %d\n", time);
 		
 		sensor_sample_fetch(sensor);
@@ -172,7 +173,7 @@ void eeprom_thread() {
 
 void upload_thread() {
 	printk("TEST upload\n");
-	int32_t lastTime;
+	int32_t lastTime = 0;
 
 	while(1)
 	{
@@ -194,13 +195,14 @@ void upload_thread() {
 			storageData data = returnStorageData(backlogStart);											//Needs correct index instead of just 0
 			measurementStruct meas;
 
-			if(data.time < 1696118400)
+			if(data.time < lastTime)
 			{
-				meas = sendMeasurement(data.temp1,data.temp2, data.press1,data.press2, data.humid1,data.humid2, lastTime+60, uart_dev);
 				lastTime += 60;
+				meas = sendMeasurement(data.temp1,data.temp2, data.press1,data.press2, data.humid1,data.humid2, lastTime, uart_dev);
 			}
 			else
 			{
+				printk("Lasttime: %ld, this time: %ld\n", lastTime, data.time);
 				meas = sendMeasurement(data.temp1,data.temp2, data.press1,data.press2, data.humid1,data.humid2, data.time, uart_dev);
 				lastTime = data.time;
 			}

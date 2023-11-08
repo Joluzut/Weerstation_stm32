@@ -13,12 +13,12 @@ void send_str(const struct device *dev, const char *str) {
  
 }
 
-measurementStruct sendMeasurement(int temp1, int temp2, int press1, int press2, int humid1, int humid2, time_t timestamp, const struct device *uart_dev)
+measurementStruct sendMeasurement(int temp1, int temp2, int press1, int press2, int humid1, int humid2, int32_t timestamp, const struct device *uart_dev)
 {
     measurementStruct meas;
     meas.tcp = "AT+CIPSTART=\"TCP\",\"joey.lvannoort.com\",80\r\n";
-
-    struct tm *timeInfo = localtime(&timestamp);
+    time_t convertedTime = (time_t)timestamp;
+    struct tm *timeInfo = localtime(&convertedTime);
     char formattedDate[25]; // Buffer to hold the formatted time string
     char formattedTime[25]; // Buffer to hold the formatted time string
 

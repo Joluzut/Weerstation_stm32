@@ -32,7 +32,7 @@ static char rx_buf[MSG_SIZE];
 static int rx_buf_pos = 0;
 
 void send_str(const struct device *dev, const char *str);
-measurementStruct sendMeasurement(int temp1, int temp2, int press1, int press2, int humid1, int humid2, time_t timestamp, const struct device *uart_dev);
+measurementStruct sendMeasurement(int temp1, int temp2, int press1, int press2, int humid1, int humid2, int32_t timestamp, const struct device *uart_dev);
 void readUsart();
 char* returnUsartStr(status stat);
 
