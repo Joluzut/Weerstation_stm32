@@ -16,10 +16,13 @@ const struct device *const dev2 = DEVICE_DT_GET(NODE_EP2);
 
 void writeEeprom(int counter, int8_t data)
 {
+//this function is for writing 1 byte to eeprom
 	int ret;
+	//because we use 2 eeprom chips the first half will be stored on one chip and the other on the other half
 	if (counter < 7200) {
 		ret = eeprom_write(dev1, counter, &data, sizeof(data));
 	} else {
+		//the -7200 is because the writing needs to start at 0 not 7200
 		ret = eeprom_write(dev2, counter - 7200, &data, sizeof(data));
 	}
 	if (ret) {
@@ -29,6 +32,7 @@ void writeEeprom(int counter, int8_t data)
 
 void writeBigEeprom(int counter, int32_t data)
 {
+//this function is for writing 4 bytes to eeprom
 	int ret;
 	if (counter < 7200) {
 		ret = eeprom_write(dev1, counter, &data, sizeof(data));
@@ -42,6 +46,7 @@ void writeBigEeprom(int counter, int32_t data)
 
 int8_t readEeprom(int counter)
 {
+//this function is to read 1 byte from the eeprom chip
 	int ret;
 	int8_t data;
 	int8_t eeprom_data[sizeof(int8_t)];
@@ -62,6 +67,7 @@ int8_t readEeprom(int counter)
 
 int32_t readBigEeprom(int counter)
 {
+//this function is to read 4 bytes from the eeprom chip
 	int ret;
 	int32_t data;
 	int32_t eeprom_data[sizeof(int8_t)];
@@ -82,6 +88,7 @@ int32_t readBigEeprom(int counter)
 
 storageData returnStorageData(int counter)
 {
+//this function return a struct with the data needed
 	int dataCounter = counter;
 	storageData data;
 	data.time = readBigEeprom(dataCounter);
@@ -97,7 +104,6 @@ storageData returnStorageData(int counter)
 	data.humid1 = readEeprom(dataCounter);
 	dataCounter++;
 	data.humid2 = readEeprom(dataCounter);
-	// dataCounter++;
 	printk("Time read from eeprom: %d\n", data.time);
 	return data;
 }

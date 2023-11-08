@@ -126,14 +126,15 @@ void eeprom_thread() {
 		int8_t * data[6];
 		int8_t recieved;
 		int32_t time = getEpochTime(rtc_dev);
-		// printk("Time_t size: %d", sizeof(int64_t));
 		printk("Returned time: %d\n", time);
 		
+		//recieve the data from the sensor
 		sensor_sample_fetch(sensor);
 		sensor_channel_get(sensor, SENSOR_CHAN_AMBIENT_TEMP, &temp);
 		sensor_channel_get(sensor, SENSOR_CHAN_PRESS, &press);
 		sensor_channel_get(sensor, SENSOR_CHAN_HUMIDITY, &humidity);
 
+		//convert the data from the sensor to int8_t for effiecient storage
 		data[0] = temp.val1;
 		data[1] = temp.val2/10000;
 		data[2] = press.val1;
@@ -145,18 +146,21 @@ void eeprom_thread() {
 		time, data[0], data[1], data[2], data[3], data[4], data[5], counterWrite/10);
 
 		writeBigEeprom(counterWrite,time);
+		//count four by the counter because time is four bytes instead of one
 		counterWrite = counterWrite + 4;
 		time++;
 		k_sleep(K_MSEC(10));
 		for(int x = 0; x<6; x++)
 		{
 			writeEeprom(counterWrite,data[x]);
+			//count by one because data is one byte
 			counterWrite++;
 			k_sleep(K_MSEC(10));
 		}
 
 		if(counterWrite > 14400)
 		{
+			//if the counter reaches this number there will be an backlog of 24 hours
 			counterWrite = 0;
 		}
 
@@ -192,7 +196,7 @@ void upload_thread() {
 		// printk("%s", resp);
 		do
 		{
-			storageData data = returnStorageData(backlogStart);											//Needs correct index instead of just 0
+			storageData data = returnStorageData(backlogStart);
 			measurementStruct meas;
 
 			if(data.time < lastTime)
