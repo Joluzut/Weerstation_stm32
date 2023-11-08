@@ -7,6 +7,5 @@
 
 typedef struct tm parsed_time;
 
-void syncRTC(const char* time, const struct device *dev, struct tm *timeStruct);
 int32_t getEpochTime(const struct device *dev);
 void parseTime(char* response, const struct device *rtc);

@@ -37,6 +37,5 @@ void readUsart();
 char* returnUsartStr(status stat);
 
 char* sendESP(const char* str, const struct device *uart_dev, status stat);
-char* getNTPTime();
 
 #endif 

@@ -1,16 +1,6 @@
 #include "rtc.h"
 
-void syncRTC(const char* time, const struct device *dev, struct tm *timeStruct)//Sync RTC to time given as string
-{
-    if (strptime(time, "%a %b %d %H:%M:%S %Y", timeStruct) == NULL) {
-        printk("Failed to parse string");
-        return;
-    }
-
-    rtc_set_time(dev, timeStruct);
-}
-
-void parseTime(char* response, const struct device *rtc)
+void parseTime(char* response, const struct device *rtc)//Parse string to Sync RTC
 {
     printk("Received time: %s\n", response);
     struct tm parsed_time = {
@@ -34,10 +24,7 @@ void parseTime(char* response, const struct device *rtc)
     // // Convert the month abbreviation to month number
     const char* months[] = {"Jan", "Feb", "Mar", "Apr", "May", "Jun",
                             "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
-    const char* wdays[] = {"Mon", "Tue", "Wed", "Thu", "Fri", "Sat",
-    "Sun"};
-
-    // // printk("Wday: %s, month: %s, mday: %d, Hours: %d, minutes: %d, seconds: %d, year: %d\n", wday, month, parsed_time.tm_mday, hours, minutes, seconds, year);
+    const char* wdays[] = {"Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"}; //Even though they are not necessary, they are stored because they are different in a request so could cause for issues in unexpected scenarios
 
     for (int i = 0; i < 12; ++i) {
         if (strcmp(month, months[i]) == 0) {
@@ -67,7 +54,7 @@ void parseTime(char* response, const struct device *rtc)
     printk("Parsed Date and Time: %s", asctime(&parsed_time));
 }
 
-int32_t getEpochTime(const struct device *dev)
+int32_t getEpochTime(const struct device *dev)//Return epoch time from RTC
 {
     struct tm timeStruct = {
         .tm_year = 2023-1900,

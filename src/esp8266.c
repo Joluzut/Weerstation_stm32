@@ -3,7 +3,7 @@
 K_MSGQ_DEFINE(uart_msgq, 2, 270, 4);
 char send_buf[256];
 
-void send_str(const struct device *dev, const char *str) {
+void send_str(const struct device *dev, const char *str) {  //This functions sends the string over uart
     int msg_len = strlen(str);
     
     printk("Device %s sending: \"%s\"\n", dev->name, str);
@@ -13,10 +13,10 @@ void send_str(const struct device *dev, const char *str) {
  
 }
 
-measurementStruct sendMeasurement(int temp1, int temp2, int press1, int press2, int humid1, int humid2, int32_t timestamp, const struct device *uart_dev)
+measurementStruct sendMeasurement(int temp1, int temp2, int press1, int press2, int humid1, int humid2, int32_t timestamp, const struct device *uart_dev)   //This will return a struct containing strings to send to the ESP
 {
     measurementStruct meas;
-    meas.tcp = "AT+CIPSTART=\"TCP\",\"joey.lvannoort.com\",80\r\n";
+    meas.tcp = "AT+CIPSTART=\"TCP\",\"joey.lvannoort.com\",80\r\n"; //This command is consistent
     time_t convertedTime = (time_t)timestamp;
     struct tm *timeInfo = localtime(&convertedTime);
     char formattedDate[25]; // Buffer to hold the formatted time string
@@ -29,7 +29,7 @@ measurementStruct sendMeasurement(int temp1, int temp2, int press1, int press2, 
 
     char request[500]; // Make sure the buffer is large enough to hold the formatted string
     snprintf(request, sizeof(request), "GET /weerstation_get.php?api_key=tPmAT5Ab3j7F9&temp=%d.%d&press=%d.%d&humid=%d.%d&timestamp=%s%%%%20%s HTTP/1.1\r\nHost: joey.lvannoort.com\r\n\r\n", temp1, temp2, press1, press2, humid1, humid2,formattedDate, formattedTime);
-    meas.request = request;
+    meas.request = request;         
     // printk("Request: %s\n", request);
     char* requestsize[16];
     snprintf(requestsize,sizeof(requestsize),"AT+CIPSEND=%d\r\n", (strlen(request)-1));
@@ -37,7 +37,7 @@ measurementStruct sendMeasurement(int temp1, int temp2, int press1, int press2, 
     return meas;
 }
 
-char* sendESP(const char* str, const struct device *uart_dev, status stat)
+char* sendESP(const char* str, const struct device *uart_dev, status stat)//Send string to ESP and return the response
 {
     
     snprintf(send_buf, 200, str);
@@ -46,14 +46,7 @@ char* sendESP(const char* str, const struct device *uart_dev, status stat)
     return returnUsartStr(stat);
 }
 
-char* getNTPTime()
-{
-    char* time;
-
-    return time;
-}
-
-char* returnUsartStr(status stat)
+char* returnUsartStr(status stat)   //put characters from messagequeue into string and return it
 {
     int ret;
     uint8_t ok = 0;
@@ -69,12 +62,11 @@ char* returnUsartStr(status stat)
 
    
 
-    switch(stat)
+    switch(stat)    //Different commands can get different responses, the enum shows what responses it is expecting
     {
         case rst:
             check = "WIFI DISCONNECT\r\n";
             check2 = "WIFI GOT IP\r\n";
-
             break;
         case at:
             check = "OK\r\n";
@@ -83,19 +75,16 @@ char* returnUsartStr(status stat)
         case tcp:
             check = "OK\r\n";
             check2 = "ERROR\r\n";
+            break;
         case req:
             check = "OK\r\n";
             check2 = "WIFI DISCONNECT\r\n";
             check3 = "ERROR\r\n";
-
-
+            break;
     }
    
-    
     while(1)
     {
-        
-
         ret = k_msgq_get(&uart_msgq, &c, K_FOREVER);
         printk("%c", c);
         if (ret == 0) {
@@ -104,19 +93,13 @@ char* returnUsartStr(status stat)
             rx_buf_pos++;
         }
 
-        
-        // check = "OK\r\n";
-        // char* check = "OK\r\n";
-
         const char *lastFourCharacters = rx_buf + strlen(rx_buf) - strlen(check);
         const char *lastFourCharacters2 = rx_buf + strlen(rx_buf) - strlen(check2);
         const char *lastFourCharacters3 = rx_buf + strlen(rx_buf) - strlen(check3);
 
-        // printk("last4char: %s\n", lastFourCharacters2);
-
         if(strcmp(check, lastFourCharacters) == 0)
         {
-            if(stat == req)
+            if(stat == req) //A sucessfull request will send back OK\r\n 3 times. So the response is received completely this way.
             {
                 ok++;
                 if(ok==3)
@@ -137,14 +120,10 @@ char* returnUsartStr(status stat)
         {
             return rx_buf;
         }
-        // else
-        // {
-        //     printk("None");
-        // }
     }
 }
 
-void readUsart(const struct device *uart_dev, void *user_data)
+void readUsart(const struct device *uart_dev, void *user_data)//The usart interrupt calss this function and will put the character into the messagequeue
 {
     int ret;
     uint16_t c;
@@ -166,21 +145,3 @@ void readUsart(const struct device *uart_dev, void *user_data)
     }
 }
 
-
-
-// char* check_buff;
-// if((c == 'O' || c == 'K' || c == '\r' || c=='\n') && rx_buf_pos > 0)
-// {
-//     const char* check = "OK\r\n";
-//     strcat(check_buff, c);
-//     if(strcmp(check_buff, check) == 0)
-//     {
-//         //end reading
-//     }
-// }
-// else
-// {
-//     check_buff = '\0';
-// }
-
-// check_buff == check && index = 4

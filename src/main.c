@@ -25,7 +25,7 @@ K_SEM_DEFINE(wifi_ready, 0, 1);  // Semaphore to signal Wi-Fi connection
 K_SEM_DEFINE(wifi_fail, 0, 1);  // Semaphore to signal Wi-Fi connection
 K_SEM_DEFINE(data_ready, 0, 1);      // Semaphore to signal data is ready for upload
 K_SEM_DEFINE(upload_completed, 0, 1); // Semaphore to signal completed data upload
-K_SEM_DEFINE(sleep_done, 0, 1); 
+K_SEM_DEFINE(sleep_done, 0, 1); //Semaphore given by timer to start measurement
 
 
 
@@ -46,69 +46,60 @@ K_TIMER_DEFINE(timer3, timerInterrupt, NULL);
 
 void sleepDevice() 
 {	
-	printk("TEST sleep\n");
+	printk("sleep thread running\n");
 	while(1)
 	{
-		if(firstCon==1)
+		if(firstCon==1)								//If wifi connection has been made on startup, start the timer
 		{
 			k_sem_take(&wifi_ready, K_FOREVER);
 			printk("Wifi connected first time\n");
 			k_timer_start(&timer3, K_MSEC(0), K_SECONDS(60));
 			firstCon = 0;
-			// k_sem_give(&sleep_done);
 			continue;
 		}
-		// printk("Waiting for upload Comleted\n\n\n\n\n\n\n\n");
-
 		k_sem_take(&upload_completed, K_FOREVER);
-		printk("Sleepdevice...\n");
-		// k_sleep(K_SECONDS(5));
-		
-		
-		// k_sem_give(&sleep_done);
+		printk("Sleepdevice...\n");	
 	}
 }
 
 void wifi_connect() 
 {
-	printk("TEST wifi\n");
+	printk("wifi thread running\n");
 	while(1)
 	{
 		k_sem_take(&wifi_fail, K_FOREVER);
 
-		char* resp;																	
+		char* resp;	//String to save response from ESP															
         // resp = sendESP("AT+CWJAP=\"iPhone van Joey\",\"123456789\"\r\n", uart_dev, at);
 		resp = sendESP("AT+CWJAP=\"vNoort\",\"Jol!no2020\"\r\n", uart_dev, at);
-        // printk("%s", resp);
-        k_sleep(K_MSEC(300));
-        const char *lastFourCharacters = resp + strlen(resp) - strlen("FAIL\r\n");
+        k_sleep(K_MSEC(300));//Slight delay because the ESP needs time to set everything up
+        const char *lastFourCharacters = resp + strlen(resp) - strlen("FAIL\r\n"); 			//Get the last characters to check for FAIL\r\n
         if(strcmp(lastFourCharacters, "FAIL\r\n") == 0)
         {
-			if(firstCon == 1)
+			if(firstCon == 1)	//If it is startup, keep trying
 			{
 				printk("FAIL on startup, trying again...\n");
 				k_sem_give(&wifi_fail);
             	continue;
 			}
-			k_sem_give(&upload_completed);
+			k_sem_give(&upload_completed);	//Go to sleep
 			continue;
         }
-		if(firstCon == 1)
+		if(firstCon == 1)	//At first connection, Sync the rtc
 		{
 			resp = sendESP("AT+CIPSNTPCFG=1,1,\"0.nl.pool.ntp.org\"\r\n", uart_dev, at);
-			// printk("%s", resp);
-			k_sleep(K_MSEC(500));
+
+			k_sleep(K_MSEC(500));				//For some reason the ESP needs time to get the config right otherwise it will return Epoch 0
 
 			resp = sendESP("AT+CIPSNTPTIME?\r\n", uart_dev, at);						
-			// printk("%s", resp);
 			k_sleep(K_MSEC(200));
-			parseTime(resp, rtc_dev);
+			parseTime(resp, rtc_dev);			//Parse the response of the ESP to get the correct time in the RTC
 			connected=1;
 			k_sem_give(&wifi_ready);
 		}
 		else
 		{
-			connected=1;
+			connected=1;						//Signal to other functions that there is/should be an internet connection
 			k_sem_give(&data_ready);
 		}
 	}
@@ -119,7 +110,6 @@ void eeprom_thread() {
 
     while (1) {
 		k_sem_take(&sleep_done, K_FOREVER);
-        printk("EEPROM\n");
         // Perform EEPROM operations
 		const struct device *sensor = DEVICE_DT_GET_ANY(bosch_bme280);
 		struct sensor_value temp, press, humidity;
@@ -176,15 +166,15 @@ void eeprom_thread() {
 }
 
 void upload_thread() {
-	printk("TEST upload\n");
+	printk("upload thread running\n");
 	int32_t lastTime = 0;
 
 	while(1)
 	{
 		// Wait for data to be ready for upload
 		k_sem_take(&data_ready, K_FOREVER);
-		uint8_t sent = 0;
-		if(connected==0)
+		uint8_t sent = 0;	//Track the amount of sucessfull requests
+		if(connected==0)	//If wifi connect fails, go to sleep
 		{
 			k_sem_give(&upload_completed);
 			continue;
@@ -193,13 +183,12 @@ void upload_thread() {
 
 		char* resp;
 		resp = sendESP("AT\r\n", uart_dev, at);
-		// printk("%s", resp);
 		do
 		{
-			storageData data = returnStorageData(backlogStart);
+			storageData data = returnStorageData(backlogStart);	//Get data from eeprom
 			measurementStruct meas;
 
-			if(data.time < lastTime)
+			if(data.time < lastTime)	//If the new time is longer ago than the last time, add 60 seconds to the last time. --This had to do with not reading the right value out of eeprom every 16 times due to using 10 bytes per measurement instead of something divisable by 4
 			{
 				lastTime += 60;
 				meas = sendMeasurement(data.temp1,data.temp2, data.press1,data.press2, data.humid1,data.humid2, lastTime, uart_dev);
@@ -212,8 +201,8 @@ void upload_thread() {
 			}
 
 			 
-		printk("COUNTERWRITE: %d\n", counterWrite);
-		printk("BACKLOGSTART: %d\n", backlogStart);
+			printk("COUNTERWRITE: %d\n", counterWrite);
+			printk("BACKLOGSTART: %d\n", backlogStart);
 			
 			resp = sendESP(meas.tcp, uart_dev, tcp);											//CIPSTART
 			// printk("%s", resp);
@@ -249,21 +238,21 @@ void upload_thread() {
 					k_sem_give(&upload_completed);
 					break;
 				}
-				// printk("%s", resp);
+
 				
 			}
-			sent++;
-			backlogStart += 10;
-			if(backlogStart > 14400)
+			sent++;	//Request sucessfull
+			backlogStart += 10;	//Backlog +10 for eeprom index
+			if(backlogStart > 14400)	//Go back to 0 if maximum eeprom index is reached
 			{
 				backlogStart = 0;
 			}
 			k_sleep(K_MSEC(100));
-			resp = sendESP("AT+CIPCLOSE\r\n", uart_dev, at);	
+			resp = sendESP("AT+CIPCLOSE\r\n", uart_dev, at);	//Close connection to website
 
-		}while(backlogStart != counterWrite || sent > 47);
+		}while(backlogStart != counterWrite || sent > 47);		//To make sure a measurement is not done in the middle of a ESP uart message, limit to 48 emasurements per minute.
 
-		if(connected != 0)
+		if(connected != 0)	//If the while loop is broken out of, then connection was lost and we set the backlogstart to counterwrite to ensure that when wifi is back all measurements are sent to the database
 		{
 			backlogStart = counterWrite;
 			k_sem_give(&upload_completed);		
