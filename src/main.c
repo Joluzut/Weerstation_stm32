@@ -70,8 +70,8 @@ void wifi_connect()
 		k_sem_take(&wifi_fail, K_FOREVER);
 
 		char* resp;	//String to save response from ESP															
-        // resp = sendESP("AT+CWJAP=\"iPhone van Joey\",\"123456789\"\r\n", uart_dev, at);
-		resp = sendESP("AT+CWJAP=\"vNoort\",\"Jol!no2020\"\r\n", uart_dev, at);
+        resp = sendESP("AT+CWJAP=\"iPhone van Joey\",\"123456789\"\r\n", uart_dev, at);
+		// resp = sendESP("AT+CWJAP=\"vNoort\",\"Jol!no2020\"\r\n", uart_dev, at);
         k_sleep(K_MSEC(300));//Slight delay because the ESP needs time to set everything up
         const char *lastFourCharacters = resp + strlen(resp) - strlen("FAIL\r\n"); 			//Get the last characters to check for FAIL\r\n
         if(strcmp(lastFourCharacters, "FAIL\r\n") == 0)
